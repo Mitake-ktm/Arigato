@@ -1,0 +1,47 @@
+
+.image_devant{
+background-image: url(../images/image\ arrière\ plan.jpg);
+background-size: cover;
+background-color: rgb(0, 0, 0,0.5);
+background-blend-mode: darken;
+width: auto;
+height: 400px;
+padding-bottom: 200px;
+margin-top: 0;
+margin-top: -120px;
+}
+
+.bouton_jouer{
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    text-transform: uppercase;
+    padding: 15px;
+    background-color:  #EC9224 ;
+    color: white; 
+    border-style: none;
+    border-radius: 3px;
+ }
+
+ .image_devant p{
+    margin-left: 500px;
+ }
+ .image_devant h1{
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 230px;
+ }
+ .image_devant h2{
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: white;
+ }
+
+ .image_devant button{
+    display: flex;
+    justify-content: center;
+ }
