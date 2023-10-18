@@ -1,3 +1,98 @@
+/* Background */
+main {
+  background: url("../image/Projet_main/fond.png") no-repeat fixed;
+  background-size: cover;
+}
+/* FIN Background */
+
+/* Titre */
+h1,
+h2 {
+  text-align: center;
+  color: rgb(33, 15, 15);
+}
+/* FIN Titre */
+
+/* Bouton */
+.bouton_jouer {
+   margin: auto;
+   width: 150px;
+   height: 50px;
+   text-transform: uppercase;
+   padding: 15px;
+   background-color:  #EC9224 ;
+   color: white; 
+   border-style: none;
+   border-radius: 3px;
+}
+/* FIN Bouton */
+
+/* Image mode de jeu */
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: space-around;
+  margin: 80px;
+  height: auto;
+  width: auto;
+  padding-right: 10px;
+  color: blue;
+}
+/* FIN Image mode de jeu */
+
+/* Image stats joueur */
+img {
+  display: flex;
+  margin: 5px;
+  width: 200px;
+  height: auto;
+}
+/* FIN Image stats joueur */
+
+/* Style pour le "Grand 1" */
+.large-one {
+  font-size: 32px;
+  color: #1e1a83;
+  margin-right: 10px;
+  display: inline;
+}
+/* FIN Style pour le "Grand 1" */
+
+/* Style pour l'en-tête (h3)*/
+.heading-container h3 {
+  display: inline;
+}
+/* FIN Style pour l'en-tête (h3)*/
+
+/******************************************************************************************************************************/
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 200px;
+  border: 1px solid rgba(red, green, rgb(239, 239, 248), alpha);
+}
+
+.table td {
+  padding: 5px;
+}
+
+.table img {
+  display: flex;
+  width: 150px;
+  height: auto;
+}
+
+.NOM {
+  display: flex;
+  justify-content: center;
+}
 
 .image_devant{
 background-image: url(../images/image\ arrière\ plan.jpg);
@@ -10,18 +105,6 @@ padding-bottom: 200px;
 margin-top: 0;
 margin-top: -120px;
 }
-
-.bouton_jouer{
-    margin: auto;
-    width: 150px;
-    height: 50px;
-    text-transform: uppercase;
-    padding: 15px;
-    background-color:  #EC9224 ;
-    color: white; 
-    border-style: none;
-    border-radius: 3px;
- }
 
  .image_devant p{
     margin-left: 500px;
