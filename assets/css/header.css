@@ -1,0 +1,47 @@
+nav{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+    margin-right: 10%;
+}
+
+a{
+    color: white;
+}
+
+header a:hover{
+    color: #EC9224;
+    border-top: #EC9224;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.titre{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-left: 15%;
+    margin-top: 2%;
+    font-size: large;
+}
+
+.titre p {
+    font-size: 20px;
+}
+
+/*h1,h2{
+    display: flex;
+    justify-content: center;
+    color: white;
+}*/
+
+header{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.titre li{
+    display: inline;
+    margin-right: 38px;
+}
