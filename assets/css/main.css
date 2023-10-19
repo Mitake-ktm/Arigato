@@ -30,7 +30,8 @@ h2 {
  width: 80%;
  padding-right: 1vw;
  color: blue;
- margin-top: 5vw;
+ margin-top: 10vw;
+ margin-bottom: 10vw;
 }
 /* FIN Image mode de jeu */
 
@@ -64,6 +65,7 @@ img {
  justify-content: center;
  height: 100%;
  width: 46%;
+ 
 }
 .container img {
  height: 22vw;
@@ -82,8 +84,8 @@ img {
 
 .table img {
  display: flex;
- width: 5vw;
- height: auto;
+ width: 17vw;
+ height: 10.9vw;
 }
 
 .NOM {
