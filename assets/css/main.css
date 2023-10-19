@@ -264,3 +264,101 @@ margin-top: -150px;
   justify-content: center;
 }
 
+/*formulaire pour changer ses infos profiles et table de jeu anto*/
+
+body{
+  margin: 0;
+  background-color: #0F0E2E;
+  font-family: 'Roboto', sans-serif;
+}
+
+.titre_connexion{
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-image: url(../images/connexion.png);
+  background-size :100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  height: 150px;
+  padding-top: 100px;
+  margin-top: 2%;
+
+}
+
+.Formulaire_de_connexion{
+  display: flex;
+  justify-content: center;
+  margin-top:5%;
+
+}
+
+.Formulaire_de_connexion label
+{
+  color: white;
+}
+.bouton_connexion{
+ margin: auto;
+ width: 150px;
+ height: 50px;
+ text-transform: uppercase;
+ padding: 15px;
+ background-color:  #EC9224 ;
+ color: white; 
+ border-style: none;
+ border-radius: 3px;
+}
+
+::placeholder{
+  color: grey;
+  padding-left: 10px;
+}
+
+.titre_page_de_jeu{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  background-color: #EC9224;
+  border-color: #EC9224;
+  border-radius: 15%;
+  text-align: center;
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-top: 4%;
+}
+
+.table_de_jeu img{
+  height: 150px;
+  width: 200px;
+}
+
+.table_de_jeu{
+display: flex;
+flex-direction: column;
+align-items: center;
+background-image: url(../images/fond\ table\ de\ jeu.png);
+background-size: 100% 100%;
+background-repeat: no-repeat;
+margin-top: 5%
+}
+
+.table_de_jeu table{
+  padding-bottom: 10px;
+ 
+}
+
+.table_de_jeu p{
+  border-style: solid;
+  background-color: #EC9224;
+  border-color: #EC9224;
+  border-radius: 15%;
+  text-align: center;
+  font-size: 200%;
+}
+
+.titre_page_de_jeu h2{
+  font-size: 200%
+
+}
