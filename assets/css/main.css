@@ -275,7 +275,7 @@ body{
  background-size :100%;
  background-repeat: no-repeat;
  object-fit: contain;
- height: 15vw;
+ height: 10vw;
  padding-top: 10vw;
  margin-top: 2%;
 
@@ -325,8 +325,8 @@ border-radius: 0.3vw
 }
 
 .table_de_jeu img{
- height: 15vw;
- width: 20vw;
+ height: 10vw;
+ width: 13vw;
 }
 
 .table_de_jeu{
@@ -340,7 +340,7 @@ margin-top: 5%
 }
 
 .table_de_jeu table{
- padding-bottom: 10px;
+ padding-bottom: 4vw;
 
 }
 
@@ -403,4 +403,8 @@ margin-top: 5%
   position: absolute;
   display: flex;
   flex-direction: column;
+  width  : 20vw;
+  height : 20vh;
+  background : green;
+
  }
