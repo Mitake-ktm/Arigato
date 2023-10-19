@@ -159,19 +159,19 @@ margin-top: -150px;
   align-items: center;
   justify-content: center;
 }
-.description .kiki h3,p{
+.description .kiki h3,.description .kiki p{
   color: white;
   text-align: center;
 }
-.description .anto h3,p{
+.description .anto h3,.description .anto p{
   color: white;
   text-align: center;
 }
-.description .kevin h3,p{
+.description .kevin h3,.description .kevin p{
   color: white;
   text-align: center;
 }
-.description .enzo h3,p{
+.description .enzo h3,.description .enzo p{
   color: white;
   text-align: center;
 }
