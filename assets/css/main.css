@@ -355,3 +355,36 @@ margin-top: 5%
 .titre_page_de_jeu h2{
   font-size: 200%
 }
+
+/* page de scores */
+.main{
+  margin-top: 10%;
+}
+.titrescore h1{
+  justify-content: center;
+  color: white;
+}
+.titrescore{
+  margin-top: 10%;
+  margin-left: 40%;
+}
+.score{
+  display: flex;
+  justify-content: center;
+}
+ .score td,th{
+  border: 0.1% solid none;
+  margin: 0%;
+  padding: 0.5%;
+  color: white;
+  text-align: center;
+ }
+ .score th{
+  background-color: #EC9224;
+ }
+ .score td{
+  background-color: rebeccapurple;
+ }
+ .score table{
+  margin-bottom: 10%;
+ }
