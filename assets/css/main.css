@@ -1,16 +1,10 @@
-/* Background */
-main {
-  background: url("../image/Projet_main/fond.png") no-repeat fixed;
-  background-size: cover;
-}
-/* FIN Background */
 
 /* Titre */
-h1,
+/*h1,
 h2 {
   text-align: center;
   color: rgb(33, 15, 15);
-}
+}/*
 /* FIN Titre */
 
 /* Bouton */
@@ -147,7 +141,7 @@ margin-top: -150px;
   margin-top: 0%;
   color: white;
 
-}
+} 
 
 .description{
   display: flex;
@@ -360,5 +354,3 @@ margin-top: 5%
 
 .titre_page_de_jeu h2{
   font-size: 200%
-
-}
