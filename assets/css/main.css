@@ -388,3 +388,10 @@ margin-top: 5%
  .score table{
   margin-bottom: 10%;
  }
+
+ .Fond_tableau{
+  background-image: url(../images/fond\ tableau.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-top: 3%;
+ }
