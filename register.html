@@ -5,7 +5,7 @@
 <title>Inscription</title>
 <link rel="stylesheet" href="assets/css/footer.css">
 <link rel="stylesheet" href="assets/css/header.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/main.css">
 <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
 <script src="https://kit.fontawesome.com/5ee2b4f395.js" crossorigin="anonymous"></script>
 </head>
@@ -33,7 +33,7 @@
 </div>
 
 <div class="Formulaire_de_connexion">
-    <p>
+    <form method="post" action="traitement.php">
         <input type="text" name="email" id="email" placeholder=Email style="width: 500px; height: 40px; background-color: #272645 ;
         border-style: none; border-radius: 3px;">
         <br>
@@ -51,8 +51,7 @@
         <br>
         <br>
         <button onclick="window.location.href = 'index.html'" class="bouton_connexion">Connexion</button>
-        
-    </p>
+</form>
 </div>
 
 
