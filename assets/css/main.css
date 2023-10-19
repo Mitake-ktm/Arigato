@@ -128,3 +128,137 @@ margin-top: -150px;
     display: flex;
     justify-content: center;
  }
+
+
+ /*image de presentation équipe enzo*/
+
+ .equipe{
+  align-items: center;
+  display: flex;
+  flex-direction:column;
+}
+
+.equipe h2{
+  margin-top: 200px;
+  color: white;
+}
+
+.equipe p{
+  margin-top: 0%;
+  color: white;
+
+}
+img{
+  height: 30px;
+  width: 45px;
+}
+
+.description{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.description img{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.description .kiki .anto .kevin .enzo p{
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.description .kiki h3,p{
+  color: white;
+  text-align: center;
+}
+.description .anto h3,p{
+  color: white;
+  text-align: center;
+}
+.description .kevin h3,p{
+  color: white;
+  text-align: center;
+}
+.description .enzo h3,p{
+  color: white;
+  text-align: center;
+}
+
+.description .kiki{
+  background-color: #0E0B26;
+  padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+.imagekiki{
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+.imagekiki img{
+  width: 55%;
+  height: 100%;
+}
+
+.description .anto{
+  background-color: #0E0B26;
+  padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.imageanto{
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+.imageanto img{
+  width: 55%;
+  height: 100%;
+}
+
+.description .kevin{
+  background-color: #0E0B26;
+  padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.imagekevin{
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+.imagekevin img{
+  width: 55%;
+  height: 100%;
+}
+
+.description .enzo{
+  background-color: #0E0B26;
+  padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 25px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.imageenzo{
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+.imageenzo img{
+  width: 55%;
+  height: 100%;
+  height: 140px;
+  width: 140px;
+}
