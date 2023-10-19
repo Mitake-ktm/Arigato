@@ -29,10 +29,11 @@ h2 {
  height: auto;
  width: 80%;
  padding-right: 1vw;
- color: blue;
+ color: whitesmoke;
  margin-top: 10vw;
- margin-bottom: 10vw;
+ margin-bottom: 5vw;
 }
+
 /* FIN Image mode de jeu */
 
 /* Image stats joueur */
@@ -91,6 +92,7 @@ img {
 .NOM {
  display: flex;
  justify-content: center;
+ margin-top: 10vw;
 }
 
 .image_devant{
