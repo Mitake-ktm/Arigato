@@ -9,83 +9,87 @@ h2 {
 
 /* Bouton */
 .bouton_jouer {
-   margin: auto;
-   width: 150px;
-   height: 50px;
-   text-transform: uppercase;
-   padding: 15px;
-   background-color:  #EC9224 ;
-   color: white; 
-   border-style: none;
-   border-radius: 3px;
+  margin: auto;
+  width: 10vw;
+  height: 3vw;
+  text-transform: uppercase;
+  padding: 1vw;
+  background-color:  #EC9224 ;
+  color: white; 
+  border-style: none;
+  border-radius: 3px;
 }
 /* FIN Bouton */
 
 /* Image mode de jeu */
 .image-container {
-  display: flex;
-  justify-content: space-evenly;
-  justify-content: space-around;
-  margin: 80px;
-  height: auto;
-  width: auto;
-  padding-right: 10px;
-  color: blue;
+ display: flex;
+ justify-content: space-evenly;
+ justify-content: space-around;
+ margin: 8vw;
+ height: auto;
+ width: auto;
+ padding-right: 1vw;
+ color: blue;
 }
 /* FIN Image mode de jeu */
 
 /* Image stats joueur */
 img {
-  display: flex;
-  margin: 5px;
-  width: 200px;
-  height: auto;
+ display: flex;
+ margin: 0.5vw;
+ width: 20vw;
+ height: auto;
 }
 /* FIN Image stats joueur */
 
 /* Style pour le "Grand 1" */
 .large-one {
-  font-size: 32px;
-  color: #1e1a83;
-  margin-right: 10px;
-  display: inline;
+ font-size: 3.2vw;
+ color: #1e1a83;
+ margin-right: 1vw;
+ display: inline;
 }
 /* FIN Style pour le "Grand 1" */
 
 /* Style pour l'en-tête (h3)*/
 .heading-container h3 {
-  display: inline;
+ display: inline;
 }
 /* FIN Style pour l'en-tête (h3)*/
 
 /******************************************************************************************************************************/
 
 .container {
-  display: flex;
-  justify-content: center;
-  height: auto;
-  width: auto;
+ display: flex;
+ justify-content: center;
+ height: 100%;
+ width: 46%;
+}
+.container img {
+ height: 22vw;
+ width: 40vw;
 }
 
 .table {
-  border-collapse: collapse;
-  width: 200px;
-  border: 1px solid rgba(red, green, rgb(239, 239, 248), alpha);
+ border-collapse: collapse;
+ width: 20vw;
+ border: 1px solid rgba(red, green, rgb(239, 239, 248), alpha);
 }
 
 .table td {
-  padding: 5px;
+ padding: 0.5vw;
 }
 
 .table img {
-  display: flex;
-  width: 150px;
-  height: auto;
+ display: flex;
+ width: 15vw;
+ height: auto;
 }
 
 .NOM {
-  display: flex;
-  justify-content: center;
+ display: flex;
+ justify-content: center;
 }
 
 .image_devant{
@@ -94,238 +98,235 @@ background-size: cover;
 background-color: rgb(0, 0, 0,0.5);
 background-blend-mode: darken;
 width: auto;
-height: 400px;
-padding-bottom: 200px;
-margin-top: 0;
-margin-top: -150px;
+height: 40vw;
+padding-bottom: 20vw;
+margin-top: 0vw;
+margin-top: -15vw;
 }
 
- .image_devant p{
-    margin-left: 500px;
- }
- .image_devant h1{
-    font-size: 70px;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding-top: 300px;
- }
- .image_devant h2{
-    font-size: 17px;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    color: white;
- }
+.image_devant p{
+   margin-left: 50vw;
+}
+.image_devant h1{
+   font-size: 7vw;
+   display: flex;
+   justify-content: center;
+   margin: 0vw;
+   padding-top: 30vw;
+}
+.image_devant h2{
+   font-size: 1.7vw;
+   display: flex;
+   justify-content: center;
+   margin: 0vw;
+   color: white;
+}
 
- .image_devant button{
-    display: flex;
-    justify-content: center;
- }
+.image_devant button{
+   display: flex;
+   justify-content: center;
+}
 
 
- /*image de presentation équipe enzo*/
+/*image de presentation équipe enzo*/
 
- .equipe{
-  align-items: center;
-  display: flex;
-  flex-direction:column;
+.equipe{
+ align-items: center;
+ display: flex;
+ flex-direction:column;
 }
 
 .equipe h2{
-  margin-top: 200px;
-  color: white;
+ margin-top: 20vw;
+ color: white;
 }
 
 .equipe p{
-  margin-top: 0%;
-  color: white;
+ margin-top: 0%;
+ color: white;
 
 } 
 
 .description{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ margin-bottom: 7.5vw;
 
 }
 .description img{
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
+ height: 2vw;
+ width: 2vw;
+ border-radius: 50%;
 }
-.description .kiki .anto .kevin .enzo p{
-  color: white;
-  align-items: center;
-  justify-content: center;
-}
+
 .description .kiki h3,.description .kiki p{
-  color: white;
-  text-align: center;
+ color: white;
+ text-align: center;
 }
-.description .anto h3,.description .anto p{
-  color: white;
-  text-align: center;
+.description .anto h3, .description .anto p{
+ color: white;
+ text-align: center;
 }
 .description .kevin h3,.description .kevin p{
-  color: white;
-  text-align: center;
+ color: white;
+ text-align: center;
 }
-.description .enzo h3,.description .enzo p{
-  color: white;
-  text-align: center;
+.description .enzo h3, .description .enzo p{
+ color: white;
+ text-align: center;
 }
 
 .description .kiki{
-  background-color: #0E0B26;
-  padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 25px;
-    padding-bottom: 45px;
-    text-align: center;
+ background-color: #0E0B26;
+ padding-left: 1vw;
+   padding-right: 1vw;
+   padding-top: 2.5vw;
+   padding-bottom: 4.5vw;
+   text-align: center;
 }
 .imagekiki{
-  width: 100%;
-  border-radius: 50%;
-  text-align: center;
+ width: 100%;
+ border-radius: 50%;
+ text-align: center;
 }
 .imagekiki img{
-  width: 55%;
-  height: 100%;
+ width: 55%;
+ height: 100%;
 }
 
 .description .anto{
-  background-color: #0E0B26;
-  padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 25px;
-    padding-bottom: 45px;
-    text-align: center;
+ background-color: #0E0B26;
+ padding-left: 1vw;
+   padding-right: 1vw;
+   padding-top: 2.5vw;
+   padding-bottom: 4.5vw;
+   text-align: center;
 }
 
 .imageanto{
-  width: 100%;
-  border-radius: 50%;
-  text-align: center;
+ width: 100%;
+ border-radius: 50%;
+ text-align: center;
 }
 .imageanto img{
-  width: 55%;
-  height: 100%;
+ width: 55%;
+ height: 100%;
 }
 
 .description .kevin{
-  background-color: #0E0B26;
-  padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 25px;
-    padding-bottom: 45px;
-    text-align: center;
+ background-color: #0E0B26;
+ padding-left: 1vw;
+   padding-right: 1vw;
+   padding-top: 2.5vw;
+   padding-bottom: 4.5vw;
+   text-align: center;
 }
 
 .imagekevin{
-  width: 100%;
-  border-radius: 50%;
-  text-align: center;
+ width: 100%;
+ border-radius: 50%;
+ text-align: center;
 }
 .imagekevin img{
-  width: 55%;
-  height: 100%;
+ width: 55%;
+ height: 100%;
 }
 
 .description .enzo{
-  background-color: #0E0B26;
-  padding-left: 70px;
-    padding-right: 70px;
-    padding-top: 25px;
-    padding-bottom: 45px;
-    text-align: center;
+ background-color: #0E0B26;
+ padding-left: 7vw;
+   padding-right: 7vw;
+   padding-top: 2.5vw;
+   padding-bottom: 4.5vw;
+   text-align: center;
 }
 
 .imageenzo{
-  width: 100%;
-  border-radius: 50%;
-  text-align: center;
+ width: 100%;
+ border-radius: 50%;
+ text-align: center;
 }
 .imageenzo img{
-  width: 55%;
-  height: 100%;
-  height: 140px;
-  width: 140px;
+ width: 55%;
+ height: 100%;
+ height: 9.9vw;
+ width: 9.9vw;
 }
 
 .infoteam div{
-  display: flex;
-  justify-content: center;
+ display: flex;
+ justify-content: center;
 }
 
 /*formulaire pour changer ses infos profiles et table de jeu anto*/
 
 body{
-  margin: 0;
-  background-color: #0F0E2E;
-  font-family: 'Roboto', sans-serif;
+ margin: 0vw;
+ background-color: #0F0E2E;
+ font-family: 'Roboto', sans-serif;
 }
 
 .titre_connexion{
-  display: flex;
-  justify-content: center;
-  color: white;
-  background-image: url(../images/connexion.png);
-  background-size :100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  height: 150px;
-  padding-top: 100px;
-  margin-top: 2%;
+ display: flex;
+ justify-content: center;
+ color: white;
+ background-image: url(../images/connexion.png);
+ background-size :100%;
+ background-repeat: no-repeat;
+ object-fit: contain;
+ height: 15vw;
+ padding-top: 10vw;
+ margin-top: 2%;
 
 }
 
 .Formulaire_de_connexion{
-  display: flex;
-  justify-content: center;
-  margin-top:5%;
+ display: flex;
+ justify-content: center;
+ margin-top:5%;
 
 }
 
 .Formulaire_de_connexion label
 {
-  color: white;
+ color: white;
 }
 .bouton_connexion{
- margin: auto;
- width: 150px;
- height: 50px;
- text-transform: uppercase;
- padding: 15px;
- background-color:  #EC9224 ;
- color: white; 
- border-style: none;
- border-radius: 3px;
+margin: auto;
+width: 15vw;
+height: 5vw;
+text-transform: uppercase;
+padding: 1.5vw;
+background-color:  #EC9224 ;
+color: white; 
+border-style: none;
+border-radius: 0.3vw
 }
 
 ::placeholder{
-  color: grey;
-  padding-left: 10px;
+ color: grey;
+ padding-left: 1vw;
 }
 
 .titre_page_de_jeu{
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-style: solid;
-  background-color: #EC9224;
-  border-color: #EC9224;
-  border-radius: 15%;
-  text-align: center;
-  margin-right: 30%;
-  margin-left: 30%;
-  margin-top: 4%;
+ color: white;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ border-style: solid;
+ background-color: #EC9224;
+ border-color: #EC9224;
+ border-radius: 15%;
+ text-align: center;
+ margin-right: 30%;
+ margin-left: 30%;
+ margin-top: 4%;
 }
 
 .table_de_jeu img{
-  height: 150px;
-  width: 200px;
+ height: 15vw;
+ width: 20vw;
 }
 
 .table_de_jeu{
@@ -339,59 +340,67 @@ margin-top: 5%
 }
 
 .table_de_jeu table{
-  padding-bottom: 10px;
- 
+ padding-bottom: 10px;
+
 }
 
 .table_de_jeu p{
-  border-style: solid;
-  background-color: #EC9224;
-  border-color: #EC9224;
-  border-radius: 15%;
-  text-align: center;
-  font-size: 200%;
+ border-style: solid;
+ background-color: #EC9224;
+ border-color: #EC9224;
+ border-radius: 15%;
+ text-align: center;
+ font-size: 200%;
 }
 
 .titre_page_de_jeu h2{
-  font-size: 200%
+ font-size: 200%
 }
 
 /* page de scores */
 .main{
-  margin-top: 10%;
+ margin-top: 10%;
 }
 .titrescore h1{
-  justify-content: center;
-  color: white;
+ justify-content: center;
+ color: white;
 }
 .titrescore{
-  margin-top: 10%;
-  margin-left: 40%;
+ margin-top: 10%;
+ margin-left: 40%;
 }
 .score{
-  display: flex;
-  justify-content: center;
+ display: flex;
+ justify-content: center;
 }
- .score td,th{
-  border: 0.1% solid none;
-  margin: 0%;
-  padding: 0.5%;
-  color: white;
-  text-align: center;
- }
- .score th{
-  background-color: #EC9224;
- }
- .score td{
-  background-color: rebeccapurple;
- }
- .score table{
-  margin-bottom: 10%;
- }
+.score td,th{
+ border: 0.1% solid none;
+ margin: 0%;
+ padding: 0.5%;
+ color: white;
+ text-align: center;
+}
+.score th{
+ background-color: #EC9224;
+}
+.score td{
+ background-color: rebeccapurple;
+}
+.score table{
+ margin-bottom: 10%;
+}
 
  .Fond_tableau{
   background-image: url(../images/fond\ tableau.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding-top: 3%;
+ }
+
+ /*chat du jeu*/
+
+ .tchat{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
  }
