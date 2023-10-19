@@ -12,8 +12,8 @@ a{
 header a:hover{
     color: #EC9224;
     border-top: #EC9224;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 4.5vw;
+    padding-bottom: 4.5vw;
 }
 
 .titre{
@@ -26,7 +26,7 @@ header a:hover{
 }
 
 .titre p {
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 /*h1,h2{
@@ -42,5 +42,5 @@ header{
 
 .titre li{
     display: inline;
-    margin-right: 38px;
+    margin-right: 3.8vw;
 }
