@@ -24,11 +24,10 @@ h2 {
 /* Image mode de jeu */
 .image-container {
  display: flex;
- justify-content: space-evenly;
- justify-content: space-around;
- margin: 8vw;
+ justify-content: space-between;
+ margin: auto;
  height: auto;
- width: auto;
+ width: 80%;
  padding-right: 1vw;
  color: blue;
 }
@@ -37,7 +36,6 @@ h2 {
 /* Image stats joueur */
 img {
  display: flex;
- margin: 0.5vw;
  width: 20vw;
  height: auto;
 }
@@ -83,7 +81,7 @@ img {
 
 .table img {
  display: flex;
- width: 15vw;
+ width: 5vw;
  height: auto;
 }
 
