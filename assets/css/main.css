@@ -455,8 +455,7 @@ margin-top: 5%
 }
 
 .bulle_gauche {
-   position: relative;
-   width: 100px;
+   width: fit-content;
    border-radius: 4px;
    padding: 20px;
    background: #1E90FF;
@@ -464,7 +463,6 @@ margin-top: 5%
    margin-top: 5vh;
 }
 .bulle .fleche_gauche {
-   position: absolute;
    top: 20px;
    left: -40px;
    width: 0;
@@ -480,17 +478,21 @@ margin-top: 5%
 
 }
 
+.tchat_body
+{
+   width: 18vw;
+}
+
 .bulle_droite {
-   position: relative;
-   width: 100px;
+   width: fit-content;
    border-radius: 4px;
    padding: 20px;
    background: #1E90FF;
    color: white;
+   margin-left: 21px;
 }
 
 .bulle .fleche_droite {
-   position: absolute;
    top: 20px;
    left: -40px;
    width: 0;
@@ -525,4 +527,11 @@ margin-top: 5%
    color: #1E90FF;
    margin-top: 0.5vh;
    margin-left: 0.5vw;
+}
+
+
+.bouton_envoie{
+   margin-left: 0.5vw;
+   margin-top: 0.5vh;
+   font-size: 35px;
 }
