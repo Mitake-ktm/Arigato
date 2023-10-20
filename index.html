@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Acceuil</title>
-<link rel="stylesheet" href="assets/css/footer.css">
-<link rel="stylesheet" href="assets/css/header.css">
-<link rel="stylesheet" href="./assets/css/style.css ">
-<link rel="stylesheet" href="assets/css/main.css">
-<style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
-<script src="https://kit.fontawesome.com/5ee2b4f395.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
+    <script src="https://kit.fontawesome.com/5ee2b4f395.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
     <header>
 
-        <div class="titre"> <p><b>Kioku</b></p>
+        <div class="titre"> <p><b>Shinkei Suijaku</b></p>
             <nav>
                 <ul>
                    <li> <a style="text-decoration: none;" href="index.html"><b>ACCUEIL</b></a> </li>
@@ -25,57 +26,190 @@
         </div>
         
     </header>
-
+    <!--IMAGE MODE DE JEU -->
     <main>
+      <!--Bouton-->
+      <div class="image_devant">
+        <h1>Bienvenue au 
+            <br>Soleil Levant !</h1>
+        <h2>Venez découvrir les Kana !</h2>
+        <br>
+        <br>
+        <button class="bouton_jouer" onclick="window.location.href = 'memory';">Jouer !</button>
+      </div>
+      <!--FIN Bouton-->
+      <div class="image-container">
+        <img src="assets/images/HIRAGANA a.png" alt="Hiragana A" />
+        <img src="assets/images/Katakana a.svg" alt="Katakana A" />
+        <img
+          src="assets/images/KATAKANA ET HIRAGANA a.png"
+          alt="Hiragana a et Katakana a" />
+      </div>
+      <!--FIN IMAGE MODE DE JEU -->
 
-        <div class="image_devant">
-            <p> <h1>Bienvenue Au <br> Soleil Levant !</h1>
-                <h2>Venez découvrir les Kama !</h2>
-                <br>
-                <br>
-                <button class="bouton_jouer" onclick="window.location.href = 'memory';">Jouer !</button>
-             </p>
-            
+      <!-- IMAGE MODE DE JEU + texte en dessous -->
+      <div class="image-container">
+        <div class="heading-container">
+          <span class="large-one">01</span>
+          <h3>HIRAGANA</h3>
+          <p>Pour travailler les hiragana !</p>
         </div>
-        
+
+        <div class="heading-container">
+          <span class="large-one">02</span>
+          <h3>HIRAGANA</h3>
+          <p>Pour travailler les hiragana !</p>
+        </div>
+
+        <div class="heading-container">
+          <span class="large-one">03</span>
+          <h3>HIRAGANA</h3>
+          <p>Pour travailler les hiragana !</p>
+        </div>
+      </div>
+      <!-- FIN IMAGE MODE DE JEU + texte en dessous -->
+
+      <!--STAT JOUEUR-->
+
+      <div class="NOM">
+        <div class="container">
+          <!-- image gauche-->
+          <img src="assets/images/NiightCIty.png" alt="IMAGE JEU" />
+          <!--FIN image gauche-->
+        </div>
+        <table class="table">
+          <tr>
+            <td>
+              <img
+                src="assets/images/Parties_Jouées.png"
+                alt="Image 1" />
+            </td>
+            <br />
+            <td>
+              <img
+                src="assets/images/Joueurs_Connectés.png"
+                alt="Image 2" />
+            </td>
+            <br />
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="assets/images/Temps_Record.png"
+                alt="Image 3" />
+            </td>
+            <br />
+            <td>
+              <img
+                src="assets/images/Joueurs_Inscrit.png"
+                alt="Image 4" />
+            </td>
+          </tr>
+        </table>
+      </div>
+      x
+      <!--FIN  STAT JOUEUR-->
+
+
+      <div class="equipe">
+        <h2><span>Notre Équipe</span></h2>
+        <p>Nihon saikō no gēmu kaihatsu chīmu</p>
+        <img src="assets/images/branche.jpg">
+    </div>
+        <div class="description">
+         
+          <div class="kiki infoteam">
+               <div class="imagekiki">
+                <img src="assets/images/kiki.jpg">
+                </div>
+            <h3><span>KILIAN</span></h3>
+            <p>supōtsuman</p>
+            <div>
+              <a href="https://www.facebook.com/"><img src="assets/images/facebook.jpg" alt=""></a>
+              <a href="https://twitter.com/home"><img src="assets/images/twitter.jpg" alt=""></a>
+              <a href="https://www.pinterest.fr/"><img src="assets/images/pinterest.jpg" alt=""></a>  
+            </div>          </div>
+    
+          <div class="anto infoteam">
+            <div class="imageanto">
+            <img src="assets/images/anto.jpg">
+        </div>
+            <h3><span>ANTONY</span></h3>
+            <p>manga fan</p>
+            <div>
+              <a href="https://www.facebook.com/"><img src="assets/images/facebook.jpg" alt=""></a>
+              <a href="https://twitter.com/home"><img src="assets/images/twitter.jpg" alt=""></a>
+              <a href="https://www.pinterest.fr/"><img src="assets/images/pinterest.jpg" alt=""></a>  
+            </div>          </div>
+    
+    
+    
+          <div class="kevin infoteam">
+            <div class="imagekevin">
+            <img src="assets/images/kevin.jpg">
+        </div>
+            <h3><span>KÉVIN</span></h3>
+            <p>Nihon no fan</p>
+            <div>
+              <a href="https://www.facebook.com/"><img src="assets/images/facebook.jpg" alt=""></a>
+              <a href="https://twitter.com/home"><img src="assets/images/twitter.jpg" alt=""></a>
+              <a href="https://www.pinterest.fr/"><img src="assets/images/pinterest.jpg" alt=""></a>  
+            </div>          </div>
+     
+    
+          <div class="enzo infoteam">
+            <div class="imageenzo">
+            <img src="assets/images/enzo.jpg">
+        </div>
+            <h3><span>ENZO</span></h3>
+            <p>Ikutsu ka no kizuato</p>
+            <div>
+              <a href="https://www.facebook.com/"><img src="assets/images/facebook.jpg" alt=""></a>
+              <a href="https://twitter.com/home"><img src="assets/images/twitter.jpg" alt=""></a>
+              <a href="https://www.pinterest.fr/"><img src="assets/images/pinterest.jpg" alt=""></a>  
+            </div>
+          </div>
+     
+    
+        </div>
+    </div>
     </main>
 
-
-<!--the footer-->
-<footer>
-    <div class="footer">
-    <div class="information">
-    <h1>information</h1>
-    <p>Comment nous contacter</p>
-    <p><span class="orange">Tel :</span> 0767697839 </p>
-    <p><span class="orange">Email :</span> support@shinkei_suijaku.com </p>
-    <p><span class="orange">Location :</span> Paris </p>
-    <a target="_blank" href="https://www.facebook.com/">
-        <i class="fa-brands fa-facebook-f logo"></i>
-    </a>
-    <a target="_blank" href="https://twitter.com/home">
-        <i class="fa-brands fa-x-twitter logo"></i>
-    </a>
-    <a target="_blank" href="https://google.com">
-        <i class="fa-brands fa-google logo"></i>
-    </a>
-    <a target="_blank" href="https://www.pinterest.fr/">
-        <i class="fa-brands fa-pinterest logo"></i>
-    </a>
-    <a target="_blank" href="https://www.instagram.com/">
-        <i class="fa-brands fa-instagram logo"></i>
-    </a>
-    </div>
-    <div class="footer_jeu">
-        <h1>Shinkei Suijaku</h1>
-        <ul class="orange">
-            <li><a href="memory.html">Jouer !</a></li>
-            <li><a href="scores.html">les scores</a></li>
-            <li><a href="contact.html">Nous contacter</a></li>
-        </ul>
-    </div>
-    </div>
-    <p class="footer_down">Copyright © 2023 Tous droits réservés</p>
-</footer>
-</body>
+    <!--the footer-->
+    <footer>
+        <div class="footer">
+        <div class="information">
+        <h1>information</h1>
+        <p>Comment nous contacter</p>
+        <p><span class="orange">Tel :</span> 0767697839 </p>
+        <p><span class="orange">Email :</span> support@shinkei_suijaku.com </p>
+        <p><span class="orange">Location :</span> Paris </p>
+        <a target="_blank" href="https://www.facebook.com/">
+            <i class="fa-brands fa-facebook-f logo"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/home">
+            <i class="fa-brands fa-x-twitter logo"></i>
+        </a>
+        <a target="_blank" href="https://google.com">
+            <i class="fa-brands fa-google logo"></i>
+        </a>
+        <a target="_blank" href="https://www.pinterest.fr/">
+            <i class="fa-brands fa-pinterest logo"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/">
+            <i class="fa-brands fa-instagram logo"></i>
+        </a>
+        </div>
+        <div class="footer_jeu">
+            <h1>Shinkei Suijaku</h1>
+            <ul class="orange">
+                <li><a href="memory.html">Jouer !</a></li>
+                <li><a href="scores.html">les scores</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+            </ul>
+        </div>
+        </div>
+        <p class="footer_down">Copyright © 2023 Tous droits réservés</p>
+    </footer>
+  </body>
 </html>
