@@ -328,8 +328,8 @@ border-radius: 0.3vw
 }
 
 .table_de_jeu img{
- height: 15vw;
- width: 20vw;
+ height: 10vw;
+ width: 14vw;
 }
 
 .table_de_jeu{
@@ -343,7 +343,7 @@ margin-top: 5%
 }
 
 .table_de_jeu table{
- padding-bottom: 10px;
+ padding-bottom: 4vw;
 
 }
 
@@ -402,8 +402,128 @@ margin-top: 5%
 
  /*chat du jeu*/
 
- .tchat{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
- }
+ .tchat {
+   position: absolute;
+   top: 270vh;
+   right: 4vh;
+   display: flex;
+   flex-direction: column;
+   width: 18vw;
+   height: 65vh;
+   background: white;
+   margin-left: 90vw;
+   border-radius: 10%;
+}
+
+.tchat_head{
+   background-color: #1E90FF;
+   border-radius: 10%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+}
+
+.connexion_logo{
+   width: 4vw;
+   height: 7vh;
+   padding-left: 2vw;
+}
+
+.connexion_logo img{
+   width: 4vw;
+   height: 7vh;
+   border-radius: 50%;
+}
+
+.rondvert{
+   width: 1vw;
+   height: 2vh;
+   padding-top: 5vh;
+   padding-right: 2vw;
+}
+
+.rondvert img{
+   width: 1vw;
+   height: 2vh;
+
+}
+
+.texte_head_chat
+{
+   padding-right: 3vw;
+}
+
+.bulle_gauche {
+   position: relative;
+   width: 100px;
+   border-radius: 4px;
+   padding: 20px;
+   background: #1E90FF;
+   color: white;
+   margin-top: 5vh;
+}
+.bulle .fleche_gauche {
+   position: absolute;
+   top: 20px;
+   left: -40px;
+   width: 0;
+   height: 0;
+   border-width: 10px;
+   border-color: transparent #00aedf transparent transparent;
+   border-style: solid;
+}
+
+.tchat_body p{
+   color: gray;
+   margin: 0;
+
+}
+
+.bulle_droite {
+   position: relative;
+   width: 100px;
+   border-radius: 4px;
+   padding: 20px;
+   background: #1E90FF;
+   color: white;
+}
+
+.bulle .fleche_droite {
+   position: absolute;
+   top: 20px;
+   left: -40px;
+   width: 0;
+   height: 0;
+   border-width: 10px;
+   border-color: transparent #00aedf transparent transparent;
+   border-style: solid;
+}
+
+.gauche{
+   margin-left: 0.3vw;
+}
+
+.droite{
+   margin-left: 8.6vw;
+
+}
+
+.droite p{
+   margin-left: 5.6vw;
+}
+
+.chat_bas{
+   margin-top: 15vh;
+   margin-left: 1vw;
+   display: flex;
+}
+
+.chat_bas img{
+   width: 3vw;
+   height: 5vh;
+   color: #1E90FF;
+   margin-top: 0.5vh;
+   margin-left: 0.5vw;
+}
+
