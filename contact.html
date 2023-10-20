@@ -4,44 +4,114 @@
 <meta charset="UTF-8">
 <title>contact</title>
 <link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/header.css">
+<link rel="stylesheet" href="./assets/css/style.css ">
+<link rel="stylesheet" href="assets/css/main.css">
 <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
 <script src="https://kit.fontawesome.com/5ee2b4f395.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<footer>
-    <div class="footer">
-    <div class="information">
-    <h1>information</h1>
-    <p>Comment nous contacter</p>
-    <p><span class="orange">Tel :</span> 0767697839 </p>
-    <p><span class="orange">Email :</span> support@shinkei_suijaku.com </p>
-    <p><span class="orange">Location :</span> Paris </p>
-    <a target="_blank" href="https://www.facebook.com/">
-        <i class="fa-brands fa-facebook-f logo"></i>
-    </a>
-    <a target="_blank" href="https://twitter.com/home">
-        <i class="fa-brands fa-x-twitter logo"></i>
-    </a>
-    <a target="_blank" href="https://google.com">
-        <i class="fa-brands fa-google logo"></i>
-    </a>
-    <a target="_blank" href="https://www.pinterest.fr/">
-        <i class="fa-brands fa-pinterest logo"></i>
-    </a>
-    <a target="_blank" href="https://www.instagram.com/">
-        <i class="fa-brands fa-instagram logo"></i>
-    </a>
-    </div>
-    <div class="footer_jeu">
-        <h1>Shinkei Suijaku</h1>
-        <ul class="orange">
-            <li><a href="memory.html">Jouer !</a></li>
-            <li><a href="scores.html">les scores</a></li>
-            <li><a href="contact.html">Nous contacter</a></li>
-        </ul>
-    </div>
-    </div>
-    <p class="footer_down">Copyright © 2023 Tous droits réservés</p>
-</footer>
+    <header>
+
+        <div class="titre"> <p><b>Kioku</b></p>
+            <nav>
+                <ul>
+                   <li> <a style="text-decoration: none;" href="index.html"><b>ACCUEIL</b></a> </li>
+                   <li> <a style="text-decoration: none;"href="memory.html"><b>JEU</b></a> </li>
+                   <li> <a style="text-decoration: none;"href="scores.html"><b>SCORES</b></a> </li>
+                    <li><a style="text-decoration: none;"href="contact.html"><b>NOUS CONTACTER</b></a> </li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        <div class="titre_contact">
+            <h1>Nous contacter</h1>
+        </div>
+        <div class="contact">
+        <div class="contact_three">
+     
+            <div class="contact_logo">
+                 <div class="logo_mobile">
+                    <i class="fa-solid fa-mobile-screen-button logo_size"></i>
+                  </div>
+              <p class="logo_text">0767697839</p>
+            </div>
+      
+            <div class="contact_logo">
+              <div class="logo_mail">
+                <i class="fa-regular fa-envelope logo_size"></i>
+          </div>
+              <p class="logo_text">support@shinkei_suijaku.com</p>
+            </div>
+      
+      
+      
+            <div class="contact_logo">
+              <div class="logo_location">
+                <i class="fa-solid fa-location-dot logo_size"></i>
+            </div>
+              <p class="logo_text">Paris</p>
+            </div>
+          </div>
+      <form>
+        <div class="Formulaire_de_contact">
+            <div class="form_contact">
+                <div class="nom_contact">
+                    <input type="text" name="name" id="name" placeholder=Nom class="contact_nom">
+                </div>
+                <div>
+                    <input type="text" name="email" id="email" placeholder=Email class="contact_mail">
+                </div>
+            </div>
+                <div>
+                <div class="sujet_contact">
+                    <input class="contact_sujet" type="text" name="Sujet" id="Sujet" placeholder="Sujet">
+                </div>
+                <div>
+                    <textarea class="contact_message" id="story" name="story" rows="5" cols="33" placeholder="Message"></textarea>
+                </div>
+                <button onclick="window.location.href = 'index.html'" class="bouton_contact">Envoyer</button>
+            </div>
+        </div>
+    </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+        <div class="information">
+        <h1>information</h1>
+        <p>Comment nous contacter</p>
+        <p><span class="orange">Tel :</span> 0767697839 </p>
+        <p><span class="orange">Email :</span> support@shinkei_suijaku.com </p>
+        <p><span class="orange">Location :</span> Paris </p>
+        <a target="_blank" href="https://www.facebook.com/">
+            <i class="fa-brands fa-facebook-f logo"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/home">
+            <i class="fa-brands fa-x-twitter logo"></i>
+        </a>
+        <a target="_blank" href="https://google.com">
+            <i class="fa-brands fa-google logo"></i>
+        </a>
+        <a target="_blank" href="https://www.pinterest.fr/">
+            <i class="fa-brands fa-pinterest logo"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/">
+            <i class="fa-brands fa-instagram logo"></i>
+        </a>
+        </div>
+        <div class="footer_jeu">
+            <h1>Shinkei Suijaku</h1>
+            <ul class="orange">
+                <li><a href="memory.html">Jouer !</a></li>
+                <li><a href="scores.html">les scores</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+            </ul>
+        </div>
+        </div>
+        <p class="footer_down">Copyright © 2023 Tous droits réservés</p>
+    </footer>
 </body>
 </html>

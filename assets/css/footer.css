@@ -4,6 +4,8 @@
     padding: 7px;
     margin-right: 3px;
     border-radius: 10%;
+    height: 15px;
+    width: 15px;
 }
 
 .footer{
@@ -20,8 +22,8 @@
     margin: auto;
     height: 40px;
     justify-content: flex-start;
-    padding-left: 235px;
-    padding-top: 25px;
+    padding-left: 19%;
+    padding-top: 2%;
 }
 
 a{
