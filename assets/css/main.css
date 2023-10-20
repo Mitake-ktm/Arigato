@@ -702,3 +702,30 @@ textarea {
 textarea::placeholder{
    padding-left: 1%;
 }
+
+
+/*shop*/
+
+.titre_shop {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-image: url(../images/Shop_Japonais.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  height: 10vw;
+  padding-top: 9vw;
+  margin-top: 2%;
+}
+
+.Article_shop {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: auto;
+  width: 75%;
+  color: rgb(236, 150, 2);
+  margin-right: 15vw;
+  margin-bottom: 5vw;
+}
