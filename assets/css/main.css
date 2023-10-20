@@ -1,4 +1,3 @@
-
 /* Titre */
 /*h1,
 h2 {
@@ -14,8 +13,8 @@ h2 {
   height: 3vw;
   text-transform: uppercase;
   padding: 1vw;
-  background-color:  #EC9224 ;
-  color: white; 
+  background-color: #ec9224;
+  color: white;
   border-style: none;
   border-radius: 3px;
 }
@@ -23,506 +22,528 @@ h2 {
 
 /* Image mode de jeu */
 .image-container {
- display: flex;
- justify-content: space-between;
- margin: auto;
- height: auto;
- width: 80%;
- padding-right: 1vw;
- color: whitesmoke;
- margin-top: 10vw;
- margin-bottom: 5vw;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: auto;
+  width: 80%;
+  padding-right: 1vw;
+  color: whitesmoke;
+  margin-top: 10vw;
+  margin-bottom: 5vw;
 }
 
 /* FIN Image mode de jeu */
 
 /* Image stats joueur */
 img {
- display: flex;
- width: 20vw;
- height: auto;
+  display: flex;
+  width: 20vw;
+  height: auto;
 }
 /* FIN Image stats joueur */
 
 /* Style pour le "Grand 1" */
 .large-one {
- font-size: 3.2vw;
- color: #1e1a83;
- margin-right: 1vw;
- display: inline;
+  font-size: 3.2vw;
+  color: #1e1a83;
+  margin-right: 1vw;
+  display: inline;
 }
 /* FIN Style pour le "Grand 1" */
 
 /* Style pour l'en-tête (h3)*/
 .heading-container h3 {
- display: inline;
+  display: inline;
 }
 /* FIN Style pour l'en-tête (h3)*/
 
 /******************************************************************************************************************************/
 
 .container {
- display: flex;
- justify-content: center;
- height: 100%;
- width: 46%;
- 
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 46%;
 }
 .container img {
- height: 22vw;
- width: 40vw;
+  height: 22vw;
+  width: 40vw;
 }
 
 .table {
- border-collapse: collapse;
- width: 20vw;
- border: 1px solid rgba(red, green, rgb(239, 239, 248), alpha);
+  border-collapse: collapse;
+  width: 20vw;
+  border: 1px solid rgba(red, green, rgb(239, 239, 248), alpha);
 }
 
 .table td {
- padding: 0.5vw;
+  padding: 0.5vw;
 }
 
 .table img {
- display: flex;
- width: 17vw;
- height: 10.9vw;
+  display: flex;
+  width: 17vw;
+  height: 10.9vw;
 }
 
 .NOM {
- display: flex;
- justify-content: center;
- margin-top: 10vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vw;
 }
 
-.image_devant{
-background-image: url(../images/image\ arrière\ plan.jpg);
-background-size: cover;
-background-color: rgb(0, 0, 0,0.5);
-background-blend-mode: darken;
-width: auto;
-height: 40vw;
-padding-bottom: 20vw;
-margin-top: 0vw;
-margin-top: -15vw;
+.image_devant {
+  background-image: url(../images/image\ arrière\ plan.jpg);
+  background-size: cover;
+  background-color: rgb(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  width: auto;
+  height: 40vw;
+  padding-bottom: 20vw;
+  margin-top: 0vw;
+  margin-top: -15vw;
 }
 
-.image_devant p{
-   margin-left: 50vw;
+.image_devant p {
+  margin-left: 50vw;
 }
-.image_devant h1{
-   font-size: 7vw;
-   display: flex;
-   justify-content: center;
-   margin: 0vw;
-   padding-top: 30vw;
+.image_devant h1 {
+  font-size: 7vw;
+  display: flex;
+  justify-content: center;
+  margin: 0vw;
+  padding-top: 30vw;
 }
-.image_devant h2{
-   font-size: 1.7vw;
-   display: flex;
-   justify-content: center;
-   margin: 0vw;
-   color: white;
-}
-
-.image_devant button{
-   display: flex;
-   justify-content: center;
+.image_devant h2 {
+  font-size: 1.7vw;
+  display: flex;
+  justify-content: center;
+  margin: 0vw;
+  color: white;
 }
 
+.image_devant button {
+  display: flex;
+  justify-content: center;
+}
 
 /*image de presentation équipe enzo*/
 
-.equipe{
- align-items: center;
- display: flex;
- flex-direction:column;
+.equipe {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.equipe h2{
- margin-top: 20vw;
- color: white;
+.equipe h2 {
+  margin-top: 20vw;
+  color: white;
 }
 
-.equipe p{
- margin-top: 0%;
- color: white;
-
-} 
-
-.description{
- display: flex;
- align-items: center;
- justify-content: space-around;
- margin-bottom: 7.5vw;
-
-}
-.description img{
- height: 2vw;
- width: 2vw;
- border-radius: 50%;
+.equipe p {
+  margin-top: 0%;
+  color: white;
 }
 
-.description .kiki h3,.description .kiki p{
- color: white;
- text-align: center;
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 7.5vw;
 }
-.description .anto h3, .description .anto p{
- color: white;
- text-align: center;
-}
-.description .kevin h3,.description .kevin p{
- color: white;
- text-align: center;
-}
-.description .enzo h3, .description .enzo p{
- color: white;
- text-align: center;
+.description img {
+  height: 2vw;
+  width: 2vw;
+  border-radius: 50%;
 }
 
-.description .kiki{
- background-color: #0E0B26;
- padding-left: 1vw;
-   padding-right: 1vw;
-   padding-top: 2.5vw;
-   padding-bottom: 4.5vw;
-   text-align: center;
+.description .kiki h3,
+.description .kiki p {
+  color: white;
+  text-align: center;
 }
-.imagekiki{
- width: 100%;
- border-radius: 50%;
- text-align: center;
+.description .anto h3,
+.description .anto p {
+  color: white;
+  text-align: center;
 }
-.imagekiki img{
- width: 55%;
- height: 100%;
+.description .kevin h3,
+.description .kevin p {
+  color: white;
+  text-align: center;
 }
-
-.description .anto{
- background-color: #0E0B26;
- padding-left: 1vw;
-   padding-right: 1vw;
-   padding-top: 2.5vw;
-   padding-bottom: 4.5vw;
-   text-align: center;
+.description .enzo h3,
+.description .enzo p {
+  color: white;
+  text-align: center;
 }
 
-.imageanto{
- width: 100%;
- border-radius: 50%;
- text-align: center;
+.description .kiki {
+  background-color: #0e0b26;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2.5vw;
+  padding-bottom: 4.5vw;
+  text-align: center;
 }
-.imageanto img{
- width: 55%;
- height: 100%;
+.imagekiki {
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
 }
-
-.description .kevin{
- background-color: #0E0B26;
- padding-left: 1vw;
-   padding-right: 1vw;
-   padding-top: 2.5vw;
-   padding-bottom: 4.5vw;
-   text-align: center;
-}
-
-.imagekevin{
- width: 100%;
- border-radius: 50%;
- text-align: center;
-}
-.imagekevin img{
- width: 55%;
- height: 100%;
+.imagekiki img {
+  width: 55%;
+  height: 100%;
 }
 
-.description .enzo{
- background-color: #0E0B26;
- padding-left: 7vw;
-   padding-right: 7vw;
-   padding-top: 2.5vw;
-   padding-bottom: 4.5vw;
-   text-align: center;
+.description .anto {
+  background-color: #0e0b26;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2.5vw;
+  padding-bottom: 4.5vw;
+  text-align: center;
 }
 
-.imageenzo{
- width: 100%;
- border-radius: 50%;
- text-align: center;
+.imageanto {
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
 }
-.imageenzo img{
- width: 55%;
- height: 100%;
- height: 9.9vw;
- width: 9.9vw;
+.imageanto img {
+  width: 55%;
+  height: 100%;
 }
 
-.infoteam div{
- display: flex;
- justify-content: center;
+.description .kevin {
+  background-color: #0e0b26;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2.5vw;
+  padding-bottom: 4.5vw;
+  text-align: center;
+}
+
+.imagekevin {
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+.imagekevin img {
+  width: 55%;
+  height: 100%;
+}
+
+.description .enzo {
+  background-color: #0e0b26;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 2.5vw;
+  padding-bottom: 4.5vw;
+  text-align: center;
+}
+
+.imageenzo {
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+.imageenzo img {
+  width: 55%;
+  height: 100%;
+  height: 9.9vw;
+  width: 9.9vw;
+}
+
+.infoteam div {
+  display: flex;
+  justify-content: center;
 }
 
 /*formulaire pour changer ses infos profiles et table de jeu anto*/
 
-body{
- margin: 0vw;
- background-color: #0F0E2E;
- font-family: 'Roboto', sans-serif;
+body {
+  margin: 0vw;
+  background-color: #0f0e2e;
+  font-family: "Roboto", sans-serif;
 }
 
-.titre_connexion{
- display: flex;
- justify-content: center;
- color: white;
- background-image: url(../images/connexion.png);
- background-size :100%;
- background-repeat: no-repeat;
- object-fit: contain;
- height: 10vw;
- padding-top: 10vw;
- margin-top: 2%;
-
+.titre_connexion {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-image: url(../images/connexion.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  height: 10vw;
+  padding-top: 10vw;
+  margin-top: 2%;
 }
 
-.Formulaire_de_connexion{
- display: flex;
- justify-content: center;
- margin-top:5%;
-
+.Formulaire_de_connexion {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
 }
 
-.Formulaire_de_connexion label
-{
- color: white;
+.Formulaire_de_connexion label {
+  color: white;
 }
-.bouton_connexion{
-margin: auto;
-width: 15vw;
-height: 5vw;
-text-transform: uppercase;
-padding: 1.5vw;
-background-color:  #EC9224 ;
-color: white; 
-border-style: none;
-border-radius: 0.3vw
-}
-
-::placeholder{
- color: grey;
- padding-left: 1vw;
+.bouton_connexion {
+  margin: auto;
+  width: 15vw;
+  height: 5vw;
+  text-transform: uppercase;
+  padding: 1.5vw;
+  background-color: #ec9224;
+  color: white;
+  border-style: none;
+  border-radius: 0.3vw;
 }
 
-.titre_page_de_jeu{
- color: white;
- display: flex;
- flex-direction: column;
- align-items: center;
- border-style: solid;
- background-color: #EC9224;
- border-color: #EC9224;
- border-radius: 15%;
- text-align: center;
- margin-right: 30%;
- margin-left: 30%;
- margin-top: 4%;
+::placeholder {
+  color: grey;
+  padding-left: 1vw;
 }
 
-.table_de_jeu img{
- height: 10vw;
- width: 13vw;
+.titre_page_de_jeu {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  background-color: #ec9224;
+  border-color: #ec9224;
+  border-radius: 15%;
+  text-align: center;
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-top: 4%;
 }
 
-.table_de_jeu{
-display: flex;
-flex-direction: column;
-align-items: center;
-background-image: url(../images/fond\ table\ de\ jeu.png);
-background-size: 100% 100%;
-background-repeat: no-repeat;
-margin-top: 5%
+.table_de_jeu img {
+  height: 10vw;
+  width: 13vw;
 }
 
-.table_de_jeu table{
- padding-bottom: 4vw;
-
+.table_de_jeu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../images/fond\ table\ de\ jeu.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: 5%;
 }
 
-.table_de_jeu p{
- border-style: solid;
- background-color: #EC9224;
- border-color: #EC9224;
- border-radius: 15%;
- text-align: center;
- font-size: 200%;
+.table_de_jeu table {
+  padding-bottom: 4vw;
 }
 
-.titre_page_de_jeu h2{
- font-size: 200%
+.table_de_jeu p {
+  border-style: solid;
+  background-color: #ec9224;
+  border-color: #ec9224;
+  border-radius: 15%;
+  text-align: center;
+  font-size: 200%;
+}
+
+.titre_page_de_jeu h2 {
+  font-size: 200%;
 }
 
 /* page de scores */
-.main{
- margin-top: 10%;
+.main {
+  margin-top: 10%;
 }
-.titrescore h1{
- justify-content: center;
- color: white;
+.titrescore h1 {
+  justify-content: center;
+  color: white;
 }
-.titrescore{
- margin-top: 10%;
- margin-left: 40%;
+.titrescore {
+  margin-top: 10%;
+  margin-left: 40%;
 }
-.score{
- display: flex;
- justify-content: center;
+.score {
+  display: flex;
+  justify-content: center;
 }
-.score td,th{
- border: 0.1% solid none;
- margin: 0%;
- padding: 0.5%;
- color: white;
- text-align: center;
+.score td,
+th {
+  border: 0.1% solid none;
+  margin: 0%;
+  padding: 0.5%;
+  color: white;
+  text-align: center;
 }
-.score th{
- background-color: #EC9224;
+.score th {
+  background-color: #ec9224;
 }
-.score td{
- background-color: rebeccapurple;
+.score td {
+  background-color: rebeccapurple;
 }
-.score table{
- margin-bottom: 10%;
+.score table {
+  margin-bottom: 10%;
 }
 
- .Fond_tableau{
+.Fond_tableau {
   background-image: url(../images/fond\ tableau.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding-top: 3%;
- }
-
- /*chat du jeu*/
-
- .tchat {
-   position: absolute;
-   top: 270vh;
-   right: 4vh;
-   display: flex;
-   flex-direction: column;
-   width: 18vw;
-   height: 65vh;
-   background: white;
-   margin-left: 90vw;
-   border-radius: 10%;
 }
 
-.tchat_head{
-   background-color: #1E90FF;
-   border-radius: 10%;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
+/*chat du jeu*/
 
+.tchat {
+  position: absolute;
+  top: 270vh;
+  right: 4vh;
+  display: flex;
+  flex-direction: column;
+  width: 18vw;
+  height: 65vh;
+  background: white;
+  margin-left: 90vw;
+  border-radius: 10%;
 }
 
-.connexion_logo{
-   width: 4vw;
-   height: 7vh;
-   padding-left: 2vw;
+.tchat_head {
+  background-color: #1e90ff;
+  border-radius: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.connexion_logo img{
-   width: 4vw;
-   height: 7vh;
-   border-radius: 50%;
+.connexion_logo {
+  width: 4vw;
+  height: 7vh;
+  padding-left: 2vw;
 }
 
-.rondvert{
-   width: 1vw;
-   height: 2vh;
-   padding-top: 5vh;
-   padding-right: 2vw;
+.connexion_logo img {
+  width: 4vw;
+  height: 7vh;
+  border-radius: 50%;
 }
 
-.rondvert img{
-   width: 1vw;
-   height: 2vh;
-
+.rondvert {
+  width: 1vw;
+  height: 2vh;
+  padding-top: 5vh;
+  padding-right: 2vw;
 }
 
-.texte_head_chat
-{
-   padding-right: 3vw;
+.rondvert img {
+  width: 1vw;
+  height: 2vh;
+}
+
+.texte_head_chat {
+  padding-right: 3vw;
 }
 
 .bulle_gauche {
-   position: relative;
-   width: 100px;
-   border-radius: 4px;
-   padding: 20px;
-   background: #1E90FF;
-   color: white;
-   margin-top: 5vh;
+  position: relative;
+  width: 100px;
+  border-radius: 4px;
+  padding: 20px;
+  background: #1e90ff;
+  color: white;
+  margin-top: 5vh;
 }
 .bulle .fleche_gauche {
-   position: absolute;
-   top: 20px;
-   left: -40px;
-   width: 0;
-   height: 0;
-   border-width: 10px;
-   border-color: transparent #00aedf transparent transparent;
-   border-style: solid;
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-color: transparent #00aedf transparent transparent;
+  border-style: solid;
 }
 
-.tchat_body p{
-   color: gray;
-   margin: 0;
-
+.tchat_body p {
+  color: gray;
+  margin: 0;
 }
 
 .bulle_droite {
-   position: relative;
-   width: 100px;
-   border-radius: 4px;
-   padding: 20px;
-   background: #1E90FF;
-   color: white;
+  position: relative;
+  width: 100px;
+  border-radius: 4px;
+  padding: 20px;
+  background: #1e90ff;
+  color: white;
 }
 
 .bulle .fleche_droite {
-   position: absolute;
-   top: 20px;
-   left: -40px;
-   width: 0;
-   height: 0;
-   border-width: 10px;
-   border-color: transparent #00aedf transparent transparent;
-   border-style: solid;
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-color: transparent #00aedf transparent transparent;
+  border-style: solid;
 }
 
-.gauche{
-   margin-left: 0.3vw;
+.gauche {
+  margin-left: 0.3vw;
 }
 
-.droite{
-   margin-left: 8.6vw;
-
+.droite {
+  margin-left: 8.6vw;
 }
 
-.droite p{
-   margin-left: 5.6vw;
+.droite p {
+  margin-left: 5.6vw;
 }
 
-.chat_bas{
-   margin-top: 15vh;
-   margin-left: 1vw;
-   display: flex;
+.chat_bas {
+  margin-top: 15vh;
+  margin-left: 1vw;
+  display: flex;
 }
 
-.chat_bas img{
-   width: 3vw;
-   height: 5vh;
-   color: #1E90FF;
-   margin-top: 0.5vh;
-   margin-left: 0.5vw;
+.chat_bas img {
+  width: 3vw;
+  height: 5vh;
+  color: #1e90ff;
+  margin-top: 0.5vh;
+  margin-left: 0.5vw;
 }
+
+/*****************************************************************************/
+/*SHOP*/
+
+.titre_shop {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-image: url(../images/Shop_Japonais.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  height: 10vw;
+  padding-top: 9vw;
+  margin-top: 2%;
+}
+
+.Article_shop {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: auto;
+  width: 75%;
+  color: rgb(236, 150, 2);
+  margin-right: 15vw;
+  margin-bottom: 5vw;
+}
+
+/*FIN SHOP*/
+/*****************************************************************************/
