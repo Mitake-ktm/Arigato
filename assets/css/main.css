@@ -526,3 +526,179 @@ margin-top: 5%
    margin-top: 0.5vh;
    margin-left: 0.5vw;
 }
+
+/*page contact kevin*/
+.titre_contact{
+   display: flex;
+   justify-content: center;
+   color: white;
+   background-image: url(../images/contact.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   object-fit: contain;
+   margin-top: 2%;
+   padding-top: 6%;
+   padding-bottom: 6%;
+}
+
+ 
+.contact_three{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin-left: 14%;
+ }
+
+
+
+ .contact_logo{
+   background-color: #0E0B26;
+   padding-left: 7%;
+   padding-right: 7%;
+   padding-top: 3%;
+   padding-bottom: 1%;
+   text-align: center;
+   margin-top: 6%;
+   width: 10%;
+   margin-right: 5%;
+}
+
+
+.logo_mobile{
+   background-color: #EC9224;
+   color: white;
+   font-size: 175%;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   margin: auto;
+   justify-content: center;
+}
+.logo_location{
+   background-color: #EC9224;
+   color: white;
+   font-size: 175%;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   display: flex;
+   margin: auto;
+   align-items: center;
+   justify-content: center;
+}
+
+.logo_mail{
+   background-color: #EC9224;
+   color: white;
+   font-size: 175%;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   display: flex;
+   margin: auto;
+   align-items: center;
+   justify-content: center;
+}
+
+.logo_text{
+   font-size: 80%;
+   color: rgba(180, 187, 217, 255);
+}
+
+.contact_three i{
+   display: flex;
+   justify-content: center;
+}
+
+
+
+.bouton_contact{
+   margin: auto;
+    height: 1%;
+    padding: 1%;
+   background-color:  #EC9224 ;
+   color: white; 
+   border-style: none;
+   border-radius: 3px;
+   margin-top: 1%;
+}
+
+::placeholder{
+   color: grey;
+   padding-left: 3%;
+}
+
+.Formulaire_de_contact{
+   display: flex;
+   margin: 4rem 0;
+   margin-left: 16%;
+   flex-direction: column;
+}
+
+contact{
+   width: 80%;
+   margin: auto;
+}
+
+.form_contact{
+   display: flex;
+   margin-bottom: 3%;
+}
+
+.contact_nom{
+   width: 160%;
+   height: 195%;
+   background-color: #272645;
+   border-style: none; 
+   border-radius: 3px;
+}
+
+.nom_contact{
+   margin-right: 125px;
+}
+
+.contact_mail{
+   width: 160%;
+   height: 195%;
+   background-color: #272645 ;
+   border-style: none; 
+   border-radius: 3px;
+}
+
+.contact_sujet{
+   width: 498px; 
+   height: 40px; 
+   background-color: #272645 ;
+   border-style: none; border-radius: 3px;
+}
+
+.sujet_contact{
+   display: flex;
+   margin-bottom: 1%;
+}
+
+.contact_message{
+   width: 483px;
+   height: 175px;
+   background-color: #272645 ;
+   border-style: none; border-radius: 3px;
+}
+
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea::placeholder{
+   padding-left: 1%;
+}
