@@ -180,14 +180,12 @@ VALUES(1,4,'comment vas-tu ???','2023-10-24 9:43:50' );
 
 /*story 11*/
 
-ALTER TABLE message
-ADD isSender bool NOT NULL;
-
-SELECT M.message,M.date_heure_message, U.pseudo, M.isSender
+SELECT M.message,M.date_heure_message, U.pseudo,(U.id = 4) as isSender
 FROM message as M
 LEFT JOIN utilisateur as U
 ON M.id_expediteur = U.id
 WHERE M.date_heure_message >= NOW() - INTERVAL 1 DAY;
+
 
 /*story 12*/
 
@@ -208,6 +206,70 @@ FROM score
 LEFT JOIN utilisateur
 ON score.id_joueur = utilisateur.id
 WHERE pseudo LIKE '%au%' ;
+
+/*story 13*/
+
+    CREATE TABLE message_prive (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    personne1 INT UNSIGNED NOT NULL,
+    personne2 INT UNSIGNED NOT NULL,
+    message TEXT NULL,
+    est_lu BOOLEAN NOT NULL,
+    date_heure_envoie_M DATETIME NOT NULL,
+    date_heure_lecture DATETIME NULL,
+    PRIMARY KEY (id)
+    )
+        ENGINE = INNODB;
+
+/*story 14*/
+
+INSERT INTO message_prive( personne1, personne2, message, est_lu, date_heure_envoie_M, date_heure_lecture)
+VALUES(1,9,'salut',1,'2023-10-24 14:00','2023-10-24 14:00'),
+      (9,1,'salut mec',1,'2023-10-24 14:02', '2023-10-24 14:02'),
+      (2,5,'ça fait longtemps !!',0,'2023-10-24 14:10',NULL),
+      (5,6,'On se fait une partie ??',1,'2023-10-24 14:15','2023-10-24 14:15'),
+      (6,5,'Vas y chaud',1,'2023-10-24 14:17','2023-10-24 14:17'),
+      (3,4,'Tu es devenu meilleur',1,'2023-10-24 14:25','2023-10-24 14:25'),
+      (4,3,'Merci',0,'2023-10-24 14:30',NULL),
+      (8,9,'tu peux m aider ?',1,'2023-10-24 14:35', '2023-10-24 14:35'),
+      (9,8,'c est quoi le pb ?',1,'2023-10-24 14:37', '2023-10-24 14:37'),
+      (8,9,'j arrive pas au level 3',1,'2023-10-24 14:38', '2023-10-24 14:38'),
+      (9,8,'ok je vais t expliquer',1,'2023-10-24 14:39', '2023-10-24 14:39'),
+      (8,9,'Merci beaucoup',1,'2023-10-24 14:40','2023-10-24 14:40'),
+      (4,2,'salut t es nouveau ?',0,'2023-10-24 14:41',NULL),
+      (5,3,'Viens discord !',1,'2023-10-24 14:42', '2023-10-24 14:42'),
+      (3,5,'vas y j arrive',1,'2023-10-24 14:43', '2023-10-24 14:43'),
+      (5,1,'CC',0,'2023-10-24 14:45', NULL),
+      (1,8,'t es bien classé toi je crois non ?',1,'2023-10-24 14:47', '2023-10-24 14:47'),
+      (8,1,'cv je me débrouille quoi',1,'2023-10-24 14:48', '2023-10-24 14:48'),
+      (1,8,'t es modeste',1,'2023-10-24 14:50', '2023-10-24 14:50'),
+      (2,3,'salut',0,'2023-10-24 14:51', NULL);
+
+
+      INSERT INTO message_prive( personne1, personne2, message, est_lu, date_heure_envoie_M, date_heure_lecture)
+      VALUES(1,2,'a suprimer',1,'2023-10-24 15:13','2023-10-24 15:14');
+      
+      UPDATE message_prive
+      SET message = 'modifier'
+      WHERE id = 4;
+
+      DELETE FROM message_prive
+      WHERE id = 21;
+
+/*story 15*/
+
+SELECT U2.pseudo as pseudo_envoyeur,U.pseudo as pseudo_receveur,M.message, M.date_heure_envoie_M, M.date_heure_lecture, M.est_lu
+FROM message_prive AS M
+LEFT JOIN utilisateur as U
+ON M.personne2 = U.id
+LEFT JOIN utilisateur as U2
+ON M.personne1 = U2.id
+WHERE M.personne1 = 1 OR M.personne2 = 1;
+
+/*story 16*/
+
+
+
 
 
 
