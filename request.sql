@@ -264,9 +264,33 @@ LEFT JOIN utilisateur as U
 ON M.personne2 = U.id
 LEFT JOIN utilisateur as U2
 ON M.personne1 = U2.id
-WHERE M.personne1 = 1 OR M.personne2 = 1;
+WHERE (M.personne1 = 1 OR M.personne2 = 1) 
+AND M.date_heure_envoie_M = 
+(SELECT MAX(M2.date_heure_envoie_M)
+        FROM message_prive as M2
+        WHERE(
+        (M2.personne1 = M.personne1 AND M2.personne2 = M.personne2)
+        OR (M2.personne1 = M.personne2 AND M2.personne2 = M.personne1)));
+
 
 /*story 16*/
+
+SELECT U2.pseudo as pseudo_envoyeur,U.pseudo as pseudo_receveur,M.message, M.date_heure_envoie_M, M.date_heure_lecture, M.est_lu,
+( SELECT COUNT(id_joueur) FROM score WHERE id_joueur = M.personne1) as partie_jouer_j1,
+( SELECT COUNT(id_joueur) FROM score WHERE id_joueur = M.personne2) as partie_jouer_j2
+FROM message_prive AS M
+LEFT JOIN utilisateur as U
+ON M.personne2 = U.id
+LEFT JOIN utilisateur as U2
+ON M.personne1 = U2.id
+WHERE (M.personne1 = 1 OR M.personne2 = 1) 
+AND M.date_heure_envoie_M = 
+(SELECT MAX(M2.date_heure_envoie_M)
+        FROM message_prive as M2
+        WHERE(
+        (M2.personne1 = M.personne1 AND M2.personne2 = M.personne2)
+        OR (M2.personne1 = M.personne2 AND M2.personne2 = M.personne1)));
+
 
 
 
