@@ -44,6 +44,8 @@ CREATE TABLE utilisateur (
     )
         ENGINE = INNODB;
 
+
+
  /*story 2*/
 
 INSERT INTO utilisateur
@@ -114,6 +116,8 @@ VALUES (1,2,'bonsoir','2023-10-23 10:25:10'),
 INSERT INTO jeu (nom_jeu)
 VALUES ('shinkei suijaku');
 
+
+
 /*story 3*/
 
 CREATE UNIQUE INDEX index_email
@@ -125,6 +129,8 @@ ON utilisateur(pseudo);
 INSERT INTO utilisateur(email,mot_de_passe,pseudo,date_heure_inscription)
 VALUES('sayonara@gmail.com','13579','sayonara','2023-10-23 00:20:20');
 
+
+
 /*story 4*/
 
 UPDATE utilisateur
@@ -135,16 +141,22 @@ UPDATE utilisateur
 SET email = "sayonara@gmail"
 WHERE id=6 AND mot_de_passe ="2468" ;
 
+
+
 /*story 5*/
 
 SELECT *
 FROM utilisateur
 WHERE email = "sayonara@gmail" AND mot_de_passe = "2468";
 
+
+
 /*story 6*/
 
 INSERT INTO jeu (nom_jeu)
 VALUES ('shinkei suijaku');
+
+
 
 /*story 7*/
 
@@ -155,6 +167,8 @@ ON S.id_joueur = U.id
 LEFT JOIN jeu AS J
 ON S.id_jeu = J.id
 ORDER BY J.nom_jeu ASC,S.difficulte ASC,S.score_partie DESC;
+
+
 
 /*story 8*/
 
@@ -167,16 +181,22 @@ ON S.id_jeu = J.id
 WHERE S.id_jeu = 1 AND U.id = 1 AND S.difficulte = 1
 ORDER BY J.nom_jeu ASC,S.difficulte ASC,S.score_partie DESC;
 
+
+
 /*story 9*/
 
 UPDATE score
 SET score_partie = 2
 WHERE id_joueur = 1 AND id_jeu = 1 AND difficulte = 1;
 
+
+
 /*story 10*/
 
 INSERT INTO message(id_jeu,id_expediteur,message,date_heure_message)
 VALUES(1,4,'comment vas-tu ???','2023-10-24 9:43:50' );
+
+
 
 /*story 11*/
 
@@ -185,6 +205,7 @@ FROM message as M
 LEFT JOIN utilisateur as U
 ON M.id_expediteur = U.id
 WHERE M.date_heure_message >= NOW() - INTERVAL 1 DAY;
+
 
 
 /*story 12*/
@@ -207,6 +228,8 @@ LEFT JOIN utilisateur
 ON score.id_joueur = utilisateur.id
 WHERE pseudo LIKE '%au%' ;
 
+
+
 /*story 13*/
 
     CREATE TABLE message_prive (
@@ -220,6 +243,8 @@ WHERE pseudo LIKE '%au%' ;
     PRIMARY KEY (id)
     )
         ENGINE = INNODB;
+
+
 
 /*story 14*/
 
@@ -256,6 +281,8 @@ VALUES(1,9,'salut',1,'2023-10-24 14:00','2023-10-24 14:00'),
       DELETE FROM message_prive
       WHERE id = 21;
 
+
+
 /*story 15*/
 
 SELECT U2.pseudo as pseudo_envoyeur,U.pseudo as pseudo_receveur,M.message, M.date_heure_envoie_M, M.date_heure_lecture, M.est_lu
@@ -273,11 +300,37 @@ AND M.date_heure_envoie_M =
         OR (M2.personne1 = M.personne2 AND M2.personne2 = M.personne1)));
 
 
+
+
 /*story 16*/
 
-SELECT U2.pseudo as pseudo_envoyeur,U.pseudo as pseudo_receveur,M.message, M.date_heure_envoie_M, M.date_heure_lecture, M.est_lu,
+SELECT U2.pseudo as pseudo_envoyeur,
+U.pseudo as pseudo_receveur,M.message, 
+M.date_heure_envoie_M, M.date_heure_lecture,
+M.est_lu,
 ( SELECT COUNT(id_joueur) FROM score WHERE id_joueur = M.personne1) as partie_jouer_j1,
-( SELECT COUNT(id_joueur) FROM score WHERE id_joueur = M.personne2) as partie_jouer_j2
+(SELECT COUNT(id_joueur) FROM score WHERE id_joueur = M.personne2) as partie_jouer_j2,
+
+(SELECT nom_jeu
+FROM jeu
+WHERE id = (SELECT id_jeu
+            FROM score
+            WHERE id_joueur = M.personne1
+            GROUP BY id_jeu
+            ORDER BY COUNT(id) DESC
+            LIMIT 1) 
+            )as jeu_plus_joue_j1,
+
+(SELECT nom_jeu
+FROM jeu
+WHERE id = (SELECT id_jeu
+            FROM score
+            WHERE id_joueur = M.personne2
+            GROUP BY id_jeu
+            ORDER BY COUNT(id) DESC
+            LIMIT 1)
+            )as jeu_plus_joue_j2
+
 FROM message_prive AS M
 LEFT JOIN utilisateur as U
 ON M.personne2 = U.id
@@ -290,6 +343,11 @@ AND M.date_heure_envoie_M =
         WHERE(
         (M2.personne1 = M.personne1 AND M2.personne2 = M.personne2)
         OR (M2.personne1 = M.personne2 AND M2.personne2 = M.personne1)));
+
+
+
+/*story 17*/
+
 
 
 
