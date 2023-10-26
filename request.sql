@@ -348,6 +348,138 @@ AND M.date_heure_envoie_M =
 
 /*story 17*/
 
+SELECT Année, Mois, Top1, Top2, Top3, Total_parties, jeu_le_plus_joué
+FROM (
+    SELECT YEAR(CURRENT_TIMESTAMP) AS Année, '1' AS Mois,
+    (SELECT pseudo
+    FROM utilisateur
+    JOIN score ON score.id_joueur = utilisateur.id
+    WHERE score.score_partie = (SELECT score_partie
+                              FROM score
+                              WHERE score.id_joueur = utilisateur.id
+                              AND MONTH(date_heure_partie) = 10
+                              AND difficulte = 1
+                              AND YEAR(date_heure_partie) = Année
+                              ORDER BY score_partie DESC
+                              LIMIT 1)
+    ORDER BY score_partie DESC
+    LIMIT 1) AS Top1,
+
+    (SELECT pseudo
+    FROM utilisateur
+    JOIN score ON score.id_joueur = utilisateur.id
+    WHERE score.score_partie = (SELECT score_partie
+                              FROM score
+                              WHERE score.id_joueur = utilisateur.id
+                              AND MONTH(date_heure_partie) = 10
+                              AND difficulte = 1
+                              AND YEAR(date_heure_partie) = Année
+                              ORDER BY score_partie DESC
+                              LIMIT 1 OFFSET 2)
+    ORDER BY score_partie DESC
+    LIMIT 1) AS Top2,
+
+    (SELECT pseudo
+    FROM utilisateur
+    JOIN score ON score.id_joueur = utilisateur.id
+    WHERE score.score_partie = (SELECT score_partie
+                              FROM score
+                              WHERE score.id_joueur = utilisateur.id
+                              AND MONTH(date_heure_partie) = 10
+                              AND difficulte = 1
+                              AND YEAR(date_heure_partie) = Année
+                              ORDER BY score_partie DESC
+                              LIMIT 1 OFFSET 3)
+    ORDER BY score_partie DESC
+    LIMIT 1) AS Top3,
+
+    (SELECT COUNT(id_jeu)
+    FROM score
+    WHERE MONTH(date_heure_partie) = 10
+    AND YEAR(date_heure_partie) = Année
+    AND difficulte = 1) AS Total_parties,
+
+    (SELECT nom_jeu
+    FROM jeu
+    WHERE id = (SELECT id_jeu
+                FROM score
+                WHERE MONTH(date_heure_partie) = 10
+                AND YEAR(date_heure_partie) = Année
+                AND difficulte = 1
+                GROUP BY id_jeu
+                ORDER BY COUNT(id) DESC
+                LIMIT 1)
+    ) AS jeu_le_plus_joué
+) AS Resultats1
+
+UNION
+
+SELECT Année, Mois, Top1, Top2, Top3, Total_parties, jeu_le_plus_joué
+FROM (
+    SELECT YEAR(CURRENT_TIMESTAMP) AS Année, '2' AS Mois,
+    (SELECT pseudo
+    FROM utilisateur
+    JOIN score ON score.id_joueur = utilisateur.id
+    WHERE score.score_partie = (SELECT score_partie
+                              FROM score
+                              WHERE score.id_joueur = utilisateur.id
+                              AND MONTH(date_heure_partie) = 2
+                              AND difficulte = 1
+                              AND YEAR(date_heure_partie) = Année
+                              ORDER BY score_partie DESC
+                              LIMIT 1)
+    ORDER BY score_partie DESC
+    LIMIT 1) AS Top1,
+
+    (SELECT pseudo
+    FROM utilisateur
+    JOIN score ON score.id_joueur = utilisateur.id
+    WHERE score.score_partie = (SELECT score_partie
+                              FROM score
+                              WHERE score.id_joueur = utilisateur.id
+                              AND MONTH(date_heure_partie) = 2
+                              AND difficulte = 1
+                              AND YEAR(date_heure_partie) = Année
+                              ORDER BY score_partie DESC
+                              LIMIT 1 OFFSET 2)
+    ORDER BY score_partie DESC
+    LIMIT 1) AS Top2,
+
+    (SELECT pseudo
+    FROM utilisateur
+    JOIN score ON score.id_joueur = utilisateur.id
+    WHERE score.score_partie = (SELECT score_partie
+                              FROM score
+                              WHERE score.id_joueur = utilisateur.id
+                              AND MONTH(date_heure_partie) = 2
+                              AND difficulte = 1
+                              AND YEAR(date_heure_partie) = Année
+                              ORDER BY score_partie DESC
+                              LIMIT 1 OFFSET 3)
+    ORDER BY score_partie DESC
+    LIMIT 1) AS Top3,
+
+    (SELECT COUNT(id_jeu)
+    FROM score
+    WHERE MONTH(date_heure_partie) = 2
+    AND YEAR(date_heure_partie) = Année
+    AND difficulte = 1) AS Total_parties,
+
+    (SELECT nom_jeu
+    FROM jeu
+    WHERE id = (SELECT id_jeu
+                FROM score
+                WHERE MONTH(date_heure_partie) = 2
+                AND YEAR(date_heure_partie) = Année
+                AND difficulte = 1
+                GROUP BY id_jeu
+                ORDER BY COUNT(id) DESC
+                LIMIT 1)
+    ) AS jeu_le_plus_joué
+) AS Resultats2;
+
+
+
 
 
 
