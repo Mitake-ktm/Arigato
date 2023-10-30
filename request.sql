@@ -44,6 +44,26 @@ CREATE TABLE utilisateur (
     )
         ENGINE = INNODB;
 
+        
+
+    ALTER TABLE score
+    ADD FOREIGN KEY (id_joueur)
+    REFERENCES utilisateur (id);
+
+    ALTER TABLE score
+    ADD FOREIGN KEY (id_jeu)
+    REFERENCES jeu (id);
+
+    ALTER TABLE message
+    ADD FOREIGN KEY (id_jeu)
+    REFERENCES jeu (id);
+
+    ALTER TABLE message
+    ADD FOREIGN KEY (id_expediteur)
+    REFERENCES utilisateur (id);
+
+
+
 
 
  /*story 2*/
@@ -477,24 +497,3 @@ FROM (
                 LIMIT 1)
     ) AS jeu_le_plus_joué
 ) AS Resultats2;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
