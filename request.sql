@@ -162,20 +162,14 @@ VALUES
 /*story 3*/
 
 CREATE UNIQUE INDEX index_email
-ON utilisateur(email);
+  ON utilisateur(email);
 
 CREATE UNIQUE INDEX index_pseudo
-ON utilisateur(pseudo);
+  ON utilisateur(pseudo);
 
-INSERT INTO
-  utilisateur(email, mot_de_passe, pseudo, date_heure_inscription)
+INSERT INTO utilisateur(email, mot_de_passe, pseudo, date_heure_inscription)
 VALUES
-  (
-    'sayonara@gmail.com'
-    , '13579'
-    , 'sayonara'
-    , '2023-10-23 00:20:20'
-  );
+  ('sayonara@gmail.com', '13579', 'sayonara', '2023-10-23 00:20:20');
 
 /*story 4*/
 
@@ -194,8 +188,7 @@ WHERE
 
 /*story 5*/
 
-SELECT
-  *
+SELECT*
 FROM
   utilisateur
 WHERE
@@ -204,427 +197,189 @@ WHERE
 
 /*story 6*/
 
-INSERT INTO
-  jeu (nom_jeu)
-VALUES
-  ('shinkei suijaku');
+INSERT INTO jeu (nom_jeu)
+VALUES('shinkei suijaku');
 
 /*story 7*/
 
-SELECT
-  J.nom_jeu
-  , U.pseudo
-  , S.difficulte
-  , S.score_partie
-FROM
-  score as S
-  LEFT JOIN utilisateur AS U
-ON S.id_joueur = U.id
+SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
+
+FROM score as S
+LEFT JOIN utilisateur AS U
+  ON S.id_joueur = U.id
+
 LEFT JOIN jeu AS J
-ON S.id_jeu = J.id
-ORDER BY
-  J.nom_jeu ASC
-  , S.difficulte ASC
-  , S.score_partie DESC;
+  ON S.id_jeu = J.id
+
+ORDER BY J.nom_jeu ASC, S.difficulte ASC, S.score_partie DESC;
 
 /*story 8*/
 
-SELECT
-  J.nom_jeu
-  , U.pseudo
-  , S.difficulte
-  , S.score_partie
-FROM
-  score as S
-  LEFT JOIN utilisateur AS U
-ON S.id_joueur = U.id
+SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
+
+FROM score as S
+LEFT JOIN utilisateur AS U
+  ON S.id_joueur = U.id
 LEFT JOIN jeu AS J
-ON S.id_jeu = J.id
-WHERE
-  S.id_jeu = 1
+  ON S.id_jeu = J.id
+WHERE S.id_jeu = 1
   AND U.id = 1
   AND S.difficulte = 1
-ORDER BY
-  J.nom_jeu ASC
-  , S.difficulte ASC
-  , S.score_partie DESC;
+
+ORDER BY J.nom_jeu ASC, S.difficulte ASC, S.score_partie DESC;
 
 /*story 9*/
 
-UPDATE
-  score
+UPDATE score
+
 SET score_partie = 2
-WHERE
-  id_joueur = 1
+WHERE id_joueur = 1
   AND id_jeu = 1
   AND difficulte = 1;
 
 /*story 10*/
 
-INSERT INTO
-  message(id_jeu, id_expediteur, message, date_heure_message)
-VALUES
-  (1, 4, 'comment vas-tu ???', '2023-10-24 9:43:50');
+INSERT INTO message(id_jeu, id_expediteur, message, date_heure_message)
+
+VALUES (1, 4, 'comment vas-tu ???', '2023-10-24 9:43:50');
 
 /*story 11*/
 
-SELECT
-  M.message
-  , M.date_heure_message
-  , U.pseudo
-  , (U.id = 4) as isSender
-FROM
-  message as M
-  LEFT JOIN utilisateur as U
-ON M.id_expediteur = U.id
-WHERE
-  M.date_heure_message >= NOW() - INTERVAL 1 DAY;
+SELECT M.message, M.date_heure_message, U.pseudo, (U.id = 4) as isSender
+
+FROM message as M
+LEFT JOIN utilisateur as U
+  ON M.id_expediteur = U.id
+WHERE M.date_heure_message >= NOW() - INTERVAL 1 DAY;
 
 
 /*story 12*/
 
-INSERT INTO
-  utilisateur
-VALUES
-  (
-    7
-    , 'oui@gmail'
-    , '123456'
-    , 'Thibaud'
-    , '2020-10-25 09:49:10'
-    , '2023-10-23'
-  )
-  , (
-    8
-    , 'non@gmail'
-    , '654321'
-    , 'Aurélien'
-    , '2019-11-09 15:20:28'
-    , '2020-10-23'
-  )
-  , (
-    9
-    , 'momomo@gmail'
-    , '7890'
-    , 'Maud'
-    , '2022-04-18 04:30:29'
-    , '2023-10-23'
-  );
+INSERT INTO utilisateur
+
+VALUES(7, 'oui@gmail' , '123456', 'Thibaud', '2020-10-25 09:49:10', '2023-10-23'),
+      (8, 'non@gmail', '654321', 'Aurélien', '2019-11-09 15:20:28', '2020-10-23'),
+      (9, 'momomo@gmail', '7890', 'Maud', '2022-04-18 04:30:29', '2023-10-23');
+
+INSERT INTO score(id_joueur, id_jeu, difficulte, score_partie, date_heure_partie)
+
+VALUES(7, 1, 1, 10, '2020-02-01 10:22:40'), 
+      (8, 1, 3, 15, '2020-02-01 10:22:40'), 
+      (9, 1, 2, 12, '2020-02-01 10:22:40');
 
 
-INSERT INTO
-  score(
-    id_joueur
-    , id_jeu
-    , difficulte
-    , score_partie
-    , date_heure_partie
-  )
-VALUES
-  (7, 1, 1, 10, '2020-02-01 10:22:40')
-  , (8, 1, 3, 15, '2020-02-01 10:22:40')
-  , (9, 1, 2, 12, '2020-02-01 10:22:40');
+SELECT score.id, `id_joueur`, `id_jeu`, `difficulte`, `score_partie`, `date_heure_partie`
 
-
-SELECT
-  score.id
-  , `id_joueur`
-  , `id_jeu`
-  , `difficulte`
-  , `score_partie`
-  , `date_heure_partie`
-FROM
-  score
-  LEFT JOIN utilisateur
-ON score.id_joueur = utilisateur.id
-WHERE
-  pseudo LIKE '%au%';
+FROM score
+LEFT JOIN utilisateur
+  ON score.id_joueur = utilisateur.id
+WHERE pseudo LIKE '%au%';
 
 /*story 13*/
 
 CREATE TABLE message_prive (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT
-  , personne1 INT UNSIGNED NOT NULL
-  , personne2 INT UNSIGNED NOT NULL
-  , message TEXT NULL
-  , est_lu BOOLEAN NOT NULL
-  , date_heure_envoie_M DATETIME NOT NULL
-  , date_heure_lecture DATETIME NULL
-  , PRIMARY KEY (id)
-) ENGINE = INNODB;
+  personne1 INT UNSIGNED NOT NULL,
+  personne2 INT UNSIGNED NOT NULL,
+  message TEXT NULL,
+  est_lu BOOLEAN NOT NULL,
+  date_heure_envoie_M DATETIME NOT NULL,
+  date_heure_lecture DATETIME NULL,
+  PRIMARY KEY (id),
+) 
+      ENGINE = INNODB;
 
 /*story 14*/
 
 INSERT INTO
-  message_prive(
-    personne1
-    , personne2
-    , message
-    , est_lu
-    , date_heure_envoie_M
-    , date_heure_lecture
-  )
-VALUES
-  (
-    1
-    , 9
-    , 'salut'
-    , 1
-    , '2023-10-24 14:00'
-    , '2023-10-24 14:00'
-  )
-  , (
-    9
-    , 1
-    , 'salut mec'
-    , 1
-    , '2023-10-24 14:02'
-    , '2023-10-24 14:02'
-  )
-  , (
-    2
-    , 5
-    , 'ça fait longtemps !!'
-    , 0
-    , '2023-10-24 14:10'
-    , NULL
-  )
-  , (
-    5
-    , 6
-    , 'On se fait une partie ??'
-    , 1
-    , '2023-10-24 14:15'
-    , '2023-10-24 14:15'
-  )
-  , (
-    6
-    , 5
-    , 'Vas y chaud'
-    , 1
-    , '2023-10-24 14:17'
-    , '2023-10-24 14:17'
-  )
-  , (
-    3
-    , 4
-    , 'Tu es devenu meilleur'
-    , 1
-    , '2023-10-24 14:25'
-    , '2023-10-24 14:25'
-  )
-  , (4, 3, 'Merci', 0, '2023-10-24 14:30', NULL)
-  , (
-    8
-    , 9
-    , 'tu peux m aider ?'
-    , 1
-    , '2023-10-24 14:35'
-    , '2023-10-24 14:35'
-  )
-  , (
-    9
-    , 8
-    , 'c est quoi le pb ?'
-    , 1
-    , '2023-10-24 14:37'
-    , '2023-10-24 14:37'
-  )
-  , (
-    8
-    , 9
-    , 'j arrive pas au level 3'
-    , 1
-    , '2023-10-24 14:38'
-    , '2023-10-24 14:38'
-  )
-  , (
-    9
-    , 8
-    , 'ok je vais t expliquer'
-    , 1
-    , '2023-10-24 14:39'
-    , '2023-10-24 14:39'
-  )
-  , (
-    8
-    , 9
-    , 'Merci beaucoup'
-    , 1
-    , '2023-10-24 14:40'
-    , '2023-10-24 14:40'
-  )
-  , (
-    4
-    , 2
-    , 'salut t es nouveau ?'
-    , 0
-    , '2023-10-24 14:41'
-    , NULL
-  )
-  , (
-    5
-    , 3
-    , 'Viens discord !'
-    , 1
-    , '2023-10-24 14:42'
-    , '2023-10-24 14:42'
-  )
-  , (
-    3
-    , 5
-    , 'vas y j arrive'
-    , 1
-    , '2023-10-24 14:43'
-    , '2023-10-24 14:43'
-  )
-  , (5, 1, 'CC', 0, '2023-10-24 14:45', NULL)
-  , (
-    1
-    , 8
-    , 't es bien classé toi je crois non ?'
-    , 1
-    , '2023-10-24 14:47'
-    , '2023-10-24 14:47'
-  )
-  , (
-    8
-    , 1
-    , 'cv je me débrouille quoi'
-    , 1
-    , '2023-10-24 14:48'
-    , '2023-10-24 14:48'
-  )
-  , (
-    1
-    , 8
-    , 't es modeste'
-    , 1
-    , '2023-10-24 14:50'
-    , '2023-10-24 14:50'
-  )
-  , (2, 3, 'salut', 0, '2023-10-24 14:51', NULL);
+  message_prive(personne1, personne2, message, est_lu, date_heure_envoie_M, date_heure_lecture)
+VALUES (1, 9, 'salut', 1, '2023-10-24 14:00', '2023-10-24 14:00'), 
+       (9, 1, 'salut mec', 1, '2023-10-24 14:02', '2023-10-24 14:02'), 
+       (2, 5, 'ça fait longtemps !!', 0, '2023-10-24 14:10', NULL), 
+       (5, 6, 'On se fait une partie ??', 1, '2023-10-24 14:15', '2023-10-24 14:15'), 
+       (6 ,5, 'Vas y chaud' , 1 , '2023-10-24 14:17', '2023-10-24 14:17'),
+       (3, 4, 'Tu es devenu meilleur' , 1 , '2023-10-24 14:25', '2023-10-24 14:25'),
+       (4, 3, 'Merci', 0, '2023-10-24 14:30', NULL), 
+       (8, 9, 'tu peux m aider ?' , 1, '2023-10-24 14:35' , '2023-10-24 14:35'), 
+       (9, 8, 'c est quoi le pb ?', 1, '2023-10-24 14:37', '2023-10-24 14:37'), 
+       (8, 9, 'j arrive pas au level 3', 1, '2023-10-24 14:38', '2023-10-24 14:38'), 
+       (9, 8, 'ok je vais t expliquer', 1 , '2023-10-24 14:39', '2023-10-24 14:39'), 
+       (8, 9, 'Merci beaucoup', 1, '2023-10-24 14:40', '2023-10-24 14:40'),
+       (4, 2, 'salut t es nouveau ?', 0, '2023-10-24 14:41', NULL), 
+       (5, 3, 'Viens discord !', 1, '2023-10-24 14:42' , '2023-10-24 14:42'),
+       (3, 5, 'vas y j arrive', 1, '2023-10-24 14:43', '2023-10-24 14:43'),
+       (5, 1, 'CC', 0, '2023-10-24 14:45', NULL), 
+       (1 ,8, 't es bien classé toi je crois non ?' , 1 , '2023-10-24 14:47' , '2023-10-24 14:47'), 
+       (8, 1, 'cv je me débrouille quoi', 1, '2023-10-24 14:48' , '2023-10-24 14:48'),
+       (1, 8, 't es modeste', 1, '2023-10-24 14:50', '2023-10-24 14:50' ), (2, 3, 'salut', 0, '2023-10-24 14:51', NULL);
 
 
-INSERT INTO
-  message_prive(
-    personne1
-    , personne2
-    , message
-    , est_lu
-    , date_heure_envoie_M
-    , date_heure_lecture
-  )
-VALUES
-  (
-    1
-    , 2
-    , 'a suprimer'
-    , 1
-    , '2023-10-24 15:13'
-    , '2023-10-24 15:14'
-  );
+INSERT INTO message_prive( personne1, personne2, message, est_lu, date_heure_envoie_M, date_heure_lecture)
+VALUES (1, 2, 'a suprimer', 1, '2023-10-24 15:13', '2023-10-24 15:14');
 
-UPDATE
-  message_prive
+
+UPDATE message_prive
 SET message = 'modifier'
-WHERE
-  id = 4;
+WHERE id = 4;
 
-DELETE FROM
-  message_prive
-WHERE
-  id = 21;
+DELETE FROM message_prive
+WHERE id = 21;
 
 /*story 15*/
 
-SELECT
-  U2.pseudo as pseudo_envoyeur
-  , U.pseudo as pseudo_receveur
-  , M.message
-  , M.date_heure_envoie_M
-  , M.date_heure_lecture
-  , M.est_lu
-FROM
-  message_prive AS M
-  LEFT JOIN utilisateur as U
-ON M.personne2 = U.id
+SELECT U2.pseudo as pseudo_envoyeur , U.pseudo as pseudo_receveur, M.message, M.date_heure_envoie_M, M.date_heure_lecture, M.est_lu
+
+FROM message_prive AS M
+LEFT JOIN utilisateur as U
+  ON M.personne2 = U.id
 LEFT JOIN utilisateur as U2
-ON M.personne1 = U2.id
-WHERE
-  (
-    M.personne1 = 1
-    OR M.personne2 = 1
+  ON M.personne1 = U2.id
+
+WHERE(M.personne1 = 1 OR M.personne2 = 1)
+  AND M.date_heure_envoie_M = 
+(SELECT MAX(M2.date_heure_envoie_M)
+
+FROM message_prive as M2
+WHERE((M2.personne1 = M.personne1 
+  AND M2.personne2 = M.personne2) 
+    OR ( M2.personne1 = M.personne2 
+  AND M2.personne2 = M.personne1)
   )
-  AND M.date_heure_envoie_M = (
-    SELECT
-      MAX(M2.date_heure_envoie_M)
-    FROM
-      message_prive as M2
-    WHERE
-(
-        (
-          M2.personne1 = M.personne1
-          AND M2.personne2 = M.personne2
-        )
-        OR (
-          M2.personne1 = M.personne2
-          AND M2.personne2 = M.personne1
-        )
-      )
-  );
+);
 
 
 /*story 16*/
 
-SELECT
-  U2.pseudo as pseudo_envoyeur
-  , U.pseudo as pseudo_receveur
-  , M.message
-  , M.date_heure_envoie_M
-  , M.date_heure_lecture
-  , M.est_lu
-  , (
-    SELECT
-      COUNT(id_joueur)
-    FROM
-      score
-    WHERE
-      id_joueur = M.personne1
-  ) as partie_jouer_j1
-  , (
-    SELECT
-      COUNT(id_joueur)
-    FROM
-      score
-    WHERE
-      id_joueur = M.personne2
-  ) as partie_jouer_j2
-FROM
-  message_prive AS M
-  LEFT JOIN utilisateur as U
-ON M.personne2 = U.id
-LEFT JOIN utilisateur as U2
-ON M.personne1 = U2.id
-WHERE
-  (
-    M.personne1 = 1
-    OR M.personne2 = 1
+SELECT U2.pseudo as pseudo_envoyeur, U.pseudo as pseudo_receveur, M.message, M.date_heure_envoie_M, M.date_heure_lecture, M.est_lu, 
+
+(SELECT COUNT(id_joueur) 
+FROM score
+WHERE id_joueur = M.personne1 ) as partie_jouer_j1,
+
+(SELECT COUNT(id_joueur)
+FROM score
+WHERE id_joueur = M.personne2) as partie_jouer_j2
+
+FROM message_prive AS M
+LEFT JOIN utilisateur as U
+  ON M.personne2 = U.id
+LEFT JOIN utilisateur as U2N 
+     M.personne1 = U2.id
+
+WHERE(M.personne1 = 1
+      OR 
+      M.personne2 = 1)
+    AND 
+      M.date_heure_envoie_M = (SELECTMAX(M2.date_heure_envoie_M) 
+
+FROM message_prive as M2
+
+WHERE((M2.personne1 = M.personne1
+        AND 
+       M2.personne2 = M.personne2)
+          OR 
+       (M2.personne1 = M.personne2
+        AND 
+       M2.personne2 = M.personne1)
   )
-  AND M.date_heure_envoie_M = (
-    SELECT
-      MAX(M2.date_heure_envoie_M)
-    FROM
-      message_prive as M2
-    WHERE
-(
-        (
-          M2.personne1 = M.personne1
-          AND M2.personne2 = M.personne2
-        )
-        OR (
-          M2.personne1 = M.personne2
-          AND M2.personne2 = M.personne1
-        )
-      )
-  );
+);
