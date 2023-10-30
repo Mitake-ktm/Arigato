@@ -54,7 +54,7 @@
 
     <div class="image-container">
       <img
-        src="../Arigato/assets/images/Mon_fuji_carte.png"
+        src="../assets/images/Mon_fuji_carte.png"
         alt="Carpe dorée shop" />
 
       <img src="assets/images/Musashi_carte.png" alt="Musashi" />
