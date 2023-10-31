@@ -62,29 +62,81 @@ require_once SITE_ROOT . 'utils/database.php';
         <table class="table">
           <tr>
             <td>
-              <img
-                src="<?= PROJECT_FOLDER ?>assets/images/Parties_Jouées.png"
-                alt="Image 1" />
+                <div class="image_partie_joue">
+                  <div class="texte_centre">
+                      <b><p><?php 
+                        $pdoStatement = $pdo->prepare('SELECT COUNT(id) AS parties_jouees FROM score;');
+                        $pdoStatement->execute();
+                        $parties_joues = $pdoStatement->fetch();
+                        echo $parties_joues->parties_jouees;
+                      ?></p>
+                      </b>
+                    </div>
+                    <div class="texte_centre2">
+                       <b><p>Parties Jouées</p></b>
+                    </div>
+                </div>
+
             </td>
             <br />
             <td>
-              <img
-                src="<?= PROJECT_FOLDER ?>assets/images/Joueurs_Connectés.png"
-                alt="Image 2" />
+              <div class="image_joueur_connect">
+                  <div class="texte_centre">
+                      <b><p><?php 
+                        $pdoStatement = $pdo->prepare('SELECT COUNT(id) AS joueurconnect
+                        FROM utilisateur
+                        WHERE date_heure_connexion >= NOW() - INTERVAL 30 MINUTE;');
+                        $pdoStatement->execute();
+                        $parties_joues = $pdoStatement->fetch();
+                        echo $parties_joues->joueurconnect;
+                      ?></p>
+                      </b>
+                    </div>
+                    <div class="texte_centre2">
+                       <b><p>Parties Jouées</p></b>
+                    </div>
+                </div>
+
             </td>
             <br />
           </tr>
           <tr>
             <td>
-              <img
-                src="<?= PROJECT_FOLDER ?>assets/images/Temps_Record.png"
-                alt="Image 3" />
+              <div class="image_temps_record">
+                  <div class="texte_centre">
+                      <b><p><?php 
+                        $pdoStatement = $pdo->prepare('SELECT score_partie AS temps_records
+                        FROM score
+                        ORDER BY score_partie DESC
+                        LIMIT 1;');
+                        $pdoStatement->execute();
+                        $parties_joues = $pdoStatement->fetch();
+                        echo $parties_joues->temps_records;
+                      ?></p>
+                      </b>
+                    </div>
+                    <div class="texte_centre2">
+                       <b><p>Parties Jouées</p></b>
+                    </div>
+                </div>
             </td>
             <br />
             <td>
-              <img
-                src="<?= PROJECT_FOLDER ?>assets/images/Joueurs_Inscrit.png"
-                alt="Image 4" />
+              <div class="image_joueur_inscrit">
+                  <div class="texte_centre">
+                      <b><p><?php 
+                        $pdoStatement = $pdo->prepare('SELECT COUNT(id) AS nombre_de_joueur_inscrit
+                        FROM utilisateur;');
+                        $pdoStatement->execute();
+                        $parties_joues = $pdoStatement->fetch();
+                        echo $parties_joues->nombre_de_joueur_inscrit;
+                      ?></p>
+                      </b>
+                    </div>
+                    <div class="texte_centre2">
+                       <b><p>Parties Jouées</p></b>
+                    </div>
+                </div>
             </td>
           </tr>
         </table>
