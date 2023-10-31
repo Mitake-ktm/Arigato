@@ -739,13 +739,13 @@ textarea::placeholder{
 }
 
 .texte_centre{
-   padding-top: 1vh;
-   font-size: 31px;
+   padding-top: 1vw;
+   font-size: 2vw;
 }
 
 .texte_centre2{
-   font-size: 20px;
-   margin-bottom: 10vh;
+   font-size: 1.5vw;
+   margin-bottom: 10vw;
 }
 
 .image_joueur_connect{
