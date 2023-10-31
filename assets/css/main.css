@@ -370,7 +370,7 @@ margin-top: 5%
 }
 .titrescore{
  margin-top: 10%;
- margin-left: 40%;
+ text-align: center;
 }
 .score{
  display: flex;
@@ -728,4 +728,16 @@ textarea::placeholder{
   color: rgb(236, 150, 2);
   margin-right: 15vw;
   margin-bottom: 5vw;
+}
+
+.recherche_score{ 
+   height: 40px; 
+   background-color: #272645 ;
+   border-style: none; border-radius: 3px;
+}
+
+.score_recherche{
+   display: flex;
+   margin-bottom: 3%;
+   justify-content: center;
 }
