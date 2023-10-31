@@ -44,7 +44,7 @@ CREATE TABLE utilisateur (
     )
         ENGINE = INNODB;
 
-        
+
 
     ALTER TABLE score
     ADD FOREIGN KEY (id_joueur)
@@ -497,3 +497,23 @@ FROM (
                 LIMIT 1)
     ) AS jeu_le_plus_joué
 ) AS Resultats2;
+
+
+/*Données dynamique pour la page d'accueil*/
+
+SELECT COUNT(id)
+FROM score
+as Parties_jouees;
+
+SELECT COUNT(id)
+FROM utilisateur
+as nombre_de_joueur_inscrit;
+
+SELECT score_partie
+FROM score
+ORDER BY score_partie DESC
+LIMIT 1;
+
+SELECT COUNT(id)
+FROM utilisateur
+WHERE date_heure_connexion >= NOW() - INTERVAL 30 MINUTE;
