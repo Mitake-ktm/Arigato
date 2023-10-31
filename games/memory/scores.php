@@ -44,6 +44,12 @@ $tableau_score = $pdoStatement->fetchAll();
 
       <h1 class="titrescore"><span>Tableau Des Scores</span></h1><br>
 
+      <div class="score_recherche">
+          <form method="post">
+                    <input class="recherche_score" type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
+          </form>
+                </div>
+
       <div class="score">
 
         <table>
