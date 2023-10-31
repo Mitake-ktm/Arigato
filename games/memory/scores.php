@@ -1,62 +1,95 @@
 <?php
+
+
+
 require_once '../../utils/common.php';
+
 require_once SITE_ROOT . 'utils/database.php';
+
+
+// Le joueur connecté (exemple)
+
+$joueurConnecte = "slt";
+
+
+$pdoStatement = $pdo->prepare('SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
+  FROM score as S
+  LEFT JOIN utilisateur AS U
+  ON S.id_joueur = U.id
+  LEFT JOIN jeu AS J
+  ON S.id_jeu = J.id
+  WHERE S.id_jeu = 1 AND U.id = 1 AND S.difficulte = 1
+  ORDER BY J.nom_jeu ASC,S.difficulte ASC,S.score_partie DESC;');
+$pdoStatement->execute();
+$tableau_score = $pdoStatement->fetchAll();
 ?>
+
+
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <?php require_once SITE_ROOT . 'partials/head.php'; ?>
+
+
 <body>
-<?php require_once SITE_ROOT . 'partials/header.php'; ?>
 
-    <main>
-        <div class="Fond_tableau">
-        <h1 class="titrescore"><span>Tableau Des Scores</span></h1><br>
-        <div class="score">
+  <?php require_once SITE_ROOT . 'partials/header.php'; ?>
+
+
+
+  <main>
+
+    <div class="Fond_tableau">
+
+      <h1 class="titrescore"><span>Tableau Des Scores</span></h1><br>
+
+      <div class="score">
+
         <table>
+
           <tr>
+
             <th>Nom de jeu</th>
+
             <th>Pseudo du joueur</th>
-            <th>Niveau de difficulté de la partie jouée</th>
+
+            <th>Niveau de difficulté</th>
+
             <th>Score du joueur</th>
-            <th>Date et heure de la partie</th>
+
           </tr>
-          <tr>
-            <td>shinkei_suijaku</td>
-            <td>KILIAN</td>
-            <td>2</td>
-            <td>150</td>
-            <td>05h10/19/10/23</td>
-          </tr>
-          <tr>
-            <td>shinkei_suijaku</td>
-            <td>ANTONY</td>
-            <td>3</td>
-            <td>300</td>
-            <td>14h51/19/10/23</td>
-          </tr>
-          <tr>
-            <td>shinkei_suijaku</td>
-            <td>KÉVIN</td>
-            <td>1</td>
-            <td>120</td>
-            <td>23h14/19/10/23</td>
-          </tr>
-          <tr>
-            <td>shinkei_suijaku</td>
-            <td>ENZO</td>
-            <td>1</td>
-            <td>120</td>
-            <td>18h37/19/10/23</td>
-          </tr>
+
+          <?php foreach ($tableau_score as $score) : ?>
+
+            <tr <?php if ($score->pseudo === $joueurConnecte) echo 'class="highlight"'; ?>>
+
+              <td><?php echo $score->nom_jeu; ?></td>
+
+              <td><?php echo $score->pseudo; ?></td>
+
+              <td><?php echo $score->difficulte; ?></td>
+
+              <td><?php echo $score->score_partie; ?></td>
+
+            </tr>
+
+          <?php endforeach; ?>
+
         </table>
+
+      </div>
+
     </div>
-</div>
+
+  </main>
 
 
 
+  <?php require_once SITE_ROOT . 'partials/footer.php'; ?>
 
-
-    </main>
-    <?php require_once SITE_ROOT . 'partials/footer.php'; ?>
 </body>
-</html>
+
+
+
+</html
