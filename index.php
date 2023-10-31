@@ -1,31 +1,13 @@
+<?php
+require_once 'utils/common.php';
+require_once SITE_ROOT . 'utils/database.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Accueil</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
-    <script src="https://kit.fontawesome.com/5ee2b4f395.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-
-    <header id="headerroute">
-
-        <div class="titre"> <p><b>Shinkei Suijaku</b></p>
-            <nav>
-                <ul>
-                   <li> <a style="text-decoration: none;" href="index.html"><b>ACCUEIL</b></a> </li>
-                   <li> <a style="text-decoration: none;"href="memory.html"><b>JEU</b></a> </li>
-                   <li> <a style="text-decoration: none;"href="scores.html"><b>SCORES</b></a> </li>
-                    <li><a style="text-decoration: none;"href="contact.html"><b>NOUS CONTACTER</b></a> </li>
-                </ul>
-            </nav>
-        </div>
-        
-    </header>
+<?php require_once SITE_ROOT . 'partials/head.php'; ?>
+<body>
+<?php require_once SITE_ROOT . 'partials/header.php'; ?>
     <!--IMAGE MODE DE JEU -->
     <main>
       <!--Bouton-->
@@ -39,10 +21,10 @@
       </div>
       <!--FIN Bouton-->
       <div class="image-container">
-        <img src="assets/images/HIRAGANA a.png" alt="Hiragana A" />
-        <img src="assets/images/Katakana a.svg" alt="Katakana A" />
+        <img src="<?= PROJECT_FOLDER ?>assets/images/HIRAGANA a.png" alt="Hiragana A" />
+        <img src="<?= PROJECT_FOLDER ?>assets/images/Katakana a.svg" alt="Katakana A" />
         <img
-          src="assets/images/KATAKANA ET HIRAGANA a.png"
+          src="<?= PROJECT_FOLDER ?>assets/images/KATAKANA ET HIRAGANA a.png"
           alt="Hiragana a et Katakana a" />
       </div>
       <!--FIN IMAGE MODE DE JEU -->
@@ -74,20 +56,20 @@
       <div class="NOM">
         <div class="container">
           <!-- image gauche-->
-          <img src="assets/images/NiightCIty.png" alt="IMAGE JEU" />
+          <img src="<?= PROJECT_FOLDER ?>assets/images/NiightCIty.png" alt="IMAGE JEU" />
           <!--FIN image gauche-->
         </div>
         <table class="table">
           <tr>
             <td>
               <img
-                src="assets/images/Parties_Jouées.png"
+                src="<?= PROJECT_FOLDER ?>assets/images/Parties_Jouées.png"
                 alt="Image 1" />
             </td>
             <br />
             <td>
               <img
-                src="assets/images/Joueurs_Connectés.png"
+                src="<?= PROJECT_FOLDER ?>assets/images/Joueurs_Connectés.png"
                 alt="Image 2" />
             </td>
             <br />
@@ -95,13 +77,13 @@
           <tr>
             <td>
               <img
-                src="assets/images/Temps_Record.png"
+                src="<?= PROJECT_FOLDER ?>assets/images/Temps_Record.png"
                 alt="Image 3" />
             </td>
             <br />
             <td>
               <img
-                src="assets/images/Joueurs_Inscrit.png"
+                src="<?= PROJECT_FOLDER ?>assets/images/Joueurs_Inscrit.png"
                 alt="Image 4" />
             </td>
           </tr>
@@ -120,53 +102,56 @@
          
           <div class="kiki infoteam">
                <div class="imagekiki">
-                <img src="assets/images/kiki.jpg">
+                <img src="<?= PROJECT_FOLDER ?>assets/images/kiki.jpg">
                 </div>
             <h3><span>KILIAN</span></h3>
             <p>supōtsuman</p>
             <div>
-              <a href="https://www.facebook.com/"><img src="assets/images/facebook.jpg" alt=""></a>
-              <a href="https://twitter.com/home"><img src="assets/images/twitter.jpg" alt=""></a>
-              <a href="https://www.pinterest.fr/"><img src="assets/images/pinterest.jpg" alt=""></a>  
-            </div>          </div>
+              <a href="<?= PROJECT_FOLDER ?>https://www.facebook.com/"><img src="<?= PROJECT_FOLDER ?>assets/images/facebook.jpg" alt=""></a>
+              <a href="<?= PROJECT_FOLDER ?>https://twitter.com/home"><img src="<?= PROJECT_FOLDER ?>assets/images/twitter.jpg" alt=""></a>
+              <a href="<?= PROJECT_FOLDER ?>https://www.pinterest.fr/"><img src="<?= PROJECT_FOLDER ?>assets/images/pinterest.jpg" alt=""></a>  
+            </div>          
+          </div>
     
           <div class="anto infoteam">
             <div class="imageanto">
-            <img src="assets/images/anto.jpg">
+            <img src="<?= PROJECT_FOLDER ?>assets/images/anto.jpg">
         </div>
             <h3><span>ANTONY</span></h3>
             <p>manga fan</p>
             <div>
-              <a href="https://www.facebook.com/"><img src="assets/images/facebook.jpg" alt=""></a>
-              <a href="https://twitter.com/home"><img src="assets/images/twitter.jpg" alt=""></a>
-              <a href="https://www.pinterest.fr/"><img src="assets/images/pinterest.jpg" alt=""></a>  
-            </div>          </div>
+              <a href="<?= PROJECT_FOLDER ?>https://www.facebook.com/"><img src="<?= PROJECT_FOLDER ?>assets/images/facebook.jpg" alt=""></a>
+              <a href="<?= PROJECT_FOLDER ?>https://twitter.com/home"><img src="<?= PROJECT_FOLDER ?>assets/images/twitter.jpg" alt=""></a>
+              <a href="<?= PROJECT_FOLDER ?>https://www.pinterest.fr/"><img src="<?= PROJECT_FOLDER ?>assets/images/pinterest.jpg" alt=""></a>  
+            </div>          
+          </div>
     
     
     
           <div class="kevin infoteam">
             <div class="imagekevin">
-            <img src="assets/images/kevin.jpg">
+            <img src="<?= PROJECT_FOLDER ?>assets/images/kevin.jpg">
         </div>
             <h3><span>KÉVIN</span></h3>
             <p>Nihon no fan</p>
             <div>
-              <a href="https://www.facebook.com/"><img src="assets/images/facebook.jpg" alt=""></a>
-              <a href="https://twitter.com/home"><img src="assets/images/twitter.jpg" alt=""></a>
-              <a href="https://www.pinterest.fr/"><img src="assets/images/pinterest.jpg" alt=""></a>  
-            </div>          </div>
+              <a href="<?= PROJECT_FOLDER ?>https://www.facebook.com/"><img src="<?= PROJECT_FOLDER ?>assets/images/facebook.jpg" alt=""></a>
+              <a href="<?= PROJECT_FOLDER ?>https://twitter.com/home"><img src="<?= PROJECT_FOLDER ?>assets/images/twitter.jpg" alt=""></a>
+              <a href="<?= PROJECT_FOLDER ?>https://www.pinterest.fr/"><img src="<?= PROJECT_FOLDER ?>assets/images/pinterest.jpg" alt=""></a>  
+            </div>          
+          </div>
      
     
           <div class="enzo infoteam">
             <div class="imageenzo">
-            <img src="assets/images/enzo.jpg">
+            <img src="<?= PROJECT_FOLDER ?>assets/images/enzo.jpg">
         </div>
             <h3><span>ENZO</span></h3>
             <p>Ikutsu ka no kizuato</p>
             <div>
-              <a href="https://www.facebook.com/"><img src="assets/images/facebook.jpg" alt=""></a>
-              <a href="https://twitter.com/home"><img src="assets/images/twitter.jpg" alt=""></a>
-              <a href="https://www.pinterest.fr/"><img src="assets/images/pinterest.jpg" alt=""></a>  
+              <a href="<?= PROJECT_FOLDER ?>https://www.facebook.com/"><img src="<?= PROJECT_FOLDER ?>assets/images/facebook.jpg" alt=""></a>
+              <a href="<?= PROJECT_FOLDER ?>https://twitter.com/home"><img src="<?= PROJECT_FOLDER ?>assets/images/twitter.jpg" alt=""></a>
+              <a href="<?= PROJECT_FOLDER ?>https://www.pinterest.fr/"><img src="<?= PROJECT_FOLDER ?>assets/images/pinterest.jpg" alt=""></a>  
             </div>
           </div>
      
@@ -176,41 +161,6 @@
     </main>
 
     <!--the footer-->
-    <footer>
-        <div class="footer">
-        <div class="information">
-        <h1>information</h1>
-        <p>Comment nous contacter</p>
-        <p><span class="orange">Tel :</span> 0767697839 </p>
-        <p><span class="orange">Email :</span> support@shinkei_suijaku.com </p>
-        <p><span class="orange">Location :</span> Paris </p>
-        <a target="_blank" href="https://www.facebook.com/">
-            <i class="fa-brands fa-facebook-f logo"></i>
-        </a>
-        <a target="_blank" href="https://twitter.com/home">
-            <i class="fa-brands fa-x-twitter logo"></i>
-        </a>
-        <a target="_blank" href="https://google.com">
-            <i class="fa-brands fa-google logo"></i>
-        </a>
-        <a target="_blank" href="https://www.pinterest.fr/">
-            <i class="fa-brands fa-pinterest logo"></i>
-        </a>
-        <a target="_blank" href="https://www.instagram.com/">
-            <i class="fa-brands fa-instagram logo"></i>
-        </a>
-        </div>
-        <div class="footer_jeu">
-            <h1>Shinkei Suijaku</h1>
-            <ul class="orange">
-                <li><a href="memory.html">Jouer !</a></li>
-                <li><a href="scores.html">les scores</a></li>
-                <li><a href="contact.html">Nous contacter</a></li>
-            </ul>
-        </div>
-        </div>
-        <a class="bouton_header" href="#headerroute"><i class="fa-solid fa-chevron-up"></i></a>
-        <p class="footer_down">Copyright © 2023 Tous droits réservés</p>
-    </footer>
+    <?php require_once SITE_ROOT . 'partials/footer.php'; ?>
   </body>
 </html>
