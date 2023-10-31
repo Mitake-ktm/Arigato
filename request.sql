@@ -513,3 +513,7 @@ SELECT score_partie
 FROM score
 ORDER BY score_partie DESC
 LIMIT 1;
+
+SELECT COUNT(id)
+FROM utilisateur
+WHERE date_heure_connexion >= NOW() - INTERVAL 30 MINUTE;
