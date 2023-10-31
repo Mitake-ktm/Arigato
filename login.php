@@ -1,31 +1,13 @@
+<?php
+require_once 'utils/common.php';
+require_once SITE_ROOT . 'utils/database.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Login</title>
-<link rel="stylesheet" href="assets/css/footer.css">
-<link rel="stylesheet" href="assets/css/header.css">
-<link rel="stylesheet" href="assets/css/main.css">
-<style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
-<script src="https://kit.fontawesome.com/5ee2b4f395.js" crossorigin="anonymous"></script>
-</head>
-
+<?php require_once SITE_ROOT . 'partials/head.php'; ?>
 <body>
-
-    <header id="headerroute">
-
-        <div class="titre"> <p><b>Shinkei Suijaku</b></p>
-            <nav>
-                <ul>
-                   <li> <a style="text-decoration: none;" href="index.html"><b>ACCUEIL</b></a> </li>
-                   <li> <a style="text-decoration: none;"href="memory.html"><b>JEU</b></a> </li>
-                   <li> <a style="text-decoration: none;"href="scores.html"><b>SCORES</b></a> </li>
-                    <li><a style="text-decoration: none;"href="contact.html"><b>NOUS CONTACTER</b></a> </li>
-                </ul>
-            </nav>
-        </div>
-        
-    </header>
+<?php require_once SITE_ROOT . 'partials/header.php'; ?>
     
 <div class="titre_connexion">
     <h1>CONNEXION</h1>

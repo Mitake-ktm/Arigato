@@ -1,29 +1,12 @@
+<?php
+require_once '../../utils/common.php';
+require_once SITE_ROOT . 'utils/database.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Jeu</title>
-<link rel="stylesheet" href="assets/css/footer.css">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/header.css">
-<style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
-<script src="https://kit.fontawesome.com/5ee2b4f395.js" crossorigin="anonymous"></script>
-</head>
+   <?php require_once SITE_ROOT . 'partials/head.php'; ?>
 <body>
-    <header id="headerroute">
-
-        <div class="titre"> <p><b>Shinkei Suijaku</b></p>
-            <nav>
-                <ul>
-                   <li> <a style="text-decoration: none;" href="index.html"><b>ACCUEIL</b></a> </li>
-                   <li> <a style="text-decoration: none;"href="memory.html"><b>JEU</b></a> </li>
-                   <li> <a style="text-decoration: none;"href="scores.html"><b>SCORES</b></a> </li>
-                    <li><a style="text-decoration: none;"href="contact.html"><b>NOUS CONTACTER</b></a> </li>
-                </ul>
-            </nav>
-        </div>
-        
-    </header>
+<?php require_once SITE_ROOT . 'partials/header.php'; ?>
 
         <div class="titre_page_de_jeu">
             <p><h1>A toi de Jouer ! Bonne Chance !</h1>
@@ -40,19 +23,19 @@
             <table>
                 <tr>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td> 
                 </tr>
 
@@ -65,31 +48,31 @@
             <table>
                 <tr>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td> 
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                 </tr>
             </table>
@@ -101,148 +84,67 @@
             <table>
                 <tr>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
-                    </td>
-                    <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
-                    </td> 
-                    <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
-                    </td>
-                    <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td> 
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                    </td>
+                    <td>
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                    </td> 
+                    <td>
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                    </td>
+                    <td>
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td> 
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                     <td>
-                        <img src="assets/images/dos des cartes.jpg" alt="carte_retiurnée">
+                        <img src="<?= PROJECT_FOLDER ?>assets/images/dos des cartes.jpg" alt="carte_retiurnée">
                     </td>
                 </tr>
             </table>
         </div>
 
 
-        <div class="tchat">
-            <div class="tchat_head">
-                <div class="connexion_logo">
-                    <img src="assets/images/anto.jpg" alt="pp_anto">
-                </div>
-                <div class="rondvert">
-                    <img src="assets/images/rond.png" alt="rond de connexion">
-
-                </div>
-                <div class="texte_head_chat">
-                    <p>Chat Global</p>
-
-                </div>
-            </div>
-
-            <div class="tchat_body">
-
-                <div class="gauche">
-                <div class="bulle_gauche">
-                    <div class="fleche_gauche"></div>
-                    Hello World !
-                </div>
-                <p>moi</p>
-            </div>
-
-                <div class="droite">
-                <div class="bulle_droite">
-                    <div class="fleche_droite"></div>
-                    Hello !!
-                </div>
-                <p>pseudo</p>
-            </div>
-
-                </div>
-                <div class="chat_bas">
-                    <form action="chat">
-                        <input type="text" name="chat" id="chat" placeholder=| style="width: 200px; height: 40px; background-color: #1E90FF;
-        border-style: none; border-radius: 3px;">
-                    </form>
-
-                    <img src="assets/images/bouton envoie.png" alt="bouton envoie">
-
-                </div>
-            </div>
-
-            
-
-<footer>
-    <div class="footer">
-    <div class="information">
-    <h1>information</h1>
-    <p>Comment nous contacter</p>
-    <p><span class="orange">Tel :</span> 0767697839 </p>
-    <p><span class="orange">Email :</span> support@shinkei_suijaku.com </p>
-    <p><span class="orange">Location :</span> Paris </p>
-    <a target="_blank" href="https://www.facebook.com/">
-        <i class="fa-brands fa-facebook-f logo"></i>
-    </a>
-    <a target="_blank" href="https://twitter.com/home">
-        <i class="fa-brands fa-x-twitter logo"></i>
-    </a>
-    <a target="_blank" href="https://google.com">
-        <i class="fa-brands fa-google logo"></i>
-    </a>
-    <a target="_blank" href="https://www.pinterest.fr/">
-        <i class="fa-brands fa-pinterest logo"></i>
-    </a>
-    <a target="_blank" href="https://www.instagram.com/">
-        <i class="fa-brands fa-instagram logo"></i>
-    </a>
-    </div>
-    <div class="footer_jeu">
-        <h1>Shinkei Suijaku</h1>
-        <ul class="orange">
-            <li><a href="memory.html">Jouer !</a></li>
-            <li><a href="scores.html">les scores</a></li>
-            <li><a href="contact.html">Nous contacter</a></li>
-        </ul>
-    </div>
-    </div>
-    <a class="bouton_header" href="#headerroute"><i class="fa-solid fa-chevron-up"></i></a>
-    <p class="footer_down">Copyright © 2023 Tous droits réservés</p>
-</footer>
+        
+    <?php require_once SITE_ROOT . 'partials/footer.php'; ?>
 </body>
 </html>
