@@ -42,7 +42,14 @@ header{
     
 }
 
-.titre li{
+
+
+.titre .menu li{
     display: inline;
     margin-right: 3.8vw;
+}
+
+.menu li.active a{
+    color: orange;
+    font-weight: bold; 
 }
