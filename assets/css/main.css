@@ -729,3 +729,45 @@ textarea::placeholder{
   margin-right: 15vw;
   margin-bottom: 5vw;
 }
+
+.image_partie_joue{
+   color: white;
+   background-color: #3724A0;
+   width: 17vw;
+   height: 10.9vw;
+   text-align: center;
+}
+
+.texte_centre{
+   padding-top: 1vh;
+   font-size: 31px;
+}
+
+.texte_centre2{
+   font-size: 20px;
+   margin-bottom: 10vh;
+}
+
+.image_joueur_connect{
+   color: white;
+   background-color: #16A15F;
+   width: 17vw;
+   height: 10.9vw;
+   text-align: center;
+}
+
+.image_temps_record{
+   color: white;
+   background-color: #B91CA8;
+   width: 17vw;
+   height: 10.9vw;
+   text-align: center;
+}
+
+.image_joueur_inscrit{
+   color: white;
+   background-color: #EC9123;
+   width: 17vw;
+   height: 10.9vw;
+   text-align: center;
+}
