@@ -501,19 +501,17 @@ FROM (
 
 /*Données dynamique pour la page d'accueil*/
 
-SELECT COUNT(id)
-FROM score
-as Parties_jouees;
+SELECT COUNT(id) AS parties_jouees FROM score;
 
-SELECT COUNT(id)
-FROM utilisateur
-as nombre_de_joueur_inscrit;
+SELECT COUNT(id) AS nombre_de_joueur_inscrit
+FROM utilisateur;
 
-SELECT score_partie
+
+SELECT score_partie AS temps_records
 FROM score
 ORDER BY score_partie DESC
 LIMIT 1;
 
-SELECT COUNT(id)
+SELECT COUNT(id) AS joueurconnect
 FROM utilisateur
 WHERE date_heure_connexion >= NOW() - INTERVAL 30 MINUTE;
