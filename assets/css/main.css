@@ -774,3 +774,15 @@ textarea::placeholder{
    height: 10.9vw;
    text-align: center;
 }
+
+.recherche_score{ 
+   height: 40px; 
+   background-color: #272645 ;
+   border-style: none; border-radius: 3px;
+}
+
+.score_recherche{
+   display: flex;
+   margin-bottom: 3%;
+   justify-content: center;
+}
