@@ -393,7 +393,7 @@ margin-top: 5%
  }
  
  .Fond_tableau {
-   background-image: url(../images/fond\ tableau.png);
+   background-color: rgb(18, 18, 60);
    background-size: 100% 100%;
    background-repeat: no-repeat;
    padding-top: 3%;
@@ -401,7 +401,7 @@ margin-top: 5%
  
  .highlight {
    background-color: #0c8ab1;
- } 
+ }
  
  /*chat du jeu*/
 
@@ -785,4 +785,8 @@ textarea::placeholder{
    display: flex;
    margin-bottom: 3%;
    justify-content: center;
+}
+
+.score_fond {
+   background-color: #EC9123;
 }

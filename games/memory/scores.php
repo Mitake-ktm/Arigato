@@ -10,19 +10,35 @@ require_once SITE_ROOT . 'utils/database.php';
 // Le joueur connecté (exemple)
 
 $joueurConnecte = "slt";
+// $pseudo_recherche = $_GET['pseudo'];
 
-
-$pdoStatement = $pdo->prepare('SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
+if (isset($_POST['pseudo'])) {
+  $pdoStatement = $pdo->prepare("SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
   FROM score as S
   LEFT JOIN utilisateur AS U
   ON S.id_joueur = U.id
   LEFT JOIN jeu AS J
   ON S.id_jeu = J.id
-  WHERE S.id_jeu = 1 AND U.id = 1 AND S.difficulte = 1
-  ORDER BY J.nom_jeu ASC,S.difficulte ASC,S.score_partie DESC;');
+  WHERE pseudo LIKE :pseudo 
+  ORDER BY J.nom_jeu ASC,S.difficulte DESC,S.score_partie DESC;");
+  $pdoStatement->execute([
+    ':pseudo' => '%'.$_POST['pseudo'].'%'
+  ]);
+  $tableau_score = $pdoStatement->fetchAll();
+}
+
+else{$pdoStatement = $pdo->prepare('SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
+  FROM score as S
+  LEFT JOIN utilisateur AS U
+  ON S.id_joueur = U.id
+  LEFT JOIN jeu AS J
+  ON S.id_jeu = J.id
+  ORDER BY J.nom_jeu ASC,S.difficulte DESC,S.score_partie DESC;');
 $pdoStatement->execute();
-$tableau_score = $pdoStatement->fetchAll();
+$tableau_score = $pdoStatement->fetchAll();} 
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -45,10 +61,10 @@ $tableau_score = $pdoStatement->fetchAll();
       <h1 class="titrescore"><span>Tableau Des Scores</span></h1><br>
 
       <div class="score_recherche">
-          <form method="post">
-                    <input class="recherche_score" type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
-          </form>
-                </div>
+        <form method="post">
+          <input class="recherche_score" type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
+        </form>
+      </div>
 
       <div class="score">
 
@@ -79,9 +95,7 @@ $tableau_score = $pdoStatement->fetchAll();
               <td><?php echo $score->score_partie; ?></td>
 
             </tr>
-
           <?php endforeach; ?>
-
         </table>
 
       </div>
