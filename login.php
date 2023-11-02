@@ -34,7 +34,7 @@ if (!empty($_GET)){
     }
 
 }
-    if(isset($_SESSION['userId'])){
+    if(isset($_SESSION['userId']) && isset($_GET['pseudo'])){
 
         $message_connexion = 'connecté en tant que ' . $user->pseudo;
     }
@@ -52,7 +52,7 @@ if (!empty($_GET)){
         <div class="erreur_php">
             <p>
                 <?php 
-                if(isset($_SESSION['userId']))
+                if(isset($_SESSION['userId']) && isset($_GET['pseudo']))
                 {
                     echo $message_connexion;
                 }
