@@ -3,16 +3,17 @@
          <!-- PSEUDO JOUEUR CONNECTÉ -->
 
          <?php
-            $joueurConnecte = "Aurélien" ?>
-         <?php
-            $pdoStatement = $pdo->prepare('SELECT * From utilisateur WHERE pseudo = :pseudo ');
-
+         if(isset($_SESSION['userId']))
+         {
+            $userID = $_SESSION['userId']; 
+            $pdoStatement = $pdo->prepare('SELECT * From utilisateur WHERE id = :id ');
             $pdoStatement->execute([
-                ':pseudo' => $joueurConnecte,
+                ':id' => $userID,
             ]);
             $utilisateur = $pdoStatement->fetch();
-
-            if ($utilisateur->pseudo == $joueurConnecte) echo "bonjour " . $joueurConnecte . " !";
+            
+            echo "bonjour " . $user->pseudo . " !";
+        }
             /*else echo "pas de joueur connecté";*/ ?>
 
 

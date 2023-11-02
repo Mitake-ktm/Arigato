@@ -14,7 +14,36 @@ require_once SITE_ROOT . 'utils/database.php';
 </div>
 
 <div class="Formulaire_de_connexion">
-    <form method="post" action="traitement.php">
+<?php 
+
+if (!empty($_GET)){
+
+    if (isset($_GET['email']) && isset($_GET['passe'])) {
+        $pdoStatement = $pdo->prepare('SELECT id,email,mot_de_passe from utilisateur
+        where  email = :email && mot_de_passe = :passe;');
+        $pdoStatement->execute([
+            ':email'=> $_GET['email'],
+            ':passe'=> $_GET['passe'],
+        ]);
+        $user = $pdoStatement->fetch();
+        
+        if($user){
+            $_SESSION['userId'] = $user->id;
+        }
+
+    }
+
+    if(isset($_SESSION['userId'])){
+
+        $message_connexion = 'connecté en tant que ' . $user->pseudo;
+    }
+
+}
+
+
+
+?>
+    <form method="get">
         <input type="text" name="email" id="email" placeholder=Email style="width: 500px; height: 40px; background-color: #272645 ;
         border-style: none; border-radius: 3px;">
         <br>
@@ -23,7 +52,15 @@ require_once SITE_ROOT . 'utils/database.php';
         border-style: none; border-radius: 3px;">
         <br>
         <br>
-        <button onclick="window.location.href = 'index.html'" class="bouton_connexion">Connexion</button>
+        <div class="erreur_php">
+            <p>
+                <?php 
+                echo $message_connexion;
+                ?>
+            </p>
+        </div>
+        <br>
+        <button class="bouton_connexion">Connexion</button>
     </form>
 </div>
 

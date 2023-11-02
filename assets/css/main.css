@@ -393,7 +393,7 @@ margin-top: 5%
  }
  
  .Fond_tableau {
-   background-image: url(../images/fond\ tableau.png);
+   background-color: rgb(18, 18, 60);
    background-size: 100% 100%;
    background-repeat: no-repeat;
    padding-top: 3%;
@@ -790,4 +790,8 @@ textarea::placeholder{
 .erreur_php p
 {
    color: white;
+}
+
+.score_fond {
+   background-color: #EC9123;
 }
