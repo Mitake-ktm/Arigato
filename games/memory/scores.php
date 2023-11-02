@@ -12,6 +12,17 @@ require_once SITE_ROOT . 'utils/database.php';
 $joueurConnecte = "slt";
 // $pseudo_recherche = $_GET['pseudo'];
 
+if(isset($_SESSION['userId']))
+{
+   $userID = $_SESSION['userId']; 
+   $pdoStatement = $pdo->prepare('SELECT * From utilisateur WHERE id = :id and pseudo = :pseudo');
+   $pdoStatement->execute([
+       ':id' => $userID,
+       ':pseudo' => $_GET['pseudo']
+   ]);
+   $utilisateur = $pdoStatement->fetch();
+}
+
 if (isset($_POST['pseudo'])) {
   $pdoStatement = $pdo->prepare("SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
   FROM score as S
@@ -84,7 +95,7 @@ $tableau_score = $pdoStatement->fetchAll();}
 
           <?php foreach ($tableau_score as $score) : ?>
 
-            <tr <?php if ($score->pseudo === $joueurConnecte) echo 'class="highlight"'; ?>>
+            <tr <?php if ($score->pseudo === $utilisateur->pseudo) echo 'class="highlight"'; ?>>
 
               <td><?php echo $score->nom_jeu; ?></td>
 
