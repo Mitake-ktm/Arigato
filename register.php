@@ -125,7 +125,8 @@ require_once SITE_ROOT . 'utils/database.php';
                     !isset($error_message_mail) && 
                     !isset($error_message_pseudo) && 
                     !isset($error_message_passe) &&
-                    !isset($error_message_passeconfirm)
+                    !isset($error_message_passeconfirm) &&
+                    !isset($_GET)
                 ){
                     echo 'Le compte a bien été créé';
                 }
