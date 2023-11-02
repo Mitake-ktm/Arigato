@@ -33,16 +33,17 @@ require_once SITE_ROOT . 'utils/database.php';
 
                 $error_message_pseudo = 'le pseudo doit etre plus long que 4 carctère';
             }
-            else{
+            
+            if(strlen('pseudo') >= 4 ){
                 $pdoStatement = $pdo->prepare('SELECT pseudo from utilisateur;');
                 $pdoStatement->execute();
-                $pseudobon = $pdoStatement->fetch();
+                $pseudobon = $pdoStatement->fetchAll();
 
                 foreach($pseudobon as $ps)
                 {
                     if($_GET['pseudo'] == $ps)
                     {
-                        $error_message_pseudo = 'le pseudo doit etre plus long que 4 carctère';
+                        $error_message_pseudo = 'le pseudo existe deja';
                     }
                 }
             }
