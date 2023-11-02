@@ -19,11 +19,11 @@ require_once SITE_ROOT . 'utils/database.php';
 if (!empty($_GET)){
 
     if (isset($_GET['email']) && isset($_GET['passe'])) {
-        $pdoStatement = $pdo->prepare('SELECT id,email,mot_de_passe from utilisateur
+        $pdoStatement = $pdo->prepare('SELECT id,email,mot_de_passe,pseudo from utilisateur
         where  email = :email && mot_de_passe = :passe;');
         $pdoStatement->execute([
             ':email'=> $_GET['email'],
-            ':passe'=> $_GET['passe'],
+            ':passe'=>  hash('sha512', $_GET['passe']),
         ]);
         $user = $pdoStatement->fetch();
         
@@ -33,14 +33,11 @@ if (!empty($_GET)){
 
     }
 
+}
     if(isset($_SESSION['userId'])){
 
         $message_connexion = 'connecté en tant que ' . $user->pseudo;
     }
-
-}
-
-
 
 ?>
     <form method="get">
@@ -55,7 +52,11 @@ if (!empty($_GET)){
         <div class="erreur_php">
             <p>
                 <?php 
-                echo $message_connexion;
+                if(isset($_SESSION['userId']))
+                {
+                    echo $message_connexion;
+                }
+                
                 ?>
             </p>
         </div>

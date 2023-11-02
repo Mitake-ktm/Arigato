@@ -12,7 +12,7 @@
             ]);
             $utilisateur = $pdoStatement->fetch();
             
-            echo "bonjour " . $user->pseudo . " !";
+            echo "bonjour " . $utilisateur->pseudo . " !";
         }
             /*else echo "pas de joueur connecté";*/ ?>
 
