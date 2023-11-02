@@ -31,7 +31,7 @@ require_once SITE_ROOT . 'utils/database.php';
 
                 foreach($emailbon as $ea)
                 {
-                    if($_GET['eamil'] == $ea)
+                    if($_GET['email'] == $ea)
                     {
                         $error_message_mail = 'le mail existe deja';
                     }
