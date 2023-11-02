@@ -25,7 +25,7 @@ require_once SITE_ROOT . 'utils/database.php';
                 $error_message_mail = "Le format de l'email n'est pas valide";
             }
 
-            $pdoStatement = $pdo->prepare('SELECT email from utilisateur;');
+                $pdoStatement = $pdo->prepare('SELECT email from utilisateur;');
                 $pdoStatement->execute();
                 $emailbon = $pdoStatement->fetchAll();
 
