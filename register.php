@@ -31,7 +31,7 @@ require_once SITE_ROOT . 'utils/database.php';
 
                 foreach($emailbon as $ea)
                 {
-                    if($_GET['email'] == $ea)
+                    if($_GET['email'] == $ea->email)
                     {
                         $error_message_mail = 'le mail existe deja';
                     }
@@ -49,11 +49,11 @@ require_once SITE_ROOT . 'utils/database.php';
             if(strlen('pseudo') >= 4 ){
                 $pdoStatement = $pdo->prepare('SELECT pseudo from utilisateur;');
                 $pdoStatement->execute();
-                $pseudobon = $pdoStatement->fetchAll();
+                $users = $pdoStatement->fetchAll();
 
-                foreach($pseudobon as $ps)
+                foreach($users as $user)
                 {
-                    if($_GET['pseudo'] == $ps)
+                    if($_GET['pseudo'] == $user->pseudo)
                     {
                         $error_message_pseudo = 'le pseudo existe deja';
                     }
@@ -139,7 +139,10 @@ require_once SITE_ROOT . 'utils/database.php';
                     !isset($error_message_pseudo) && 
                     !isset($error_message_passe) &&
                     !isset($error_message_passeconfirm) &&
-                    !isset($_GET)
+                    isset($_GET['email']) &&
+                    isset($_GET['pseudo']) &&
+                    isset($_GET['passe']) &&
+                    isset($_GET['confirm_password'])
                 ){
                     echo 'Le compte a bien été créé';
                 }
