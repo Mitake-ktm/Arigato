@@ -1,34 +1,33 @@
-nav{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    color: white;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-a{
-    color: white;
+a {
+  color: white;
 }
 
-
-header a:hover{
-    color: #EC9124;
-    border-top: 2px solid #EC9124;
-    padding-top: 4.7vw;
-    padding-bottom: 4.7vw;
- 
+header a:hover {
+  color: #ec9124;
+  border-top: 2px solid #ec9124;
+  padding-top: 4.7vw;
+  padding-bottom: 4.7vw;
 }
 
-.titre{
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    margin-left: 15%;
-    margin-top: 2%;
-    font-size: large;
+.titre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  margin-left: 2%;
+  font-size: large;
 }
 
 .titre p {
-    font-size: 2vw;
+  font-size: 2vw;
 }
 
 /*h1,h2{
@@ -37,19 +36,20 @@ header a:hover{
     color: white;
 }*/
 
-header{
-    font-family: 'Roboto', sans-serif;
-    
+header {
+  font-family: "Roboto", sans-serif;
 }
 
-
-
-.titre .menu li{
-    display: inline;
-    margin-right: 3.8vw;
+.titre .menu li {
+  display: inline;
+  margin-right: 3.8vw;
 }
 
-.menu li.active a{
-    color: orange;
-    font-weight: bold; 
+.menu li.active a {
+  color: orange;
+  font-weight: bold;
 }
+
+/* PSEUDO JOUEUR CONNECTÉ*/
+
+/* FIN PSEUDO JOUEUR CONNECTÉ*/
