@@ -9,8 +9,8 @@ CREATE TABLE utilisateur (
     email VARCHAR(40) NOT NULL,
     mot_de_passe VARCHAR(256) NOT NULL,
     pseudo VARCHAR(20) NOT NULL,
-    date_heure_inscription DATETIME NOT NULL,
-    date_heure_connexion DATETIME NULL,
+    date_heure_inscription DATETIME CURRENT_TIMESTAMP,
+    date_heure_connexion DATETIME CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
     )
     
