@@ -786,3 +786,8 @@ textarea::placeholder{
    margin-bottom: 3%;
    justify-content: center;
 }
+
+.erreur_php p
+{
+   color: white;
+}
