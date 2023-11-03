@@ -16,11 +16,11 @@ require_once SITE_ROOT . 'utils/database.php';
 <div class="Formulaire_de_connexion">
 
 <?php
-    if (!empty($_GET)) {
+    if (!empty($_POST)) {
 
-        if (isset($_GET['email'])) {
+        if (isset($_POST['email'])) {
             
-            if (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) 
+            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
             {
                 $error_message_mail = "Le format de l'email n'est pas valide";
             }
@@ -31,7 +31,7 @@ require_once SITE_ROOT . 'utils/database.php';
 
                 foreach($emailbon as $ea)
                 {
-                    if($_GET['email'] == $ea->email)
+                    if($_POST['email'] == $ea->email)
                     {
                         $error_message_mail = 'le mail existe deja';
                     }
@@ -39,7 +39,7 @@ require_once SITE_ROOT . 'utils/database.php';
             
         }
 
-        if (isset($_GET['pseudo'])){
+        if (isset($_POST['pseudo'])){
 
             if (strlen('pseudo') < 4 ){
 
@@ -53,7 +53,7 @@ require_once SITE_ROOT . 'utils/database.php';
 
                 foreach($users as $user)
                 {
-                    if($_GET['pseudo'] == $user->pseudo)
+                    if($_POST['pseudo'] == $user->pseudo)
                     {
                         $error_message_pseudo = 'le pseudo existe deja';
                     }
@@ -62,17 +62,17 @@ require_once SITE_ROOT . 'utils/database.php';
         }
 
         $passwordtest = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/'; 
-        if(isset($_GET['passe']))
+        if(isset($_POST['passe']))
         {
-            if (!preg_match($passwordtest,$_GET['passe']))
+            if (!preg_match($passwordtest,$_POST['passe']))
             {
                 $error_message_passe = 'le mot de passe n est pas valide';
             }
         }
 
-        if(isset($_GET['confirm_password']))
+        if(isset($_POST['confirm_password']))
         {
-            if ($_GET['confirm_password'] != $_GET['passe'] )
+            if ($_POST['confirm_password'] != $_POST['passe'] )
             {
                 $error_message_passeconfirm = 'le mot de passe doit etre identique';;
             }
@@ -86,9 +86,9 @@ require_once SITE_ROOT . 'utils/database.php';
         ){
             $pdoStatement = $pdo->prepare('INSERT INTO utilisateur (email,mot_de_passe,pseudo) VALUES(:email,:mot_de_passe,:pseudo)');
             $pdoStatement->execute([
-                ':email' => $_GET['email'],
-                ':mot_de_passe' => hash('sha512', $_GET['confirm_password']),
-                ':pseudo' => $_GET['pseudo'],
+                ':email' => $_POST['email'],
+                ':mot_de_passe' => hash('sha512', $_POST['confirm_password']),
+                ':pseudo' => $_POST['pseudo'],
             ]);
         }
 
@@ -97,7 +97,7 @@ require_once SITE_ROOT . 'utils/database.php';
 
     }
 ?>
-    <form method="get">
+    <form method="POST">
         <input type="text" name="email" id="email" placeholder=Email style="width: 500px; height: 40px; background-color: #272645 ;
         border-style: none; border-radius: 3px;">
         <br>
@@ -139,10 +139,10 @@ require_once SITE_ROOT . 'utils/database.php';
                     !isset($error_message_pseudo) && 
                     !isset($error_message_passe) &&
                     !isset($error_message_passeconfirm) &&
-                    isset($_GET['email']) &&
-                    isset($_GET['pseudo']) &&
-                    isset($_GET['passe']) &&
-                    isset($_GET['confirm_password'])
+                    isset($_POST['email']) &&
+                    isset($_POST['pseudo']) &&
+                    isset($_POST['passe']) &&
+                    isset($_POST['confirm_password'])
                 ){
                     echo 'Le compte a bien été créé';
                 }

@@ -16,14 +16,14 @@ require_once SITE_ROOT . 'utils/database.php';
 <div class="Formulaire_de_connexion">
 <?php 
 
-if (!empty($_GET)){
+if (!empty($_POST)){
 
-    if (isset($_GET['email']) && isset($_GET['passe'])) {
+    if (isset($_POST['email']) && isset($_POST['passe'])) {
         $pdoStatement = $pdo->prepare('SELECT id,email,mot_de_passe,pseudo from utilisateur
         where  email = :email && mot_de_passe = :passe;');
         $pdoStatement->execute([
-            ':email'=> $_GET['email'],
-            ':passe'=>  hash('sha512', $_GET['passe']),
+            ':email'=> $_POST['email'],
+            ':passe'=>  hash('sha512', $_POST['passe']),
         ]);
         $user = $pdoStatement->fetch();
         
@@ -34,13 +34,13 @@ if (!empty($_GET)){
     }
 
 }
-    if(isset($_SESSION['userId']) && isset($_GET['pseudo'])){
+    if(isset($_SESSION['userId']) && isset($_POST['pseudo'])){
 
         $message_connexion = 'connecté en tant que ' . $user->pseudo;
     }
 
 ?>
-    <form method="get">
+    <form method="POST">
         <input type="text" name="email" id="email" placeholder=Email style="width: 500px; height: 40px; background-color: #272645 ;
         border-style: none; border-radius: 3px;">
         <br>
@@ -52,7 +52,7 @@ if (!empty($_GET)){
         <div class="erreur_php">
             <p>
                 <?php 
-                if(isset($_SESSION['userId']) && isset($_GET['pseudo']))
+                if(isset($_SESSION['userId']) && isset($_POST['pseudo']))
                 {
                     echo $message_connexion;
                 }

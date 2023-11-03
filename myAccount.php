@@ -15,20 +15,20 @@ require_once SITE_ROOT . 'utils/database.php';
         </div>        
         <div class="Formulaire_de_connexion">
         <?php
-        if (!empty($_GET)) {
+        if (!empty($_POST)) {
 
-            if (isset($_GET['Nemail'])) {
+            if (isset($_POST['Nemail'])) {
                 
-                if (!filter_var($_GET['Nemail'], FILTER_VALIDATE_EMAIL)) 
+                if (!filter_var($_POST['Nemail'], FILTER_VALIDATE_EMAIL)) 
                 {
                     $error_message_nouveau_mail = "Le format de l'email n'est pas valide";
                 }
                 
             }
     
-            if (isset($_GET['Nemail']) && isset($_GET['email'])){
+            if (isset($_POST['Nemail']) && isset($_POST['email'])){
     
-                if ($_GET['Nemail'] == $_GET['email'] ){
+                if ($_POST['Nemail'] == $_POST['email'] ){
     
                     $error_message_ancien_mail = "nouveau email identique à l'ancien";
                 }
@@ -39,7 +39,7 @@ require_once SITE_ROOT . 'utils/database.php';
     
                 foreach($emailbon as $ea)
                 {
-                    if($_GET['Nemail'] == $ea)
+                    if($_POST['Nemail'] == $ea)
                     {
                         $error_message_nouveau_mail = 'le mail existe deja';
                     }
@@ -57,16 +57,16 @@ require_once SITE_ROOT . 'utils/database.php';
                 !isset($error_message_ancien_mail) && 
                 !isset($error_message_nouveau_mail) && 
                 !isset($error_message_motdepasse)&&
-                isset($_GET['email'])&&
-                isset($_GET['Nemail'])&&
-                isset($_GET['passe'])) 
+                isset($_POST['email'])&&
+                isset($_POST['Nemail'])&&
+                isset($_POST['passe'])) 
                  
             {
                 $pdoStatement = $pdo->prepare('UPDATE utilisateur SET email=:Nemail WHERE email=:email AND mot_de_passe=:passe');
                 $pdoStatement->execute([
-                    ':email' => $_GET['email'],
-                    ':Nemail' => $_GET['Nemail'],
-                    ':passe' => hash('sha512', $_GET['passe']),
+                    ':email' => $_POST['email'],
+                    ':Nemail' => $_POST['Nemail'],
+                    ':passe' => hash('sha512', $_POST['passe']),
                     
                 ]);
             }
@@ -76,7 +76,7 @@ require_once SITE_ROOT . 'utils/database.php';
             
             ?>
 
-            <form method="get">
+            <form method="POST">
                 <label for="email">Changer votre mail :</label>
                 <br>
                 <br>
@@ -111,9 +111,9 @@ require_once SITE_ROOT . 'utils/database.php';
                     !isset($error_message_ancien_mail) && 
                     !isset($error_message_nouveau_mail) && 
                     !isset($error_message_motdepasse)&&
-                    isset($_GET['email'])&&
-                    isset($_GET['Nemail'])&&
-                    isset($_GET['passe']))   
+                    isset($_POST['email'])&&
+                    isset($_POST['Nemail'])&&
+                    isset($_POST['passe']))   
                     {
                     echo "L'email a bien été modifié";
                 }
@@ -126,10 +126,10 @@ require_once SITE_ROOT . 'utils/database.php';
                 
         <div class="Formulaire_de_connexion">
         <?php
-if (!empty($_GET)) {
-    if (isset($_GET['Npasse']) && isset($_GET['passe'])){
+if (!empty($_POST)) {
+    if (isset($_POST['Npasse']) && isset($_POST['passe'])){
     
-        if ($_GET['Npasse'] == $_GET['passe'] ){
+        if ($_POST['Npasse'] == $_POST['passe'] ){
 
             $error_message_ancien_motdepasse = "nouveau mot de passe identique à l'ancien";
         }
@@ -145,9 +145,9 @@ if (!empty($_GET)) {
             $error_message_nouveau_motdepasse = 'le mot de passe n est pas valide';
         }
     }*/
-    if(isset($_GET['Cpasse']))
+    if(isset($_POST['Cpasse']))
         {
-            if ($_GET['Cpasse'] != $_GET['Npasse'] )
+            if ($_POST['Cpasse'] != $_POST['Npasse'] )
             {
                 $error_message_passeconfirm = 'le mot de passe doit etre identique';;
             }
@@ -156,21 +156,21 @@ if (!empty($_GET)) {
         !isset($error_message_ancien_motdepasse) && 
         !isset($error_message_nouveau_motdepasse) && 
         !isset($error_message_passeconfirm)&&
-        isset($_GET['passe'])&&
-        isset($_GET['Npasse'])&&
-        isset($_GET['Cpasse'])) 
+        isset($_POST['passe'])&&
+        isset($_POST['Npasse'])&&
+        isset($_POST['Cpasse'])) 
          
     {
         $pdoStatement = $pdo->prepare('UPDATE utilisateur SET mot_de_passe=:Cpasse WHERE mot_de_passe=:passe');
         $pdoStatement->execute([
-            ':passe' => hash('sha512', $_GET['passe']),
-            ':Cpasse' => hash('sha512', $_GET['Cpasse']),
+            ':passe' => hash('sha512', $_POST['passe']),
+            ':Cpasse' => hash('sha512', $_POST['Cpasse']),
             
         ]);
 
 }
 ?>
-            <form method="get">
+            <form method="POST">
                 <label for="passe">Changer votre mot de passe :</label>
                 <br>
                 <br>
@@ -204,9 +204,9 @@ if (!empty($_GET)) {
                     !isset($error_message_ancien_motdepasse) && 
                     !isset($error_message_nouveau_motdepasse) && 
                     !isset($error_message_passeconfirm)&&
-                    isset($_GET['passe'])&&
-                    isset($_GET['Npasse'])&&
-                    isset($_GET['Cpasse']))   
+                    isset($_POST['passe'])&&
+                    isset($_POST['Npasse'])&&
+                    isset($_POST['Cpasse']))   
                     {
                     echo "Le mot de passe a bien été modifié";
                 }
