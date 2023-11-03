@@ -41,12 +41,12 @@ require_once SITE_ROOT . 'utils/database.php';
 
         if (isset($_POST['pseudo'])){
 
-            if (strlen('pseudo') < 4 ){
+            if (strlen($_POST['pseudo']) < 4 ){
 
                 $error_message_pseudo = 'le pseudo doit etre plus long que 4 carctère';
             }
             
-            if(strlen('pseudo') >= 4 ){
+            if(strlen($_POST['pseudo']) >= 4 ){
                 $pdoStatement = $pdo->prepare('SELECT pseudo from utilisateur;');
                 $pdoStatement->execute();
                 $users = $pdoStatement->fetchAll();

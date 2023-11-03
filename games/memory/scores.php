@@ -7,9 +7,6 @@ require_once '../../utils/common.php';
 require_once SITE_ROOT . 'utils/database.php';
 
 
-// Le joueur connecté (exemple)
-
-$joueurConnecte = "slt";
 // $pseudo_recherche = $_GET['pseudo'];
 
 if(isset($_SESSION['userId']))

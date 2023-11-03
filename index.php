@@ -93,7 +93,7 @@ require_once SITE_ROOT . 'utils/database.php';
                       </b>
                     </div>
                     <div class="texte_centre2">
-                       <b><p>Parties Jouées</p></b>
+                       <b><p>joueurs connectés</p></b>
                     </div>
                 </div>
 
@@ -116,7 +116,7 @@ require_once SITE_ROOT . 'utils/database.php';
                       </b>
                     </div>
                     <div class="texte_centre2">
-                       <b><p>Parties Jouées</p></b>
+                       <b><p>temps record</p></b>
                     </div>
                 </div>
             </td>
@@ -134,7 +134,7 @@ require_once SITE_ROOT . 'utils/database.php';
                       </b>
                     </div>
                     <div class="texte_centre2">
-                       <b><p>Parties Jouées</p></b>
+                       <b><p>joueurs inscrits</p></b>
                     </div>
                 </div>
             </td>
