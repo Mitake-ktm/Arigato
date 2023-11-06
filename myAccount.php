@@ -45,13 +45,6 @@ require_once SITE_ROOT . 'utils/database.php';
                     }
                 }
             }
-            /*if(isset($_GET['passe']))
-            {
-                $passwordtest = '/^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#$%^&*]).{8,}$/';
-                if (!preg_match($passwordtest,$_GET['passe']))
-                {
-                    $error_message_motdepasse = 'le mot de passe n est pas valide';
-                }*/
             }
             if(
                 !isset($error_message_ancien_mail) && 
@@ -137,14 +130,6 @@ if (!empty($_POST)) {
         
        
     }
-    /*if(isset($_GET['Npasse']))
-    {
-        $passwordtest = '/^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#$%^&*]).{8,}$/';
-        if (!preg_match($passwordtest,$_GET['Npasse']))
-        {
-            $error_message_nouveau_motdepasse = 'le mot de passe n est pas valide';
-        }
-    }*/
     if(isset($_POST['Cpasse']))
         {
             if ($_POST['Cpasse'] != $_POST['Npasse'] )
