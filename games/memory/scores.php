@@ -15,10 +15,9 @@ $joueurConnecte = "slt";
 if(isset($_SESSION['userId']) && isset($_POST['pseudo']))
 {
    $userID = $_SESSION['userId']; 
-   $pdoStatement = $pdo->prepare('SELECT * From utilisateur WHERE id = :id and pseudo = :pseudo');
+   $pdoStatement = $pdo->prepare('SELECT * From utilisateur WHERE id = :id');
    $pdoStatement->execute([
        ':id' => $userID,
-       ':pseudo' => $_GET['pseudo']
    ]);
    $utilisateur = $pdoStatement->fetch();
 }

@@ -393,7 +393,7 @@ margin-top: 5%
  }
  
  .Fond_tableau {
-   background-color: rgb(18, 18, 60);
+   background-color: rgb(23, 23, 94);
    background-size: 100% 100%;
    background-repeat: no-repeat;
    padding-top: 3%;
@@ -401,7 +401,7 @@ margin-top: 5%
  
  .highlight {
    background-color: #0c8ab1;
- } 
+ }
  
  /*chat du jeu*/
 
@@ -787,11 +787,267 @@ textarea::placeholder{
    justify-content: center;
 }
 
-.erreur_php p
-{
-   color: white;
-}
-
 .score_fond {
    background-color: #EC9123;
+}
+
+/*
+    Game properties (game.html)
+*/
+
+@media (min-width: 768px) {
+   main#game table tbody tr td {
+       width: 150px;
+       height: 200px;
+   }
+   main#game table tbody {
+       padding: 20px;
+       margin: 40px;
+   }
+}
+
+main#game table tbody tr td {
+   transition: 0.8s;
+
+   border-radius: 10px; 
+   margin: 10px;
+
+   font-size: 3rem;
+   background: orange;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+main#game table tbody tr td:hover {
+   rotate: 5deg;
+   scale: 1.05;
+   transition: 0.5s;
+
+   border-radius: 10px; 
+   margin: 10px;
+
+   font-size: 3rem;
+   background: orange;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+main#game table tbody tr {
+   display: flex;
+}
+
+main#game table tbody {
+   display: flex;
+   flex-direction: column;
+
+   border: 2px solid;
+
+   border-radius: 15px;
+}
+
+main#game table {
+   display: flex;
+   justify-content: center;
+}
+
+.game-chat {
+   transform: translate(0,0);
+
+   bottom: 0;
+   right: 0;
+
+   width: 400px;
+   height: 600px;
+   
+   position: fixed;
+   color: white;
+   background-color: #fff;
+   border-radius: 10px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+#header-chat {
+   padding: 10px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   background-color: #4949ff;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+#header-chat div{
+   display: flex;
+   align-items: center;
+}
+
+#header-chat i.fa-arrow-right {
+   margin: 10px;
+}
+
+.icon-chat {
+   border-radius: 50%;
+   border: solid #fff 2px; 
+   background-color: #99daf2;
+   width: 50px;
+   padding: 5px;
+}
+
+#chat-title {
+   padding: 0px 20px;
+}
+
+.circle-green {
+   width: 15px;
+   height: 15px;
+   border: solid #fff 2px;
+   background-color: #0fe200;
+   border-radius: 50%;
+   position: relative;
+   left: -20px;
+   bottom: -20px;
+}
+
+#group-arrow{
+   position: fixed;
+   z-index: 2;
+   top: 5%;
+   right: 5%;
+}
+
+#arrow-down_up {
+   font-size: 3rem;
+   border-radius: 50%;
+   text-align: center;
+   width: 40px;
+   height: 40px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.collapse > a{
+   cursor: pointer;
+   display: block;
+}
+
+.collapse:focus{
+   outline: none;
+}
+
+.collapse .game-chat{
+   display: none;
+}
+
+.collapse:focus .game-chat{
+   display: flex; 
+}
+
+#open{
+   position: fixed;
+   width: 70px;
+   height: 70px;
+   font-size: 3rem;
+   border-radius: 50%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   bottom: 2%;
+   right: 2%;
+   background-color: blue;
+}
+
+#game-chat-checkbox{
+   width: 100%;
+   position: absolute;
+   right: 1%;
+   bottom: 2%;
+   height: 100%;
+   opacity: 0;
+}
+
+/* #chat-footer {
+   color: #333;
+   margin: 30px;
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+} */
+
+#chat-input {
+   padding: 10px;
+   border-radius: 5px;
+}
+
+#chat-main {
+   /* display: flex; */
+   width: 380px;
+   position: relative;
+   right: -20px;
+   overflow-y: scroll;
+   color: #333;
+}
+
+#content-message {
+   margin-right: 30px;
+}
+
+#chat-send-btn {
+   width: 80px;
+   border-radius: 20px;
+
+   background-color: blue;
+   border: white;
+   color: red;
+   margin-left: 1%;
+}
+
+.chat-message {
+   padding: 15px;
+   border-radius: 15px;
+   margin: 5px 0px;
+}
+
+.chat-message-send-by-me {
+   background-color: #5252f6;
+   border: solid #eee 2px;
+   color: #fff;
+}
+
+.chat-message-send-by-other {
+   background-color: #e1f6ff;
+   color: #252525;
+}
+
+.chat-send-by-me {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: flex-end;
+   margin: 20px 0px;
+}
+
+.chat-send-by-other {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   margin: 20px 0px;
+}
+
+.flex-chat {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
 }

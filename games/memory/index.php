@@ -142,9 +142,9 @@ require_once SITE_ROOT . 'utils/database.php';
                 </tr>
             </table>
         </div>
-
+        <?php require_once SITE_ROOT . 'chat.php'; ?>
 
         
     <?php require_once SITE_ROOT . 'partials/footer.php'; ?>
 </body>
-</html>
+</html>^
