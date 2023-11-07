@@ -8,6 +8,21 @@ require_once SITE_ROOT . 'utils/database.php';
 <?php require_once SITE_ROOT . 'partials/head.php'; ?>
 <body>
 <?php require_once SITE_ROOT . 'partials/header.php'; ?>
+
+
+<?php 
+
+if(isset($_SESSION['userId']))
+{
+  $lien = 'games/memory/index.php';
+}
+else
+{
+  $lien = 'login.php';
+
+}
+
+?>
     <!--IMAGE MODE DE JEU -->
     <main>
       <!--Bouton-->
@@ -17,7 +32,7 @@ require_once SITE_ROOT . 'utils/database.php';
         <h2>Venez découvrir les Kana !</h2>
         <br>
         <br>
-        <button class="bouton_jouer" onclick="window.location.href = 'memory';">Jouer !</button>
+        <button class="bouton_jouer" onclick="window.location.href = <?php $lien ?>;">Jouer !</button>
       </div>
       <!--FIN Bouton-->
       <div class="image-container">

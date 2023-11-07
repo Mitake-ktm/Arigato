@@ -56,6 +56,10 @@ if (!empty($_POST)){
                 {
                     echo $message_connexion;
                 }
+                elseif(isset($_POST['email']) && isset($_POST['passe']) && !isset($message_connexion) )
+                {
+                    echo "Mot de passe ou email incorect";
+                }
                 
                 ?>
             </p>
