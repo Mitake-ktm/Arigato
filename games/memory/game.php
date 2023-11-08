@@ -4,25 +4,26 @@ require_once SITE_ROOT . 'utils/database.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-   <?php require_once SITE_ROOT . 'partials/head.php'; ?>
+<?php require_once SITE_ROOT . 'partials/head.php'; ?>
+
 <body>
-<?php require_once SITE_ROOT . 'partials/header.php'; ?>
+  <?php require_once SITE_ROOT . 'partials/header.php'; ?>
 
-<div class="game">
-      <div class="controls">
-        <button>Début</button>
-        <div class="stats">
-          <div class="moves">0 mouvement</div>
-          <div class="timer">time: 0 sec</div>
-        </div>
+  <div class="game">
+    <div class="controls">
+      <button>Début</button>
+      <div class="stats">
+        <div class="moves">0 mouvement</div>
+        <div class="timer">time: 0 sec</div>
       </div>
-      <div class="board-container">
-        <div id="level" class="board"></div>
-        <div class="win">Tu as gagné!</div>
-      </div>
-     
     </div>
+    <div class="board-container">
+      <div id="level" class="board"></div>
+      <div class="win">Tu as gagné!</div>
+    </div>
+  </div>
 
-    <script src="../../assets/js/script.js" defer></script>
+  <script src="../../assets/js/script.js" defer></script>
 </body>
+
 </html>
