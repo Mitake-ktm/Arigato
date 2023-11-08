@@ -135,6 +135,7 @@ const pickRandom = (array, items) => {
   return randomPicks
 }
 
+var level = 0;
 // Fonction pour générer le jeu.
 const generateGame = () => {
 
@@ -148,7 +149,9 @@ const generateGame = () => {
   
     // Affichez la nouvelle valeur
     console.log(boardElement.getAttribute('data-dimension'));
-  
+
+    level = 1;
+  console.log(level);
   console.log(difficulte);
 }
 
@@ -162,6 +165,8 @@ if(difficulte == "moyen")
   
     // Affichez la nouvelle valeur
     console.log(boardElement.getAttribute('data-dimension'));
+
+    level = 2;
   
   console.log(difficulte);
 }
@@ -176,6 +181,8 @@ if(difficulte == "difficile")
   
     // Affichez la nouvelle valeur
     console.log(boardElement.getAttribute('data-dimension'));
+
+    level = 3;
   
   console.log(difficulte);
 }
@@ -276,20 +283,19 @@ const flipCard = card => {
 
   // Si toutes les cartes sont retournées (appariées), affichage message victoire.
   if (!document.querySelectorAll('.card:not(.flipped)').length) {
-      setTimeout(() => {
+   setTimeout(() => {
+        ajaxEnvoie();
+        console.log("salut");
           selectors.boardContainer.classList.add('flipped')  
           selectors.win.innerHTML = `
               <span class="win-text">
                   Vous avez gagné !<br />
                   avec <span class="highlight">${state.totalFlips}</span> mouvements<br />
                   en moins de <span class="highlight">${state.totalTime}</span> secondes
-              </span>
-          `
-
-          clearInterval(state.loop)
-      }, 1000)
-  }
-} 
+              </span>`
+      clearInterval(state.loop)}, 1000)
+ } 
+}
 
 // Fonction pour gerer la logique du jeu, retourner les cartes et de démarrer une nouvelle partie.
 const attachEventListeners = () => {
@@ -309,3 +315,17 @@ const attachEventListeners = () => {
 // Génération du jeu.
 generateGame()
 attachEventListeners()
+
+function ajaxEnvoie(){
+  let request =
+$.ajax({
+  type: "POST",             //Méthode à employer POST ou GET 
+  url: "../../serveur.php",  //Cible du script coté serveur à appeler 
+  data: {'score': state.totalTime,'level' : level}
+});
+request.done(function (output) {
+  console.log(state.totalTime);
+  //Code à jouer en cas d'éxécution sans erreur du script du PHP
+});
+console.log("requete");
+}
