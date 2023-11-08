@@ -19,7 +19,14 @@ require_once SITE_ROOT . 'utils/database.php';
       <h2>Venez découvrir les Kana !</h2>
       <br>
       <br>
-      <button class="bouton_jouer" onclick="window.location.href = 'memory';">Jouer !</button>
+
+      <?php if (!isset($_SESSION['userId'])) : ?>
+        <button class="bouton_jouer" onclick="window.location.href = 'login.php';">Jouer !</button>
+      <?php else : ?>
+        <button class="bouton_jouer" onclick="window.location.href = 'games/memory';">Jouer !</button>
+      <?php endif; ?>
+
+
     </div>
     <!--FIN Bouton-->
     <div class="image-container">

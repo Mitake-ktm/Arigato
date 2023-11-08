@@ -291,8 +291,10 @@ const flipCard = card => {
               <span class="win-text">
                   Vous avez gagné !<br />
                   avec <span class="highlight">${state.totalFlips}</span> mouvements<br />
-                  en moins de <span class="highlight">${state.totalTime}</span> secondes
+                  en moins de <span class="highlight">${state.totalTime}</span> secondes <br />
+                <div> <button onclick="window.location.href = '../../games/memory/index.php'"> Restart</div>
               </span>`
+
       clearInterval(state.loop)}, 1000)
  } 
 }
