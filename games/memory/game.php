@@ -23,7 +23,8 @@ require_once SITE_ROOT . 'utils/database.php';
     </div>
   </div>
 
+  <?php require_once SITE_ROOT . 'chat.php'; ?>
   <script src="../../assets/js/script.js" defer></script>
+  
 </body>
-
 </html>
