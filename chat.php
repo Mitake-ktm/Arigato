@@ -65,13 +65,23 @@
              <div class="chat_bas">
                         <input type="text" name="message" id="chat"  style="width: 200px; height: 40px; background-color: #1E90FF;
                         border-style: none; border-radius: 3px;">
-                        <input onclick="ajaxEnvoie2()" type="button" name="valider" value="envoyer">
+                        <input onclick="ajaxEnvoie2()" type="button" name="valider" value="envoyer" >
                 </div>   
              </div>
                                  
 </div>
 
 <script>
+    
+    function handleKeyPress(event) {
+        // Vérifie si la touche pressée est "Entrée" (keyCode 13)
+        if (event.keycode === 13) {
+            // Appelle la fonction lorsque "Entrée" est pressée
+            ajaxEnvoie2();
+            console.log(confirm);
+        }
+    }
+
     function ajaxEnvoie2(){
         var test = document.getElementById('chat').value;
         var pseudo = document.getElementById('pseudo').innerText;
@@ -82,10 +92,12 @@
         url: "../../message.php",  //Cible du script coté serveur à appeler 
         data: {'message': test}
      })
+    
       request.done(function (output) {
         document.getElementById('nouveau_message').innerHTML +=
         `<div class="droite"> <div class="bulle_droite"> ${test}</div>${pseudo}</div>`;
         //Code à jouer en cas d'éxécution sans erreur du script du PHP
       });
+    
     }
 </script>

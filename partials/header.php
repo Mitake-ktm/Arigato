@@ -9,7 +9,7 @@
         ]);
         $utilisateur = $pdoStatement->fetch();?>
         <div class="utilisateur">
-        <?php echo "bonjour " . $utilisateur->pseudo . "  !"  ?> <img src="userFiles/<?php if(isset($utilisateur->avatar))echo $utilisateur->avatar?>"/>
+        <?php echo "bonjour " . $utilisateur->pseudo . "  !"  ?> <img src="/projet/Arigato/userFiles/<?php if(isset($utilisateur->avatar))echo $utilisateur->avatar?>"/>
         </div>
 
         <?php
