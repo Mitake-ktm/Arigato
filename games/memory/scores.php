@@ -91,7 +91,7 @@ $tableau_score = $pdoStatement->fetchAll();}
 
           <?php foreach ($tableau_score as $score) : ?>
 
-            <tr <?php if (isset($_SESSION['userId']) && $score->pseudo === $utilisateur->pseudo) echo 'class="highlight"'; ?>>
+            <tr <?php if (isset($_SESSION['userId']) && $score->pseudo === $utilisateur->pseudo) echo 'class="highlight_score"'; ?>>
 
               <td><?php echo $score->nom_jeu; ?></td>
 

@@ -11,7 +11,7 @@ require_once SITE_ROOT . 'utils/database.php';
 
   <div class="game">
     <div class="controls">
-      <button>Début</button>
+      <button class="bouton_game">Début</button>
       <div class="stats">
         <div class="moves">0 mouvement</div>
         <div class="timer">time: 0 sec</div>

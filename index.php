@@ -30,7 +30,7 @@ require_once SITE_ROOT . 'utils/database.php';
     </div>
     <!--FIN Bouton-->
     <div class="image-container">
-      <img src="<?= PROJECT_FOLDER ?>assets/images/HIRAGANA.jpg" alt="Hiragana" />
+      <img src="<?= PROJECT_FOLDER ?>assets/images/Hiragana.png" alt="Hiragana" />
       <img src="<?= PROJECT_FOLDER ?>assets/images/Katakana.png" alt="Katakana" />
       <img src="<?= PROJECT_FOLDER ?>assets/images/Kana.png" alt="Kana" />
     </div>
@@ -167,7 +167,7 @@ require_once SITE_ROOT . 'utils/database.php';
     <div class="equipe">
       <h2><span>Notre Équipe</span></h2>
       <p>Nihon saikō no gēmu kaihatsu chīmu</p>
-      <img src="assets/images/branche.jpg">
+      <img src="assets/images/logo_branche.png">
     </div>
     <div class="description">
 
