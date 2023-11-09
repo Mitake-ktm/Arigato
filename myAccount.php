@@ -33,7 +33,7 @@ require_once SITE_ROOT . 'utils/database.php';
                     $error_message_ancien_mail = "nouveau email identique à l'ancien";
                 }
                 
-                $pdoStatement = $pdo->prepare('SELECT email from utilisateur;');
+                $pdoStatement = $pdo->prepare('SELECT email from utilisateur');
                 $pdoStatement->execute();
                 $emailbon = $pdoStatement->fetchAll();
     
@@ -69,7 +69,7 @@ require_once SITE_ROOT . 'utils/database.php';
             
             ?>
 
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 <label for="email">Changer votre mail :</label>
                 <br>
                 <br>
@@ -155,7 +155,7 @@ if (!empty($_POST)) {
 
 }
 ?>
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 <label for="passe">Changer votre mot de passe :</label>
                 <br>
                 <br>
@@ -198,6 +198,59 @@ if (!empty($_POST)) {
                 ?></p>
                 </div>
                 <button class="bouton_connexion">Changer le mot de passe</button>
+                <br>
+                <br>
+                <div class="avatar">
+                <label>Avatar :</label>
+                <input type="file" name="avatar">
+                <?php
+                $userID = $_SESSION['userId'];
+if (isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])) {
+    $tailleMax = 2097152; 
+
+    $extensionsValides = array('png', 'jpg', 'jpeg', 'gif');
+
+    if ($_FILES['avatar']['size'] <= $tailleMax) {
+        $extensionsUpload = strtolower(substr(strrchr($_FILES['avatar']['name'],"."),1));
+
+        if (in_array($extensionsUpload, $extensionsValides)) {
+
+            $chemin = "/Applications/MAMP/htdocs/Projet/Arigato/userFiles/" .$userID.".".$extensionsUpload;
+            $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
+
+
+            if ($resultat) {
+                $updateavatar = $pdo->prepare('UPDATE utilisateur SET avatar = :avatar WHERE id = :id');
+                $updateavatar->execute(array(
+                    'avatar'=> $userID.".".$extensionsUpload,
+                    'id'=>$userID
+
+                ));
+            } else {
+                echo "Échec lors de l'importation de l'image.";
+            }
+        } else {
+            echo "Votre format d'image doit être soit en png, jpg, jpeg ou gif.";
+        }
+    } else {
+        echo "Votre photo de profil ne doit pas dépasser 2 Mo.";
+    }
+}
+?>
+     <?php
+
+if (!empty($userinfo->avatar)) {
+        ?>
+        <br>
+        <br>
+         <img src="userFiles/<?php echo $userinfo->avatar?>"/>;
+         <?php
+    }
+    ?>
+                <br>
+                <br>
+                <button>mettre à jour</button>
+                </div>
         </form>
         </div>
     </main>

@@ -7,9 +7,12 @@
         $pdoStatement->execute([
             ':id' => $userID,
         ]);
-        $utilisateur = $pdoStatement->fetch();
-
-        echo "bonjour " . $utilisateur->pseudo . " !";
+        $utilisateur = $pdoStatement->fetch();?>
+        <div class="utilisateur">
+        <?php echo "bonjour " . $utilisateur->pseudo . "  !"  ?> <img src="userFiles/<?php echo $utilisateur->avatar?>"/>
+        </div>
+       
+        <?php
     } else {
         echo "pas de joueur connecté";
     }

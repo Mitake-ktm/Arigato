@@ -292,7 +292,7 @@ h2 {
    color: white;
  }
  .bouton_connexion {
-   margin: auto;
+  margin-left: 10vw;
    width: 15vw;
    height: 5vw;
    text-transform: uppercase;
