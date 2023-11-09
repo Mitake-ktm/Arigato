@@ -292,7 +292,7 @@ h2 {
    color: white;
  }
  .bouton_connexion {
-   margin: auto;
+   margin-left: 10vw;
    width: 15vw;
    height: 5vw;
    text-transform: uppercase;
@@ -474,6 +474,7 @@ h2 {
 }
 
 .chat_bas{
+  position: absolute;
   margin-left: 1vw;
   display: flex;
 }
@@ -972,3 +973,33 @@ h2 {
   border-bottom-left-radius: 10px; 
   border-bottom-right-radius: 10px;
 }
+
+.avatar img{
+  height: 10vw;
+  width: 10vw;
+  margin-left: 12.5vw;
+  border-radius: 50%;
+}
+
+.avatar input{
+  color: black;
+  margin-left: 0vw;
+  background-color: #F0EFF0;
+  border-radius: 10vw;
+}
+
+.avatar label{
+  margin-left: 6.5vw;
+}
+
+.avatar button{
+  background-color: #ec9224;
+  border-radius: 10vw;
+  margin-left: 12.5vw;
+  border-style: none;
+  font-size: 1vw;
+  height: 4vw;
+  width: 10vw;
+  color: white;
+}
+

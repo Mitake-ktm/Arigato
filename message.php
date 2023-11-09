@@ -15,3 +15,4 @@ $messages = nl2br(htmlspecialchars($_POST['message']));
             ':id_expediteur' => $id_joueur,
         ]); 
 ?>
+
