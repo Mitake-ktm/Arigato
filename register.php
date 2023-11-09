@@ -8,8 +8,6 @@ require_once SITE_ROOT . 'utils/database.php';
 <?php require_once SITE_ROOT . 'partials/head.php'; ?>
 <body>
 <?php require_once SITE_ROOT . 'partials/header.php'; ?>
-
-<link href="Arigato/assets/css/story5.css">
     
 <div class="titre_connexion">
     <h1>Inscription</h1>
@@ -101,7 +99,7 @@ require_once SITE_ROOT . 'utils/database.php';
 ?>
     <form method="POST">
         <style>
-                    .passed {
+        .passed {
             width: 12vw;
             height: 1vw;
             background-color: #ddd;
@@ -168,7 +166,8 @@ require_once SITE_ROOT . 'utils/database.php';
         <div class="passe">
         <div id="passed" ></div>
         </div>
-        <p><span id="passwordStrengthText">Entrez un mot de passe</span></p>
+        <p><span id="passwordStrengthText">Entrez à nouveau votre mot de passe</span></p>
+        
 
     <script>
         function checkPasswordStrength() {
@@ -194,7 +193,7 @@ require_once SITE_ROOT . 'utils/database.php';
 
             if (strength === 0) {
                 passed.className = "strength-neutre";
-                passwordStrengthText.textContent = "Entrez un mot de passe";
+                passwordStrengthText.textContent = "Entrez à nouveau votre mot de passe";
             } else if (strength === 1) {
                 passed.className = "strength-weak";
                 passwordStrengthText.textContent = "Faible";
