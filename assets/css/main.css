@@ -406,55 +406,38 @@ margin-top: 5%
  /*chat du jeu*/
 
  .tchat {
-   position: absolute;
-   top: 270vh;
-   right: 4vh;
-   display: flex;
+   position: fixed;
    flex-direction: column;
-   width: 18vw;
-   height: 65vh;
+   width: 21%;
+   height: 30vw;
    background: white;
-   margin-left: 90vw;
-   border-radius: 10%;
+   border-radius: 5%;
+   bottom: 0;
+   right: 1vh;
 }
 
 .tchat_head{
    background-color: #1E90FF;
-   border-radius: 10%;
    display: flex;
-   justify-content: space-around;
-   align-items: center;
-
+   border-radius: 5% 5% 0 0;
 }
 
 .connexion_logo{
    width: 4vw;
-   height: 7vh;
-   padding-left: 2vw;
+   padding-left: 1vw;
 }
 
 .connexion_logo img{
    width: 4vw;
-   height: 7vh;
    border-radius: 50%;
+   margin-top: 15%;
+   margin-bottom: 15%;
 }
 
-.rondvert{
-   width: 1vw;
-   height: 2vh;
-   padding-top: 5vh;
-   padding-right: 2vw;
-}
-
-.rondvert img{
-   width: 1vw;
-   height: 2vh;
-
-}
 
 .texte_head_chat
 {
-   padding-right: 3vw;
+   margin-left: 5%;
 }
 
 .bulle_gauche {
@@ -466,21 +449,14 @@ margin-top: 5%
    color: white;
    margin-top: 5vh;
 }
-.bulle .fleche_gauche {
-   position: absolute;
-   top: 20px;
-   left: -40px;
-   width: 0;
-   height: 0;
-   border-width: 10px;
-   border-color: transparent #00aedf transparent transparent;
-   border-style: solid;
-}
 
+.tchat_body{
+   height: 20vw;
+   overflow-y: scroll;
+}
 .tchat_body p{
    color: gray;
    margin: 0;
-
 }
 
 .bulle_droite {
@@ -490,34 +466,20 @@ margin-top: 5%
    padding: 20px;
    background: #1E90FF;
    color: white;
-}
-
-.bulle .fleche_droite {
-   position: absolute;
-   top: 20px;
-   left: -40px;
-   width: 0;
-   height: 0;
-   border-width: 10px;
-   border-color: transparent #00aedf transparent transparent;
-   border-style: solid;
+   margin-left: 8.6vw;
 }
 
 .gauche{
    margin-left: 0.3vw;
 }
 
-.droite{
-   margin-left: 8.6vw;
 
-}
 
 .droite p{
    margin-left: 5.6vw;
 }
 
 .chat_bas{
-   margin-top: 15vh;
    margin-left: 1vw;
    display: flex;
 }
