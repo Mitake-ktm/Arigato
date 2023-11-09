@@ -137,7 +137,7 @@ if (isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])) {
 
         if (in_array($extensionsUpload, $extensionsValides)) {
 
-            $chemin = "userFiles/" .$userID.".".$extensionsUpload;
+            $chemin = "/Applications/MAMP/htdocs/Projet/Arigato/userFiles/" .$userID.".".$extensionsUpload;
             $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
 
 
