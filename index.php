@@ -23,14 +23,14 @@ require_once SITE_ROOT . 'utils/database.php';
       <?php if (!isset($_SESSION['userId'])) : ?>
         <button class="bouton_jouer" onclick="window.location.href = 'login.php';">Jouer !</button>
       <?php else : ?>
-        <button class="bouton_jouer" onclick="window.location.href = 'games/memory';">Jouer !</button>
-      <?php endif; ?>
+        <button class="bouton_jouer" onclick="window.location.href = 'games/memory';">Jouer !</+>
+        <?php endif; ?>
 
 
     </div>
     <!--FIN Bouton-->
     <div class="image-container">
-      <img src="<?= PROJECT_FOLDER ?>assets/images/HIRAGANA.jpg" alt="Hiragana" />
+      <img src="<?= PROJECT_FOLDER ?>assets/images/Hiragana.png" alt="Hiragana" />
       <img src="<?= PROJECT_FOLDER ?>assets/images/Katakana.png" alt="Katakana" />
       <img src="<?= PROJECT_FOLDER ?>assets/images/Kana.png" alt="Kana" />
     </div>
@@ -41,19 +41,19 @@ require_once SITE_ROOT . 'utils/database.php';
       <div class="heading-container">
         <span class="large-one">01</span>
         <h3>HIRAGANA</h3>
-        <p>Pour travailler les Hiragana !</p>
+        <p>Pour travailler les Hiragana ! </p>
       </div>
 
       <div class="heading-container">
         <span class="large-one">02</span>
         <h3>KATAKANA</h3>
-        <p>Pour travailler les Katakana !</p>
+        <p>Pour travailler les Katakana ! </p>
       </div>
 
       <div class="heading-container">
         <span class="large-one">03</span>
         <h3>KANA</h3>
-        <p>Pour travailler les Kana !</p>
+        <p>Pour travailler les Kana ! </p>
       </div>
     </div>
     <!-- FIN IMAGE MODE DE JEU + texte en dessous -->
@@ -160,14 +160,14 @@ require_once SITE_ROOT . 'utils/database.php';
         </tr>
       </table>
     </div>
-    x
+    
     <!--FIN  STAT JOUEUR-->
 
 
     <div class="equipe">
       <h2><span>Notre Équipe</span></h2>
       <p>Nihon saikō no gēmu kaihatsu chīmu</p>
-      <img src="assets/images/branche.jpg">
+      <img src="assets/images/logo_branche.png">
     </div>
     <div class="description">
 

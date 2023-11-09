@@ -9,14 +9,13 @@ require_once SITE_ROOT . 'utils/database.php';
 
 // $pseudo_recherche = $_GET['pseudo'];
 
-if(isset($_SESSION['userId']))
-{
-   $userID = $_SESSION['userId']; 
-   $pdoStatement = $pdo->prepare('SELECT * From utilisateur WHERE id = :id');
-   $pdoStatement->execute([
-       ':id' => $userID,
-   ]);
-   $utilisateur = $pdoStatement->fetch();
+if (isset($_SESSION['userId'])) {
+  $userID = $_SESSION['userId'];
+  $pdoStatement = $pdo->prepare('SELECT * From utilisateur WHERE id = :id');
+  $pdoStatement->execute([
+    ':id' => $userID,
+  ]);
+  $utilisateur = $pdoStatement->fetch();
 }
 
 if (isset($_POST['pseudo'])) {
@@ -29,20 +28,20 @@ if (isset($_POST['pseudo'])) {
   WHERE pseudo LIKE :pseudo 
   ORDER BY J.nom_jeu ASC,S.difficulte DESC,S.score_partie DESC;");
   $pdoStatement->execute([
-    ':pseudo' => '%'.$_POST['pseudo'].'%'
+    ':pseudo' => '%' . $_POST['pseudo'] . '%'
   ]);
   $tableau_score = $pdoStatement->fetchAll();
-}
-
-else{$pdoStatement = $pdo->prepare('SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
+} else {
+  $pdoStatement = $pdo->prepare('SELECT J.nom_jeu, U.pseudo, S.difficulte, S.score_partie
   FROM score as S
   LEFT JOIN utilisateur AS U
   ON S.id_joueur = U.id
   LEFT JOIN jeu AS J
   ON S.id_jeu = J.id
   ORDER BY J.nom_jeu ASC,S.difficulte DESC,S.score_partie DESC;');
-$pdoStatement->execute();
-$tableau_score = $pdoStatement->fetchAll();} 
+  $pdoStatement->execute();
+  $tableau_score = $pdoStatement->fetchAll();
+}
 
 ?>
 
@@ -91,7 +90,7 @@ $tableau_score = $pdoStatement->fetchAll();}
 
           <?php foreach ($tableau_score as $score) : ?>
 
-            <tr <?php if (isset($_SESSION['userId']) && $score->pseudo === $utilisateur->pseudo) echo 'class="highlight"'; ?>>
+            <tr <?php if (isset($_SESSION['userId']) && $score->pseudo === $utilisateur->pseudo) echo 'class="highlight_score"'; ?>>
 
               <td><?php echo $score->nom_jeu; ?></td>
 
