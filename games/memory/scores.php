@@ -27,7 +27,7 @@ if (isset($_POST['pseudo'])) {
   LEFT JOIN jeu AS J
   ON S.id_jeu = J.id
   WHERE pseudo LIKE :pseudo 
-  ORDER BY J.nom_jeu ASC,S.difficulte DESC,S.score_partie DESC;");
+  ORDER BY J.nom_jeu ASC,S.difficulte DESC,S.score_partie ASC;");
   $pdoStatement->execute([
     ':pseudo' => '%'.$_POST['pseudo'].'%'
   ]);
@@ -40,7 +40,7 @@ else{$pdoStatement = $pdo->prepare('SELECT J.nom_jeu, U.pseudo, S.difficulte, S.
   ON S.id_joueur = U.id
   LEFT JOIN jeu AS J
   ON S.id_jeu = J.id
-  ORDER BY J.nom_jeu ASC,S.difficulte DESC,S.score_partie DESC;');
+  ORDER BY J.nom_jeu ASC,S.difficulte DESC,S.score_partie ASC;');
 $pdoStatement->execute();
 $tableau_score = $pdoStatement->fetchAll();} 
 

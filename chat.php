@@ -65,7 +65,7 @@
              <div class="chat_bas">
                         <input type="text" name="message" id="chat"  style="width: 200px; height: 40px; background-color: #1E90FF;
                         border-style: none; border-radius: 3px;">
-                        <input onclick="ajaxEnvoie2()" type="button" name="valider" value="envoyer" >
+                        <input onclick="ajaxEnvoie2()" type="button" name="valider" value="envoyer">
                 </div>   
              </div>
                                  
