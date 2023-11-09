@@ -8,6 +8,8 @@ require_once SITE_ROOT . 'utils/database.php';
 <?php require_once SITE_ROOT . 'partials/head.php'; ?>
 <body>
 <?php require_once SITE_ROOT . 'partials/header.php'; ?>
+
+<link href="Arigato/assets/css/story5.css">
     
 <div class="titre_connexion">
     <h1>Inscription</h1>
@@ -98,6 +100,59 @@ require_once SITE_ROOT . 'utils/database.php';
     }
 ?>
     <form method="POST">
+        <style>
+                    .passed {
+            width: 12vw;
+            height: 1vw;
+            background-color: #ddd;
+            margin-bottom: 10px;
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            border-bottom-right-radius: 10px;
+        }
+        .strength-neutre {
+            width: 0vw;
+            height: 1vw;
+            background-color: white;
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            border-bottom-right-radius: 10px;
+        }
+
+        .strength-weak {
+            width: 3vw;
+            height: 1vw;
+            background-color: #ff5555;
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            border-bottom-right-radius: 10px;
+        }
+
+        .strength-medium {
+            width: 6vw;
+            height: 1vw;
+            background-color: #ffaa00;
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            border-bottom-right-radius: 10px;
+        }
+
+        .strength-strong {
+            width: 9vw;
+            height: 1vw;
+            background-color: #55ff55;
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            border-bottom-right-radius: 10px;
+        }
+
+
+        </style> 
         <input type="text" name="email" id="email" placeholder=Email style="width: 500px; height: 40px; background-color: #272645 ;
         border-style: none; border-radius: 3px;">
         <br>
@@ -106,10 +161,53 @@ require_once SITE_ROOT . 'utils/database.php';
         border-style: none; border-radius: 3px;">
         <br>
         <br>
+        <label for="password"></label>
         <input type="password" name="passe" id="passe" placeholder="Mot de passe" style="width: 500px; height: 40px; background-color: #272645 ;
-        border-style: none; border-radius: 3px;">
+        border-style: none; border-radius: 3px;" onkeyup="checkPasswordStrength()"><br>
         <br>
-        <br>
+        <div class="passe">
+        <div id="passed" ></div>
+        </div>
+        <p><span id="passwordStrengthText">Entrez un mot de passe</span></p>
+
+    <script>
+        function checkPasswordStrength() {
+            var passed = document.getElementById("passe").value;
+            var strength = 0;
+
+            if (passed.length >= 8) {
+                strength++;
+            }
+
+            if (passed.match(/[A-Z]/) && passed.match(/[0-9]/)) {
+             strength++;
+            }
+
+
+
+            if (passed.match(/[\!\@\#\$\%\^\&\*\?\_\~]/)) {
+                strength++;
+            }
+
+            var passed = document.getElementById("passed");
+            var passwordStrengthText = document.getElementById("passwordStrengthText");
+
+            if (strength === 0) {
+                passed.className = "strength-neutre";
+                passwordStrengthText.textContent = "Entrez un mot de passe";
+            } else if (strength === 1) {
+                passed.className = "strength-weak";
+                passwordStrengthText.textContent = "Faible";
+            } else if (strength === 2) {
+                passed.className = "strength-medium";
+                passwordStrengthText.textContent = "Moyen";
+            } else if (strength === 3) {
+                passed.className = "strength-strong";
+                passwordStrengthText.textContent = "Fort";
+
+            }   
+    }
+    </script>
         <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer le mot de passe" style="width: 500px; height: 40px; background-color: #272645 ;
         border-style: none; border-radius: 3px;">
         <br>
@@ -161,4 +259,4 @@ require_once SITE_ROOT . 'utils/database.php';
 
 <?php require_once SITE_ROOT . 'partials/footer.php'; ?>
 </body>
-</html>
+</html>   
