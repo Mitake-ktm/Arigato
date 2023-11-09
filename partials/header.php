@@ -7,12 +7,12 @@
         $pdoStatement->execute([
             ':id' => $userID,
         ]);
-        $utilisateur = $pdoStatement->fetch();?>
+        $utilisateur = $pdoStatement->fetch(); ?>
         <div class="utilisateur">
-        <?php echo "bonjour " . $utilisateur->pseudo . "  !"  ?> <img src="/projet/Arigato/userFiles/<?php if(isset($utilisateur->avatar))echo $utilisateur->avatar?>"/>
+            <?php echo "bonjour " ?> <span id="pseudo"> <?php echo $utilisateur->pseudo ?></span>  <?php echo " !" ?> <img src="/projet/Arigato/userFiles/<?php if (isset($utilisateur->avatar)) echo $utilisateur->avatar ?>" />
         </div>
 
-        <?php
+    <?php
     } else {
         echo "pas de joueur connecté";
     }
@@ -79,4 +79,3 @@
         </ul>
     </nav>
 </div>
-
