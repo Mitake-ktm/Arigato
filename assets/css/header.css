@@ -11,7 +11,7 @@ a {
 
 nav a:hover {
   color: #ec9124;
-  border-top: 2px solid #ec9124;
+  border-top: 0.2vw solid #ec9124;
   padding-top: 2.8vw;
 }
 

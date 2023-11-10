@@ -15,8 +15,9 @@
                 <img src="/projet/Arigato/userFiles/<?php if (isset($utilisateur->avatar)) echo $utilisateur->avatar ?>" />
                 </div>
                 <div class="texte_head_chat">
-                    <p>Chat Global</p>
+                    <p>Chat Global</p> 
                 </div>
+                <div class="gif-container" id="gif-container"></div>
             </div>
 
             <div class="tchat_body">
@@ -112,5 +113,20 @@
         //Code à jouer en cas d'éxécution sans erreur du script du PHP
       });
     
+    }
+</script>
+
+<script>
+    // Code JavaScript pour afficher le GIF dans la barre du titre
+    var gifData = [{"id":"2ka","url":"https://cdn2.thecatapi.com/images/2ka.gif","width":50,"height":37}];
+    var gifContainer = document.getElementById('gif-container');
+
+    if (gifData.length > 0) {
+        var gifImage = document.createElement('img');
+        gifImage.src = gifData[0].url;
+        gifImage.width = gifData[0].width;
+        gifImage.height = gifData[0].height;
+
+        gifContainer.appendChild(gifImage);
     }
 </script>
