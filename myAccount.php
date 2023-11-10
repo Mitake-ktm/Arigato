@@ -101,17 +101,17 @@ require_once SITE_ROOT . 'utils/database.php';
                 <br>
                 <br>
                 <div class="erreur_php"> <p><?php 
-        if(isset($error_message_ancien_mail) && !isset($_POST['email']))
+                if(isset($error_message_ancien_mail))
                 {
                     echo $error_message_ancien_mail;
                 }
 
-                if(isset($error_message_nouveau_mail) && !isset($_POST['Nemail']))
+                if(isset($error_message_nouveau_mail))
                 {
                     echo $error_message_nouveau_mail;
                 }
 
-                if(isset($error_message_motdepasse) && !isset($_POST['passe']))
+                if(isset($error_message_motdepasse))
                 {
                     echo $error_message_motdepasse;
                 }
@@ -239,17 +239,17 @@ if (!empty($_POST)) {
                 border-style: none; border-radius: 3px;">
                 <br>
                 <div class="erreur_php"> <p><?php 
-                if(isset($error_message_ancien_motdepasse) && !isset($_POST['passe']))
+                if(isset($error_message_ancien_motdepasse))
                 {
                     echo $error_message_ancien_motdepasse;
                 }
 
-                if(isset($error_message_nouveau_motdepasse) && !isset($_POST['Npasse']))
+                if(isset($error_message_nouveau_motdepasse))
                 {
                     echo $error_message_nouveau_motdepasse;
                 }
 
-                if(isset($error_message_passeconfirm) && !isset($_POST['Cpasse']))
+                if(isset($error_message_passeconfirm))
                 {
                     echo $error_message_passeconfirm;
                 }
@@ -259,7 +259,7 @@ if (!empty($_POST)) {
                     !isset($error_message_passeconfirm)&&
                     isset($_POST['passe'])&&
                     isset($_POST['Npasse'])&&
-                    isset($_POST['Cpasse']))   
+                    isset($_POST['Cpasse']) && $_POST['Cpasse'] != "")   
                     {
                     echo "Le mot de passe a bien été modifié";
                 }
