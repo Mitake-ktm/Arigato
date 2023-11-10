@@ -101,17 +101,17 @@ require_once SITE_ROOT . 'utils/database.php';
                 <br>
                 <br>
                 <div class="erreur_php"> <p><?php 
-        if(isset($error_message_ancien_mail))
+        if(isset($error_message_ancien_mail) && !isset($_POST['email']))
                 {
                     echo $error_message_ancien_mail;
                 }
 
-                if(isset($error_message_nouveau_mail))
+                if(isset($error_message_nouveau_mail) && !isset($_POST['Nemail']))
                 {
                     echo $error_message_nouveau_mail;
                 }
 
-                if(isset($error_message_motdepasse))
+                if(isset($error_message_motdepasse) && !isset($_POST['passe']))
                 {
                     echo $error_message_motdepasse;
                 }
@@ -239,17 +239,17 @@ if (!empty($_POST)) {
                 border-style: none; border-radius: 3px;">
                 <br>
                 <div class="erreur_php"> <p><?php 
-                if(isset($error_message_ancien_motdepasse))
+                if(isset($error_message_ancien_motdepasse) && !isset($_POST['passe']))
                 {
                     echo $error_message_ancien_motdepasse;
                 }
 
-                if(isset($error_message_nouveau_motdepasse))
+                if(isset($error_message_nouveau_motdepasse) && !isset($_POST['Npasse']))
                 {
                     echo $error_message_nouveau_motdepasse;
                 }
 
-                if(isset($error_message_passeconfirm))
+                if(isset($error_message_passeconfirm) && !isset($_POST['Cpasse']))
                 {
                     echo $error_message_passeconfirm;
                 }
