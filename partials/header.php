@@ -8,9 +8,10 @@
             ':id' => $userID,
         ]);
         $utilisateur = $pdoStatement->fetch(); ?>
-        <div class="utilisateur">
-            <?php echo "bonjour " ?> <span id="pseudo"> <?php echo $utilisateur->pseudo ?></span>  <?php echo " !" ?> <img src="/projet/Arigato/userFiles/<?php if (isset($utilisateur->avatar)) echo $utilisateur->avatar ?>" />
-        </div>
+       <div class="utilisateur">
+    <?php echo "bonjour" ?>&nbsp;<span id="pseudo"><?php echo $utilisateur->pseudo ?></span>&nbsp;<?php echo " !" ?> 
+    <img src="/projet/Arigato/userFiles/<?php if (isset($utilisateur->avatar)) echo $utilisateur->avatar ?>" />
+</div>
 
     <?php
     } else {

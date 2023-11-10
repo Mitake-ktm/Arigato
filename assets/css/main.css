@@ -409,7 +409,7 @@ th {
 }
 
 .tchat_head{
- background-color: #1E90FF;
+ background-color: #ec9224;
  display: flex;
  border-radius: 5% 5% 0 0;
 }
@@ -437,7 +437,7 @@ th {
  width: 100px;
  border-radius: 4px;
  padding: 20px;
- background: #1E90FF;
+ background: grey;
  color: white;
  margin-top: 5vh;
 }
@@ -456,7 +456,7 @@ th {
  width: 7vw;
  border-radius: 0.4vw;
  padding: 2vw;
- background: #1E90FF;
+ background: #ec9224;
  color: white;
 }
 
@@ -482,7 +482,7 @@ th {
 .chat_bas img{
  width: 3vw;
  height: 5vh;
- color: #1E90FF;
+ color: #ec9224;
  margin-top: 0.5vh;
  margin-left: 0.5vw;
 }
@@ -1027,4 +1027,8 @@ textarea::placeholder {
 }
 .tableau_kana p{
   text-align: center;
+}
+
+input {
+  color: white;
 }

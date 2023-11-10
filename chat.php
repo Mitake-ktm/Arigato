@@ -24,7 +24,7 @@
            <?php 
 
                 $userID = $_SESSION['userId'];
-                $pdoStatement = $pdo->prepare('SELECT id_expediteur, message,U.pseudo,  
+                $pdoStatement = $pdo->prepare('SELECT id_expediteur, message,U.pseudo, date_heure_message,  
                 CASE 
                     WHEN M.id_expediteur = '.$userID.'   THEN true
                     ELSE false
@@ -44,17 +44,17 @@
 
                         if($message->connecte){
 
-                            echo '<div class="droite"> <div class="bulle_droite">' . $message->message .'</div>'. '<span id="pseudo">'.$message->pseudo. '</span>' .'</div><br>';
+                            echo '<div class="droite"> <div class="bulle_droite">' . $message->message .'</div>'. '<span id="pseudo">'.$message->pseudo . '<br>' . $message->date_heure_message . '</span>' .'</div><br>';
 
                         }
 
                         if(!$message->connecte){
-                            echo '<div class="gauche"> <div class="bulle_gauche">' . $message->message . '</div>'. $message->pseudo.'</div><br>';
+                            echo '<div class="gauche"> <div class="bulle_gauche">' . $message->message . '</div>'. $message->pseudo . '<br>' . $message->date_heure_message . '</div><br>';
                     
                         }
                            
                     }
-                    ?>
+                    ?> 
 
                     <div id="nouveau_message">
 
@@ -73,8 +73,10 @@
                 </div>
             </div>
              -->
+
+             <br>
              <div class="chat_bas">
-                        <input type="text" name="message" id="chat"  style="width: 200px; height: 40px; background-color: #1E90FF;
+                        <input type="text" name="message" id="chat"  style="width: 200px; height: 40px; background-color: #ec9224;
                         border-style: none; border-radius: 3px;">
                         <input onclick="ajaxEnvoie2()" type="button" name="valider" value="envoyer" >
                 </div>   
