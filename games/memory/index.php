@@ -9,6 +9,14 @@ require_once SITE_ROOT . 'utils/database.php';
 <body>
     <?php require_once SITE_ROOT . 'partials/header.php'; ?>
 
+    <?php if (isset($_SESSION['userId'])){
+  $userID = $_SESSION['userId'];
+  $pdoStatement = $pdo->prepare('UPDATE utilisateur SET date_heure_connexion = NOW() WHERE id = :id ');
+  $pdoStatement->execute([
+      ':id' => $userID,
+  ]); 
+}?>
+
 
     <div class="haut_page_jeu">
         <div class="titre_page_de_jeu">

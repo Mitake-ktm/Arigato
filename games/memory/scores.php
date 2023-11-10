@@ -6,7 +6,6 @@ require_once '../../utils/common.php';
 
 require_once SITE_ROOT . 'utils/database.php';
 
-
 // $pseudo_recherche = $_GET['pseudo'];
 
 if(isset($_SESSION['userId']))
@@ -56,6 +55,14 @@ $tableau_score = $pdoStatement->fetchAll();}
 
 
 <body>
+
+<?php if (isset($_SESSION['userId'])){
+  $userID = $_SESSION['userId'];
+  $pdoStatement = $pdo->prepare('UPDATE utilisateur SET date_heure_connexion = NOW() WHERE id = :id ');
+  $pdoStatement->execute([
+      ':id' => $userID,
+  ]); 
+}?>
 
   <?php require_once SITE_ROOT . 'partials/header.php'; ?>
 

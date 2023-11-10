@@ -7,8 +7,9 @@
         $pdoStatement->execute([
             ':id' => $userID,
         ]);
-        $utilisateur = $pdoStatement->fetch(); }?>
-        
+        $utilisateur = $pdoStatement->fetch(); 
+        }?>
+
 <div class="tchat_head">
                 <div class="connexion_logo">
                 <img src="/projet/Arigato/userFiles/<?php if (isset($utilisateur->avatar)) echo $utilisateur->avatar ?>" />
