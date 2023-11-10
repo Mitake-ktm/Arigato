@@ -1,7 +1,17 @@
 <div class="tchat">
+
+<?php
+    if (isset($_SESSION['userId'])){
+        $userID = $_SESSION['userId'];
+        $pdoStatement = $pdo->prepare('SELECT * From utilisateur WHERE id = :id ');
+        $pdoStatement->execute([
+            ':id' => $userID,
+        ]);
+        $utilisateur = $pdoStatement->fetch(); }?>
+        
 <div class="tchat_head">
                 <div class="connexion_logo">
-                    <img src="<?= PROJECT_FOLDER ?>assets/images/anto.jpg" alt="pp_anto">
+                <img src="/projet/Arigato/userFiles/<?php if (isset($utilisateur->avatar)) echo $utilisateur->avatar ?>" />
                 </div>
                 <div class="texte_head_chat">
                     <p>Chat Global</p>
@@ -85,7 +95,7 @@
     function ajaxEnvoie2(){
         var test = document.getElementById('chat').value;
         var pseudo = document.getElementById('pseudo').innerText;
-        console.log(test);
+        console.log(document.getElementById('pseudo'));
         let request =
       $.ajax({
         type: "POST",             //Méthode à employer POST ou GET 
