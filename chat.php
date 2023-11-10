@@ -20,7 +20,7 @@
                 <div class="gif-container" id="gif-container"></div>
             </div>
 
-            <div class="tchat_body">
+            <div class="tchat_body" id="scroll">
 
            <?php 
 
@@ -111,6 +111,9 @@
         document.getElementById('nouveau_message').innerHTML +=
         `<div class="droite"> <div class="bulle_droite"> ${test}</div>${pseudo}</div>`;
         //Code à jouer en cas d'éxécution sans erreur du script du PHP
+        document.getElementById('chat').value = "";
+        element = document.getElementById('scroll');
+        element.scrollTop = element.scrollHeight;
       });
     
     }
