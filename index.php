@@ -130,7 +130,7 @@ require_once SITE_ROOT . 'utils/database.php';
                   <p><?php
                       $pdoStatement = $pdo->prepare('SELECT score_partie AS temps_records
                         FROM score
-                        ORDER BY score_partie DESC
+                        ORDER BY score_partie ASC
                         LIMIT 1;');
                       $pdoStatement->execute();
                       $parties_joues = $pdoStatement->fetch();
