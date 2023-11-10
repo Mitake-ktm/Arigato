@@ -101,7 +101,7 @@ require_once SITE_ROOT . 'utils/database.php';
                 <br>
                 <br>
                 <div class="erreur_php"> <p><?php 
-        if(isset($error_message_ancien_mail))
+                if(isset($error_message_ancien_mail))
                 {
                     echo $error_message_ancien_mail;
                 }
@@ -259,7 +259,7 @@ if (!empty($_POST)) {
                     !isset($error_message_passeconfirm)&&
                     isset($_POST['passe'])&&
                     isset($_POST['Npasse'])&&
-                    isset($_POST['Cpasse']))   
+                    isset($_POST['Cpasse']) && $_POST['Cpasse'] != "")   
                     {
                     echo "Le mot de passe a bien été modifié";
                 }
