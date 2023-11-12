@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div class="tchat_body">
+            <div class="tchat_body" id="scroll">
 
            <?php 
 
@@ -107,6 +107,9 @@
       request.done(function (output) {
         document.getElementById('nouveau_message').innerHTML +=
         `<div class="droite"> <div class="bulle_droite"> ${test}</div>${pseudo}</div>`;
+        document.getElementById('chat').value = "";
+        element = document.getElementById('scroll');
+        element.scrollTop = element.scrollHeight;
         //Code à jouer en cas d'éxécution sans erreur du script du PHP
       });
     
